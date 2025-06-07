@@ -302,7 +302,43 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("Shutting down.")
         sys.exit(0)</pre>
-<p><a href="./../downloads/webots_stream.7z">webots_stream.7z</a></p><br />Webots << <a href='Webots.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+<p><a href="./../downloads/webots_stream.7z">webots_stream.7z</a></p>
+<p>在雲端提供多 Webots 場景串流的方法是, 每一個場景採</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">webotsw my_world.wbt --stream --port 8888</pre>
+<p>在 8888 埠號串流 my_world.wbt 場景, 並在 WWW 伺服器中指定要開啟的 port 就能利用一台雲端主機檢視多個由使用者上傳的場景. 再加上 https 設定, 建立類似 <a href="https://webots.cloud/">https://webots.cloud/</a> 的服務.</p>
+<p>cloud (<a href="https://github.com/cyberbotics/webots-cloud">https://github.com/cyberbotics/webots-cloud</a>) 中的 html 如下:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;
+  &lt;title id="title"&gt;webots.cloud&lt;/title&gt;
+  &lt;meta name="description" content="Run Webots simulations in the cloud"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;meta name="og:locale" content="en"&gt;
+  &lt;meta name="og:type" content="website"&gt;
+  &lt;meta name="og:title" content="webots.cloud"&gt;
+  &lt;meta name="og:description" content="The place to share Webots simulations."&gt;
+  &lt;meta name="og:updated_time" content="1587637793"&gt;
+  &lt;link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /&gt;
+  &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css"/&gt;
+  &lt;link rel="stylesheet" href="/css/webots-cloud.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="scrollable-body" id="scrollable-body"&gt;&lt;/div&gt;
+  &lt;script src="/js/webots-cloud.js" type="module"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cyberbotics.com/showdown/1.3.0/showdown-youtube.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/7.0.0/mermaidAPI.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/cyberbotics/webots@released/docs/js/showdown-extensions.js"&gt;&lt;/script&gt;
+&lt;/html&gt;
+</pre>
+<pre class="CodeBlock-module__code--KUcqT" tabindex="0"></pre><br />Webots << <a href='Webots.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
