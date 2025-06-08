@@ -2,7 +2,7 @@
         <head>
         <title>cad2025</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CAD.html'>CAD</a><ul class='dropdown'><li><a href='Solvespace.html'>Solvespace</a><li><a href='NX.html'>NX</a><li><a href='OnShape.html'>OnShape</a></li></ul><li class='has-children'><a href='Linkage.html'>Linkage</a><ul class='dropdown'><li><a href='Jansen.html'>Jansen</a></li></ul><li><a href='Robotics.html'>Robotics</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Clouds.html'>Clouds</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li><a href='Web.html'>Web</a></li></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Blender.html'>Blender</a></li></li></ul></ul><li class='has-children'><a href='Hardware.html'>Hardware</a><ul class='dropdown'><li><a href='Printer.html'>Printer</a></li></ul><li><a href='Projects.html'>Projects</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,19 +142,105 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Linkage << <a href='Linkage.html'>Previous</a> <a href='Robotics.html'>Next</a> >> Robotics<br /><h1>Jansen</h1>
-<p><a href="https://www.researchgate.net/publication/345650357_Design_and_Linkage_Analysis_of_Theo_Jansen_Mechanism">https://www.researchgate.net/publication/345650357_Design_and_Linkage_Analysis_of_Theo_Jansen_Mechanism</a> </p>
-<p>CAD 繪製 Jansen's Linkage</p>
-<p>轉入 Webots 進行模擬與控制</p>
-<p style="padding-left: 30px;">機構位移、速度與加速度分析</p>
-<p style="padding-left: 30px;">控制運行的 Arduino 程式</p>
-<p>左右兩組 Jansen's Mechanical, 帶動隨後的兩輪車</p>
-<p style="padding-left: 30px;">Webots 的 Python Controller</p>
-<p style="padding-left: 30px;">extern 模式下的控制程式</p>
-<p style="padding-left: 60px;">控制虛擬場景</p>
-<p style="padding-left: 60px;">控制實體機電系統</p>
-<p>Reference:</p>
-<p style="padding-left: 30px;"><a href="https://youtu.be/3HTDuWJHADY">https://youtu.be/3HTDuWJHADY</a> </p><br />Linkage << <a href='Linkage.html'>Previous</a> <a href='Robotics.html'>Next</a> >> Robotics</div>
+    <div id="tipue_search_content">Webots << <a href='Webots.html'>Previous</a> <a href='Clouds.html'>Next</a> >> Clouds<br /><h1>TimeStep</h1>
+<p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
+<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
+<ul>
+<li><strong><span node="[object Object]">定義</span></strong><span node="[object Object]">：模擬器內部用於計算物理模擬的時間間隔。它決定了模擬器每次更新物理場景時所模擬的時間量。</span></li>
+<li><strong><span node="[object Object]">作用</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><span node="[object Object]">控制系統的精度與性能。</span></li>
+<li><span node="[object Object]">計算物理行為（如碰撞、運動等）的關鍵參數。</span></li>
+</ul>
+</li>
+<li><strong><span node="[object Object]">設置方式</span></strong><span node="[object Object]">：模擬器的時間步長通常由模擬控制器中的代碼明確設置。例如，在 Python 控制器中，您可以使用</span><code node="[object Object]"><span node="[object Object]">robot.step(timestep)</span></code><span node="[object Object]">來進行控制。</span></li>
+<li><strong><span node="[object Object]">特性</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><strong><span node="[object Object]">越小</span></strong><span node="[object Object]">：模擬精度越高，但計算負擔增加，模擬速度可能變慢。</span></li>
+<li><strong><span node="[object Object]">越大</span></strong><span node="[object Object]">：模擬速度提高，但精度降低，可能導致模擬不穩定。</span></li>
+</ul>
+</li>
+</ul>
+<hr/><br/><span node="[object Object]">2. </span><strong><span node="[object Object]">世界的時間步長（World </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
+<ul>
+<li><strong><span node="[object Object]">定義</span></strong><span node="[object Object]">：模擬世界中用於更新場景的固定時間間隔，主要由 Webots 的場景樹（Scene </span><span node="[object Object]">Tree）中的 </span><code node="[object Object]"><span node="[object Object]">WorldInfo </span><span node="[object Object]">&gt; </span><span node="[object Object]">basicTimeStep</span></code> <span node="[object Object]">參數定義。</span></li>
+<li><strong><span node="[object Object]">作用</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><span node="[object Object]">控制整個模擬場景中物體更新的頻率。</span></li>
+<li><span node="[object Object]">決定模擬器每次計算後，虛擬時間向前推進的時間量。</span></li>
+</ul>
+</li>
+<li><strong><span node="[object Object]">設置方式</span></strong><span node="[object Object]">：可以在場景樹的 </span><code node="[object Object]"><span node="[object Object]">WorldInfo </span></code><span node="[object Object]">節點中修改 </span><code node="[object Object]"><span node="[object Object]">basicTimeStep </span></code><span node="[object Object]">參數值。</span></li>
+<li><strong><span node="[object Object]">特性</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><strong><span node="[object Object]">越小</span></strong><span node="[object Object]">：模擬的物理場景更新更加頻繁，但所需計算資源更多。</span></li>
+<li><strong><span node="[object Object]">越大</span></strong><span node="[object Object]">：模擬場景更新較少，可能導致物理行為的細節丟失。</span></li>
+</ul>
+</li>
+</ul>
+<hr/><br/><span node="[object Object]">3. </span><strong><span node="[object Object]">兩者的關係</span></strong>
+<ul>
+<li><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">應該</span><strong><span node="[object Object]">小於或等於</span></strong><span node="[object Object]">世界的時間步長。</span>
+<ul>
+<li><span node="[object Object]">原因是：模擬器需要在每個世界時間步長內完成多次計算，以確保物理模擬的準確性。</span></li>
+<li><span node="[object Object]">如果模擬器的時間步長大於世界的時間步長，可能導致模擬不穩定，甚至出現錯誤。</span></li>
+</ul>
+</li>
+<li><strong><span node="[object Object]">設置建議</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><span node="[object Object]">一般情況下，模擬器的時間步長可以設置為世界時間步長的一部分（如1/10）。</span></li>
+<li><span node="[object Object]">測試不同的時間步長，根據模擬精度與性能需求進行調整。</span></li>
+</ul>
+</li>
+</ul>
+<hr/><br/><span node="[object Object]">4. </span><strong><span node="[object Object]">實際應用場景</span></strong>
+<ul>
+<li><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><span node="[object Object]">用於控制機器人的控制器代碼，例如逐步執行機器人的操作或模擬傳感器的更新。</span></li>
+</ul>
+</li>
+<li><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">：</span>
+<ul>
+<li><span node="[object Object]">用於控制整個模擬場景的更新頻率，例如物體的運動、碰撞檢測等。</span></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h4>簡單對比</h4>
+<table>
+<thead>
+<tr>
+<th><strong><span node="[object Object]">項目</span></strong></th>
+<th><strong><span node="[object Object]">模擬器的時間步長</span></strong></th>
+<th><strong><span node="[object Object]">世界的時間步長</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><span node="[object Object]">定義</span></strong></td>
+<td><span node="[object Object]">模擬器內部計算的時間間隔</span></td>
+<td><span node="[object Object]">模擬世界中場景更新的時間間隔</span></td>
+</tr>
+<tr>
+<td><strong><span node="[object Object]">設置位置</span></strong></td>
+<td><span node="[object Object]">控制器代碼中</span></td>
+<td><span node="[object Object]">場景樹的</span><code node="[object Object]"><span node="[object Object]">WorldInfo</span></code><span node="[object Object]">節點</span></td>
+</tr>
+<tr>
+<td><strong><span node="[object Object]">影響</span></strong></td>
+<td><span node="[object Object]">控制模擬計算的精度與性能</span></td>
+<td><span node="[object Object]">控制整個場景的更新頻率</span></td>
+</tr>
+<tr>
+<td><strong><span node="[object Object]">大小關係</span></strong></td>
+<td><span node="[object Object]">必須小於或等於世界時間步長</span></td>
+<td><span node="[object Object]">可設置為模擬所需的任意值</span></td>
+</tr>
+</tbody>
+</table>
+<p><span node="[object Object]">透過合理設置這兩個參數，可以在模擬的精度與性能之間達到平衡。</span></p>
+<br />Webots << <a href='Webots.html'>Previous</a> <a href='Clouds.html'>Next</a> >> Clouds</div>
         
     <!-- footer -->
       <div class="container">
