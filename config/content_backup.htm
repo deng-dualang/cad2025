@@ -429,6 +429,103 @@ http {
         }
     }
 }</pre>
+<p>此時的 index.html 設為:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;title&gt;Streaming viewer&lt;/title&gt;
+    &lt;link rel="icon" type="image/png" href="webots_icon.png"&gt;
+    &lt;link type="text/css" rel="stylesheet" href='style.css' /&gt;
+    &lt;style&gt;
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background: #222;
+      }
+      header {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        background: #181818;
+        color: #fff;
+        text-align: center;
+      }
+      .title-container {
+        margin: 0;
+        padding: 0.5em 0;
+      }
+      .webots-view-container {
+        flex: 1 1 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        min-height: 0;
+        min-width: 0;
+      }
+      webots-view {
+        width: 100vw;
+        height: 100vh;
+        flex: 1 1 0;
+        display: block;
+        min-width: 0;
+        min-height: 0;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="webots-view-container"&gt;
+      &lt;webots-view&gt;&lt;/webots-view&gt;
+    &lt;/div&gt;
+    &lt;script type="module" src="./../wwi/WebotsView.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      // 根據當前協定與主機自動組成 wss/ws 路徑
+      const wsProtocol = (window.location.protocol === "https:") ? "wss:" : "ws:";
+      const wsHost = window.location.host;
+      // 注意：此處路徑要跟 nginx location /webots_ws/ 一致
+      const defaultIp = wsProtocol + "//" + wsHost + "/webots_ws/";
+      const defaultStreamingMode = "x3d";
+      const defaultBroadcast = false;
+      const mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const defaultThumbnail = './../wwi/images/loading/default_thumbnail.png';
+
+      // Optional: load mobile CSS if on mobile device
+      if (mobileDevice) {
+        let head = document.getElementsByTagName('head')[0];
+        let mobileCss = document.createElement('link');
+        mobileCss.setAttribute('rel', 'stylesheet');
+        mobileCss.setAttribute('type', 'text/css');
+        mobileCss.setAttribute('href', './../wwi/css/wwi_mobile.css');
+        head.appendChild(mobileCss);
+      }
+
+      // Wait for WebotsView.js to load and custom element to be defined
+      window.addEventListener('DOMContentLoaded', () =&gt; {
+        customElements.whenDefined('webots-view').then(() =&gt; {
+          const webotsView = document.querySelector('webots-view');
+          webotsView.onready = () =&gt; {
+            console.log("Connected to Webots streaming server!");
+          };
+          webotsView.ondisconnect = () =&gt; {
+            console.log("Disconnected from Webots streaming server!");
+          };
+          webotsView.connect(defaultIp, defaultStreamingMode, defaultBroadcast, mobileDevice, -1, defaultThumbnail);
+        });
+      });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 <p></p>
 <pre class="CodeBlock-module__code--KUcqT" tabindex="0"></pre><h3>Blender</h3>
 <p>Blender: <a href="https://www.blender.org/">https://www.blender.org/</a></p>
