@@ -526,7 +526,11 @@ http {
     &lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-<p></p>
+<p>Webots headless command:</p>
+<p>webots --no-rendering --stream --batch --port=1234  C:\portable_wcm2025_big\data\Webots_2023b\projects\vehicles\worlds\city.wbt</p>
+<p><span>Since Webots runs in headless mode, the </span><code>--stdout</code><span><span> </span>and<span> </span></span><code>--stderr</code><span><span> </span>arguments are used to redirect these streams from the Webots console to the console in which Webots was started, the<span> </span></span><code>--batch</code><span><span> </span>argument disables any blocking pop-up window and the<span> </span></span><code>--mode=realtime</code><span><span> </span>makes sure that the simulation is not started in pause mode (you may replace<span> </span></span><code>realtime</code><span><span> </span>by<span> </span></span><code>fast</code><span>), finally don't forget to specify which simulation you want to run.</span></p>
+<p><span><a href="https://www.cyberbotics.com/doc/guide/installation-procedure?version=develop#installing-the-docker-image">https://www.cyberbotics.com/doc/guide/installation-procedure?version=develop#installing-the-docker-image</a> </span></p>
+<p><span><a href="https://gist.github.com/cyberang3l/422a77a47bdc15a0824d5cca47e64ba2">https://gist.github.com/cyberang3l/422a77a47bdc15a0824d5cca47e64ba2</a> </span></p>
 <pre class="CodeBlock-module__code--KUcqT" tabindex="0"></pre><h3>Blender</h3>
 <p>Blender: <a href="https://www.blender.org/">https://www.blender.org/</a></p>
 <h1>Hardware</h1>
