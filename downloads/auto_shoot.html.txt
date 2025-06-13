@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Streaming viewer</title>
+    <link rel="icon" type="image/png" href="webots_icon.png">
+    <link type="text/css" rel="stylesheet" href='style.css' />
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background: #222;
+      }
+      header {
+        flex: 0 0 auto;
+        padding: 0;
+        margin: 0;
+        background: #181818;
+        color: #fff;
+        text-align: center;
+      }
+      .title-container {
+        margin: 0;
+        padding: 0.5em 0;
+      }
+      .webots-view-container {
+        flex: 1 1 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        min-height: 0;
+        min-width: 0;
+      }
+      webots-view {
+        width: 100vw;
+        height: 100vh;
+        flex: 1 1 0;
+        display: block;
+        min-width: 0;
+        min-height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="webots-view-container">
+      <webots-view></webots-view>
+    </div>
+    <script type="module" src="./../wwi/WebotsView.js"></script>
+    <script>
+      // 根據當前協定與主機自動組成 wss/ws 路徑
+      const wsProtocol = (window.location.protocol === "https:") ? "wss:" : "ws:";
+      const wsHost = window.location.host;
+      // 注意：此處路徑要跟 nginx location /auto_shoot/  to port 1235一致
+      const defaultIp = wsProtocol + "//" + wsHost + "/auto_shoot/";
+      const defaultStreamingMode = "x3d";
+      const defaultBroadcast = false;
+      const mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const defaultThumbnail = './../wwi/images/loading/default_thumbnail.png';
+
+      // Optional: load mobile CSS if on mobile device
+      if (mobileDevice) {
+        let head = document.getElementsByTagName('head')[0];
+        let mobileCss = document.createElement('link');
+        mobileCss.setAttribute('rel', 'stylesheet');
+        mobileCss.setAttribute('type', 'text/css');
+        mobileCss.setAttribute('href', './../wwi/css/wwi_mobile.css');
+        head.appendChild(mobileCss);
+      }
+
+      // Wait for WebotsView.js to load and custom element to be defined
+      window.addEventListener('DOMContentLoaded', () => {
+        customElements.whenDefined('webots-view').then(() => {
+          const webotsView = document.querySelector('webots-view');
+          webotsView.onready = () => {
+            console.log("Connected to Webots streaming server!");
+          };
+          webotsView.ondisconnect = () => {
+            console.log("Disconnected from Webots streaming server!");
+          };
+          webotsView.connect(defaultIp, defaultStreamingMode, defaultBroadcast, mobileDevice, -1, defaultThumbnail);
+        });
+      });
+    </script>
+  </body>
+</html>

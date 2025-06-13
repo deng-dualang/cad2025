@@ -1,0 +1,236 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li class='has-children'><a href='Mind-Map.html'>Mind-Map</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a></li></li></ul></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li><a href='Web.html'>Web</a></li></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX.html'>NX</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Blender.html'>Blender</a></li></li></ul></ul><li class='has-children'><a href='Hardware.html'>Hardware</a><ul class='dropdown'><li><a href='Printer.html'>Printer</a></li></ul><li><a href='Projects.html'>Projects</a><li><a href='Brython.html'>Brython</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Printer << <a href='Printer.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>Projects</h1>
+<p>利用 NX 繪製 <a href="https://en.wikipedia.org/wiki/Jansen%27s_linkage">Jansen</a> and <a href="https://en.wikipedia.org/wiki/Quick_return_mechanism">Whitworth</a> mechanism 零組件: <a href="./../downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
+<p>利用 <a href="https://www.onshape.com/en/">Onshape</a> 繪製 <a href="https://en.wikipedia.org/wiki/Jansen%27s_linkage">Jansen</a> and <a href="https://en.wikipedia.org/wiki/Quick_return_mechanism">Whitworth</a> mechanism 零組件: <a href="./../downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
+<h4>Jansen</h4>
+<p style="padding-left: 30px;"><a href="https://www.researchgate.net/publication/345650357_Design_and_Linkage_Analysis_of_Theo_Jansen_Mechanism">https://www.researchgate.net/publication/345650357_Design_and_Linkage_Analysis_of_Theo_Jansen_Mechanism</a></p>
+<p style="padding-left: 30px;">CAD 繪製 Jansen's Linkage</p>
+<p style="padding-left: 30px;">轉入 Webots 進行模擬與控制</p>
+<p style="padding-left: 30px;">機構位移、速度與加速度分析</p>
+<p style="padding-left: 30px;">控制運行的 Arduino 程式</p>
+<p style="padding-left: 30px;">左右兩組 Jansen's Mechanical, 帶動隨後的兩輪車</p>
+<p style="padding-left: 30px;">Webots 的 Python Controller</p>
+<p style="padding-left: 30px;">extern 模式下的控制程式</p>
+<p style="padding-left: 30px;">控制虛擬場景</p>
+<p style="padding-left: 30px;">控制實體機電系統</p>
+<p style="padding-left: 30px;">Reference:</p>
+<p style="padding-left: 30px;"><a href="https://youtu.be/3HTDuWJHADY">https://youtu.be/3HTDuWJHADY</a></p>
+<p>利用 Solvespae、NX 與 Onshape 建立下列的五軸機械臂零組件</p>
+<h4>Linkages</h4>
+<p style="padding-left: 30px;"><a href="https://blog.rectorsquid.com/linkage-mechanism-designer-and-simulator/">https://blog.rectorsquid.com/linkage-mechanism-designer-and-simulator/</a> </p>
+<p style="padding-left: 30px;">5-bar</p>
+<p style="padding-left: 30px;"><a href="./../downloads/fivebar_parallel_linkage.7z">fivebar_parallel_linkage.7z</a> (in Solidworks and NX2312)</p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/5-Bar-Parallel-Robot-Kinematics-Simulation">https://github.com/mdecycu/5-Bar-Parallel-Robot-Kinematics-Simulation</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/parallel-five-bar-robot">https://github.com/mdecycu/parallel-five-bar-robot</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/five_bar_linkage">https://github.com/mdecycu/five_bar_linkage</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/FrostBot">https://github.com/mdecycu/FrostBot</a></p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/Robot-Sketcher-5-bar-parallel-manipulator-">https://github.com/mdecycu/Robot-Sketcher-5-bar-parallel-manipulator-</a> </p>
+<p style="padding-left: 30px;"><a href="https://www.researchgate.net/publication/277299749_User's_manual_for_the_DexTAR_five-bar_parallel_robot">https://www.researchgate.net/publication/277299749_User's_manual_for_the_DexTAR_five-bar_parallel_robot</a></p>
+<p style="padding-left: 30px;"><a href="https://www.mathworks.com/help/sm/ug/five-bar-robot.html">https://www.mathworks.com/help/sm/ug/five-bar-robot.html</a></p>
+<p style="padding-left: 30px;"><a href="https://www.mdpi.com/2075-1702/10/11/971">Optimal Design of a Five-Bar Planar Manipulator and Its Controller by Using Different Algorithms for Minimum Shaking Forces and Moments for the Largest Trajectory in a Usable Workspace </a></p>
+<p style="padding-left: 30px;"><a href="https://www.sciencedirect.com/science/article/pii/S0736584512001214">Kinematic calibration of a five-bar planar parallel robot using all working modes</a></p>
+<p style="padding-left: 30px;"><a href="https://ieeexplore.ieee.org/document/9330526">Concurrent Design of a 2 Dof Five-Bar Parallel Robot a Hybrid Design of Rigid and Flexible Links</a></p>
+<p style="padding-left: 30px;"><a href="./../downloads/Kinematic Analysis of Five-Bar Mechanism.pdf">Kinematic Analysis of Five-Bar Mechanism.pdf</a></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/dvi_3OcbsCI?si=uViJq3nPdyN4Jkda" title="YouTube video player" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cPmnAHVEEYM?si=1qf8mlXzjz7RzdqQ" title="YouTube video player" width="560"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yubS3_OUhQs?si=QGv55rstovztoQm2" title="YouTube video player" width="560"></iframe></p>
+<p><a href="https://link.springer.com/chapter/10.1007/978-3-319-98020-1_28">Kinematic Design of Five-Bar Parallel Robot by Kinematically Defined Performance Index for Energy Consumption</a></p>
+<p><a href="https://github.com/Phylliade/ikpy">https://github.com/Phylliade/ikpy</a> </p>
+<p><a href="https://hackaday.io/project/173325-educational-five-bar-parallel-robot">https://hackaday.io/project/173325-educational-five-bar-parallel-robot</a></p>
+<h4>Robotics</h4>
+<p><a href="https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots">https://github.com/Introduction-to-Autonomous-Robots/Introduction-to-Autonomous-Robots</a> </p>
+<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div>
+<br />Printer << <a href='Printer.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
