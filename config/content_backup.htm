@@ -3,6 +3,8 @@
 <p>Web: <a href="https://mde.tw/cad2025">https://mde.tw/cad2025</a></p>
 <p>可攜程式套件:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
+<p style="padding-left: 30px;">NX2312_CAD_CAE.7z (2.9GB)</p>
+<p style="padding-left: 30px;">NX2312_full.7z (</p>
 <p>課程評分:</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">出席 (30%)</span> - MS Teams 線上參與, 每週填具心得表單</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (30%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得</p>
@@ -15,10 +17,16 @@
 <p>2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w11 11/21 全校運動會)</p>
 <p>2b 上課時段: 每週二 09:10 - 12:00</p>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei"> 全頁檢視 </a></p>
-<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
-<h2>Mind-Map</h2>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Mind-Map</h2>
 <p><object data="/images/cad2025.svg" height="817" type="image/svg+xml" width="670"></object></p>
-<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p><h3>Fourbar</h3>
+<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p><h2>Commands</h2>
+<p>Allow ping ICMPv4 powershell:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
+New-NetFirewallRule -Name "Allow ICMPv4-In" -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow</pre>
+<p>ICMPv6:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv6 Echo Request (ping)
+New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Protocol ICMPv6 -IcmpType 128 -Direction Inbound -Action Allow</pre>
+<p>允許 ICMP/ICMPv6 的安全性考量<br/><br/>ICMP（包括 ICMPv6）不只是用於 ping，它對許多網路功能來說都是必要的，尤其是在 IPv6 環境下。不過，開放 ICMP/ICMPv6 仍然會帶來一些安全性疑慮：<br/><br/>對於 IPv4（ICMP）：<br/><br/>- 攻擊者可以利用 ICMP 進行：<br/>    - 偵查：發現存活主機（ping 掃描）。<br/>    - 淹水攻擊：ICMP flood（阻斷服務攻擊）。<br/>    - 網路映射：例如透過 traceroute 等工具。<br/>- 緩解方式：通常會限制 ICMP 類型（如僅允許 Echo Request/Reply），或限制來源 IP，或進行流量速率限制。<br/><br/>對於 IPv6（ICMPv6）：<br/><br/>- ICMPv6 對於 IPv6 的運作至關重要！<br/>    - 它支援鄰居探索、路徑 MTU 探查，以及位址自動設定。<br/>    - 若封鎖 ICMPv6，可能會導致 IPv6 無法正常運作，因為路由器與主機都仰賴 ICMPv6 完成這些基本功能。<br/>- 安全性疑慮：<br/>    - 偵查：攻擊者仍可發現 IPv6 主機與網段。<br/>    - 潛在濫用：例如 ICMPv6 flood，或偽造鄰居請求（Neighbor Solicitation spoofing）。<br/>- 緩解方式：<br/>    - 不要完全封鎖 ICMPv6，而是只允許必要的訊息類型（如 128/129 為 Echo、133-136 為鄰居探索等）。<br/>    - 考慮使用流量速率限制與監控。<br/>    - 檢查防火牆的預設規則——Windows 及現代防火牆通常對 ICMPv6 已有安全的預設值。<br/><br/><br/></p><h3>Fourbar</h3>
 <p><object data="/images/fourbar.svg" height="2126" type="image/svg+xml" width="3168"></object></p>
 <p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/fourbar.smm">Edit fourbar.smm</a></p><h1>Network</h1>
 <p>這裡所指的 Network 是 Computer Network，電腦網路可說是目前電腦輔助設計流程的基礎設施，許多輔助設計的軟體透過電腦網路執行認證、協同設計或及時擷取資源。因此進行電腦輔助設計流程之前，必須對所依附使用的電腦網路系統與架構有所了解。</p>
@@ -69,7 +77,8 @@
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
 <p><a href="https://www.slideshare.net/slideshow/tpwebots7mai2021pdf/259157378">https://www.slideshare.net/slideshow/tpwebots7mai2021pdf/259157378</a> </p>
 <p><a href="https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html">https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html</a> </p>
-<p><a href="https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/">https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/</a> </p><h3>TimeStep</h3>
+<p><a href="https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/">https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/</a> </p>
+<p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p><h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>
