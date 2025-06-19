@@ -22,18 +22,45 @@
 <p style="padding-left: 30px;">2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w11 11/21 全校運動會)</p>
 <p style="padding-left: 30px;">2b 上課時段: 每週二 09:10 - 12:00</p>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei"> 全頁檢視 </a></p>
-<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Mind-Map</h2>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
+<h2>Mind-Map</h2>
 <p><object data="/images/cad2025.svg" height="817" type="image/svg+xml" width="670"></object></p>
-<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p><h2>Commands</h2>
+<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p>
+<h2>Commands</h2>
 <p>Allow ping ICMPv4 powershell:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
 New-NetFirewallRule -Name "Allow ICMPv4-In" -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow</pre>
 <p>ICMPv6:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv6 Echo Request (ping)
 New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Protocol ICMPv6 -IcmpType 128 -Direction Inbound -Action Allow</pre>
-<p>允許 ICMP/ICMPv6 的安全性考量<br/><br/>ICMP（包括 ICMPv6）不只是用於 ping，它對許多網路功能來說都是必要的，尤其是在 IPv6 環境下。不過，開放 ICMP/ICMPv6 仍然會帶來一些安全性疑慮：<br/><br/>對於 IPv4（ICMP）：<br/><br/>- 攻擊者可以利用 ICMP 進行：<br/>    - 偵查：發現存活主機（ping 掃描）。<br/>    - 淹水攻擊：ICMP flood（阻斷服務攻擊）。<br/>    - 網路映射：例如透過 traceroute 等工具。<br/>- 緩解方式：通常會限制 ICMP 類型（如僅允許 Echo Request/Reply），或限制來源 IP，或進行流量速率限制。<br/><br/>對於 IPv6（ICMPv6）：<br/><br/>- ICMPv6 對於 IPv6 的運作至關重要！<br/>    - 它支援鄰居探索、路徑 MTU 探查，以及位址自動設定。<br/>    - 若封鎖 ICMPv6，可能會導致 IPv6 無法正常運作，因為路由器與主機都仰賴 ICMPv6 完成這些基本功能。<br/>- 安全性疑慮：<br/>    - 偵查：攻擊者仍可發現 IPv6 主機與網段。<br/>    - 潛在濫用：例如 ICMPv6 flood，或偽造鄰居請求（Neighbor Solicitation spoofing）。<br/>- 緩解方式：<br/>    - 不要完全封鎖 ICMPv6，而是只允許必要的訊息類型（如 128/129 為 Echo、133-136 為鄰居探索等）。<br/>    - 考慮使用流量速率限制與監控。<br/>    - 檢查防火牆的預設規則——Windows 及現代防火牆通常對 ICMPv6 已有安全的預設值。<br/><br/><br/></p><h3>Fourbar</h3>
+<p>允許 ICMP/ICMPv6 的安全性考量<br/><br/>ICMP（包括 ICMPv6）不只是用於 ping，它對許多網路功能來說都是必要的，尤其是在 IPv6 環境下。不過，開放 ICMP/ICMPv6 仍然會帶來一些安全性疑慮：<br/><br/>對於 IPv4（ICMP）：<br/><br/>- 攻擊者可以利用 ICMP 進行：<br/>    - 偵查：發現存活主機（ping 掃描）。<br/>    - 淹水攻擊：ICMP flood（阻斷服務攻擊）。<br/>    - 網路映射：例如透過 traceroute 等工具。<br/>- 緩解方式：通常會限制 ICMP 類型（如僅允許 Echo Request/Reply），或限制來源 IP，或進行流量速率限制。<br/><br/>對於 IPv6（ICMPv6）：<br/><br/>- ICMPv6 對於 IPv6 的運作至關重要！<br/>    - 它支援鄰居探索、路徑 MTU 探查，以及位址自動設定。<br/>    - 若封鎖 ICMPv6，可能會導致 IPv6 無法正常運作，因為路由器與主機都仰賴 ICMPv6 完成這些基本功能。<br/>- 安全性疑慮：<br/>    - 偵查：攻擊者仍可發現 IPv6 主機與網段。<br/>    - 潛在濫用：例如 ICMPv6 flood，或偽造鄰居請求（Neighbor Solicitation spoofing）。<br/>- 緩解方式：<br/>    - 不要完全封鎖 ICMPv6，而是只允許必要的訊息類型（如 128/129 為 Echo、133-136 為鄰居探索等）。<br/>    - 考慮使用流量速率限制與監控。<br/>    - 檢查防火牆的預設規則——Windows 及現代防火牆通常對 ICMPv6 已有安全的預設值。<br/><br/><br/></p>
+<h3>Fourbar</h3>
 <p><object data="/images/fourbar.svg" height="2126" type="image/svg+xml" width="3168"></object></p>
-<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/fourbar.smm">Edit fourbar.smm</a></p><h1>Network</h1>
+<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/fourbar.smm">Edit fourbar.smm</a></p>
+<h1>Topics</h1>
+<p>下載可攜程式套件:</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a> (含 git、Python、Solvespace、Webots 與 Blender)</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_CAD_CAE.7z">NX2312_CAD_CAE.7z</a> (2.9GB)</p>
+<p>複習如何開啟可攜套件、關閉可攜套件</p>
+<p style="padding-left: 30px;">利用 Python 執行設計運算、組立件分割、控制機電系統並維護倉儲與網站內容</p>
+<p>如何開啟 Solvespace、NX2312、Webots 與 Blender</p>
+<p style="padding-left: 30px;">利用 Solvespace 與 NX2312 進行零組件繪圖</p>
+<p style="padding-left: 30px;">利用 Webots 建立機電模擬系統</p>
+<p style="padding-left: 30px;">利用 Blender 檢視組立件分割結果</p>
+<p>Github Classroom 上的分組網站: <a href="https://github.com/mdecad2025">https://github.com/mdecad2025</a> </p>
+<p style="padding-left: 30px;">各組組長建立 Github Classroom 分組團隊，取得分組倉儲 </p>
+<p>利用 Git 與 Github 進行協同設計</p>
+<p style="padding-left: 30px;">各組員維護分組倉儲中的分支，進行協同設計</p>
+<p style="padding-left: 30px;">熟悉 Pull Requests 或各組員開發分支與主分支的合併</p>
+<p>平面四連桿機構零組件繪圖</p>
+<p style="padding-left: 30px;">Solvespace、NX2312 與 Onshape 的操作應用</p>
+<p>Webots 四連桿機構設計與模擬</p>
+<p style="padding-left: 30px;">零組件的 STL 與 OBJ 格式轉檔</p>
+<p style="padding-left: 30px;">Blender 的零組件檢視應用</p>
+<p style="padding-left: 30px;">Robot、Solid、Shape、CadShape、HingeJoint 與 device 節點的應用</p>
+<p style="padding-left: 30px;">Python Controller 程式的應用</p>
+<p>Webots 五連桿繪圖系統設計與模擬</p>
+<p>Webots 八連桿行走機構系統設計與模擬</p><h1>Network</h1>
 <p>這裡所指的 Network 是 Computer Network，電腦網路可說是目前電腦輔助設計流程的基礎設施，許多輔助設計的軟體透過電腦網路執行認證、協同設計或及時擷取資源。因此進行電腦輔助設計流程之前，必須對所依附使用的電腦網路系統與架構有所了解。</p>
 <p><a href="https://en.wikipedia.org/wiki/Computer_network">Computer Network</a>:</p>
 <p>A<span> </span><b>computer network</b><span> </span>is a collection of communicating<span> </span><a href="https://en.wikipedia.org/wiki/Computer" title="Computer">computers</a><span> </span>and other devices, such as printers and smart phones. In order to communicate, the computers and devices must be connected by wired media like copper cables,<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Optical_fibers" title="Optical fibers">optical fibers</a>, or by<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Wireless_communication" title="Wireless communication">wireless communication</a>. The devices may be connected in a variety of<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Network_topologies" title="Network topologies">network topologies</a>. In order to communicate over the network, computers use agreed-on rules, called<span> </span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communication protocols</a>, over whatever medium is used.</p>
@@ -41,14 +68,17 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p></p><h2>IPv6</h2>
 <p>IPv6 網路協定是用來解決 IPv4 網路不敷使用的問題而產生。但是目前許多伺服器尚未全面支援 IPv6 網路協定，其原因很多，其中包括使用者欠缺對於 IPv6 網路協定的認識，或者因為伺服器上的用戶程式並未做好支援 IPv6 的準備。無論如何當決定在電腦輔助設計流程使用 IPv6 網路協定後，必須設法因應各種問題，讓採純 IPv6 網路協定設計的環境能夠連線至各個伺服器。</p>
 <p><a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a>: </p>
-<p><b>Internet Protocol version 6</b><span><span> </span>(</span><b>IPv6</b><span>) is the most recent version of the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a><span><span> </span>(IP), the<span> </span></span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communications protocol</a><span><span> </span>that provides an identification and location system for computers on networks and routes traffic across the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a><span>. IPv6 was developed by the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a><span><span> </span>(IETF) to deal with the long-anticipated problem of<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4_address_exhaustion" title="IPv4 address exhaustion">IPv4 address exhaustion</a><span>, and was intended to replace<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4" title="IPv4">IPv4</a><span>.</span><span><span> </span>In December 1998, IPv6 became a Draft Standard for the IETF,</span><span><span> </span>which subsequently ratified it as an<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Standard" title="Internet Standard">Internet Standard</a><span><span> </span>on 14 July 2017.</span></p><h2>DNS</h2>
+<p><b>Internet Protocol version 6</b><span><span> </span>(</span><b>IPv6</b><span>) is the most recent version of the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a><span><span> </span>(IP), the<span> </span></span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communications protocol</a><span><span> </span>that provides an identification and location system for computers on networks and routes traffic across the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a><span>. IPv6 was developed by the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a><span><span> </span>(IETF) to deal with the long-anticipated problem of<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4_address_exhaustion" title="IPv4 address exhaustion">IPv4 address exhaustion</a><span>, and was intended to replace<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4" title="IPv4">IPv4</a><span>.</span><span><span> </span>In December 1998, IPv6 became a Draft Standard for the IETF,</span><span><span> </span>which subsequently ratified it as an<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Standard" title="Internet Standard">Internet Standard</a><span><span> </span>on 14 July 2017.</span></p>
+<h2>DNS</h2>
 <p>DNS 指的是 <a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name System</a>:</p>
-<p><span>The </span><b>Domain Name System</b><span><span> </span>(</span><b>DNS</b><span>) is a hierarchical and distributed<span> </span></span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Name_service" title="Name service">name service</a><span><span> </span>that provides a naming system for<span> </span></span><a href="https://en.wikipedia.org/wiki/Computer" title="Computer">computers</a><span>, services, and other resources on the Internet or other<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a><span><span> </span>(IP) networks. It associates various information with<span> </span></span><i><a href="https://en.wikipedia.org/wiki/Domain_name" title="">domain names</a></i><span><span> </span>(</span><a href="https://en.wikipedia.org/wiki/Identification_(information)" title="Identification (information)">identification</a><span><span> </span></span><a href="https://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a><span>) assigned to each of the associated entities. Most prominently, it translates readily memorized domain names to the numerical<span> </span></span><a href="https://en.wikipedia.org/wiki/IP_address" title="IP address">IP addresses</a><span><span> </span>needed for locating and identifying computer services and devices with the underlying<span> </span></span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Network_protocol" title="Network protocol">network protocols</a><span>.</span><sup class="reference" id="cite_ref-1"><a href="https://en.wikipedia.org/wiki/Domain_Name_System#cite_note-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup><span><span> </span>The Domain Name System has been an essential component of the functionality of the Internet since 1985.</span></p><h2>Proxy</h2>
+<p><span>The </span><b>Domain Name System</b><span><span> </span>(</span><b>DNS</b><span>) is a hierarchical and distributed<span> </span></span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Name_service" title="Name service">name service</a><span><span> </span>that provides a naming system for<span> </span></span><a href="https://en.wikipedia.org/wiki/Computer" title="Computer">computers</a><span>, services, and other resources on the Internet or other<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a><span><span> </span>(IP) networks. It associates various information with<span> </span></span><i><a href="https://en.wikipedia.org/wiki/Domain_name" title="">domain names</a></i><span><span> </span>(</span><a href="https://en.wikipedia.org/wiki/Identification_(information)" title="Identification (information)">identification</a><span><span> </span></span><a href="https://en.wikipedia.org/wiki/String_(computer_science)" title="String (computer science)">strings</a><span>) assigned to each of the associated entities. Most prominently, it translates readily memorized domain names to the numerical<span> </span></span><a href="https://en.wikipedia.org/wiki/IP_address" title="IP address">IP addresses</a><span><span> </span>needed for locating and identifying computer services and devices with the underlying<span> </span></span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Network_protocol" title="Network protocol">network protocols</a><span>.</span><sup class="reference" id="cite_ref-1"><a href="https://en.wikipedia.org/wiki/Domain_Name_System#cite_note-1"><span class="cite-bracket">[</span>1<span class="cite-bracket">]</span></a></sup><span><span> </span>The Domain Name System has been an essential component of the functionality of the Internet since 1985.</span></p>
+<h2>Proxy</h2>
 <h2>Web</h2>
 <h3>Codespaces</h3>
 <p><a href="https://github.com/codespaces">https://github.com/codespaces</a> </p>
 <h3>Replit</h3>
-<p><a href="https://replit.com">https://replit.com</a> </p><h1>Software</h1>
+<p><a href="https://replit.com">https://replit.com</a> </p>
+<h1>Software</h1>
 <p>這裡的 Software 指的是電腦軟體，執行電腦輔助設計時會接觸電腦操作系統、電腦輔助設計套件以及全球資訊網相關的各種應用軟體。</p>
 <p><a href="https://en.wikipedia.org/wiki/Software">Software</a>:</p>
 <p>The history of software is closely tied to the development of digital computers in the mid-20th century. Early programs were written in the<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Machine_language" title="Machine language">machine language</a><span> </span>specific to the hardware. The introduction of<span> </span><a href="https://en.wikipedia.org/wiki/High-level_programming_language" title="">high-level programming languages</a><span> </span>in 1958 allowed for more human-readable instructions, making<span> </span><a href="https://en.wikipedia.org/wiki/Software_development" title="Software development">software development</a><span> </span>easier and more portable across different<span> </span><a href="https://en.wikipedia.org/wiki/Computer_architecture" title="Computer architecture">computer architectures</a>. Software in a programming language is run through a<span> </span><a href="https://en.wikipedia.org/wiki/Compiler" title="Compiler">compiler</a><span> </span>or<span> </span><a href="https://en.wikipedia.org/wiki/Interpreter_(computing)" title="Interpreter (computing)">interpreter</a><span> </span>to<span> </span><a href="https://en.wikipedia.org/wiki/Execution_(computing)" title="Execution (computing)">execute</a><span> </span>on the architecture's hardware. Over time, software has become complex, owing to developments in<span> </span><a href="https://en.wikipedia.org/wiki/Computer_network" title="Computer network">networking</a>,<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Operating_systems" title="Operating systems">operating systems</a>, and<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Databases" title="Databases">databases</a>.</p>
@@ -59,10 +89,13 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 </ol>
 <p>The rise of<span> </span><a href="https://en.wikipedia.org/wiki/Cloud_computing" title="Cloud computing">cloud computing</a><span> </span>has introduced the new software delivery model<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Software_as_a_Service" title="Software as a Service">Software as a Service</a><span> </span>(SaaS). In SaaS, applications are hosted by a<span> </span><a href="https://en.wikipedia.org/wiki/Application_service_provider" title="Application service provider">provider</a><span> </span>and<span> </span><a href="https://en.wikipedia.org/wiki/HTTP" title="HTTP">accessed</a><span> </span>over the<span> </span><a href="https://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a>.</p>
 <p>The process of developing software involves several stages. The stages include<span> </span><a href="https://en.wikipedia.org/wiki/Software_design" title="Software design">software design</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Computer_programming" title="Computer programming">programming</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Software_testing" title="Software testing">testing</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Software_release_life_cycle" title="Software release life cycle">release</a>, and<span> </span><a href="https://en.wikipedia.org/wiki/Software_maintenance" title="Software maintenance">maintenance</a>.<span> </span><a href="https://en.wikipedia.org/wiki/Software_quality_assurance" title="Software quality assurance">Software quality assurance</a><span> </span>and<span> </span><a href="https://en.wikipedia.org/wiki/Information_security" title="Information security">security</a><span> </span>are critical aspects of software development, as<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Computer_bug" title="Computer bug">bugs</a><span> </span>and<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Vulnerability_(computing)" title="Vulnerability (computing)">security vulnerabilities</a><span> </span>can lead to system failures and security breaches. Additionally, legal issues such as software licenses and intellectual property rights play a significant role in the distribution of software products.</p>
-<p></p><h2>Git</h2>
+<p></p>
+<h2>Git</h2>
 <p>Git and Github</p>
 <p>電腦輔助機械設計流程:</p>
-<p style="padding-left: 30px;">每三位學員一組，請自選套件協同完成平面<a href="https://en.wikipedia.org/wiki/Four-bar_linkage">四連桿機構</a>的零組件設計繪圖。完成後請詳細說明設計與繪圖過程。</p><h2>CMSiMDE</h2><h3>Flask</h3>
+<p style="padding-left: 30px;">每三位學員一組，請自選套件協同完成平面<a href="https://en.wikipedia.org/wiki/Four-bar_linkage">四連桿機構</a>的零組件設計繪圖。完成後請詳細說明設計與繪圖過程。</p>
+<h2>CMSiMDE</h2>
+<h3>Flask</h3>
 <h2>Solvespace</h2>
 <p>Solvespace: <a href="https://solvespace.com">https://solvespace.com</a></p>
 <p><a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
@@ -71,7 +104,8 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <h2>NX2312</h2>
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
-<p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p><h3>License</h3>
+<p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
+<h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開援軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
@@ -79,14 +113,16 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p><a href="https://support.sdasoftware.com/portal/en/kb/articles/siemens-license-server-installation-and-setup">https://support.sdasoftware.com/portal/en/kb/articles/siemens-license-server-installation-and-setup</a> </p>
 <p>NX2212 之後的認證伺服器變更: <a href="https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html">https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html</a> </p>
 <p>一旦全面 SaaS 化之後的 Siemens Nx，客戶端的使用認證將不再依賴近端的認證伺服器。</p>
-<p style="padding-left: 30px;">SaaS 之後的 Siemens NX X: <a href="https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/">https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/</a> </p><h2>Onshape</h2>
+<p style="padding-left: 30px;">SaaS 之後的 Siemens NX X: <a href="https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/">https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/</a> </p>
+<h2>Onshape</h2>
 <p>OnShape: <a href="https://www.onshape.com/en/">https://www.onshape.com/en/</a></p>
 <h2>Webots</h2>
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
 <p><a href="https://www.slideshare.net/slideshow/tpwebots7mai2021pdf/259157378">https://www.slideshare.net/slideshow/tpwebots7mai2021pdf/259157378</a> </p>
 <p><a href="https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html">https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html</a> </p>
 <p><a href="https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/">https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/</a> </p>
-<p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p><h3>TimeStep</h3>
+<p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p>
+<h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>
@@ -720,20 +756,16 @@ start webots.exe --no-rendering --minimize --stream --stdout --stderr --batch --
 
 
 Exit
-</pre><h3>Talks</h3>
+</pre>
+<h3>Talks</h3>
 <p><a href="https://www.theconstruct.ai/webots-robot-simulator-ros-olivier-michel/">https://www.theconstruct.ai/webots-robot-simulator-ros-olivier-michel/</a> </p>
 <h3>Blender</h3>
 <p>Blender: <a href="https://www.blender.org/">https://www.blender.org/</a></p>
-<p><a href="https://github.com/cyberbotics/blender-webots-exporter">https://github.com/cyberbotics/blender-webots-exporter</a> </p><h3>Ardupilot</h3>
+<p><a href="https://github.com/cyberbotics/blender-webots-exporter">https://github.com/cyberbotics/blender-webots-exporter</a> </p>
+<h3>Ardupilot</h3>
 <p><a href="https://ardupilot.org/dev/docs/sitl-with-webots-cpp.html">https://ardupilot.org/dev/docs/sitl-with-webots-cpp.html</a> </p>
 <p><a href="https://ardupilot.org/rover/index.html">https://ardupilot.org/rover/index.html</a> </p>
-<p></p><h1>Hardware</h1>
-<p><a href="https://link.springer.com/book/10.1007/978-1-4842-9600-4">Essentials of Arduino Boards Programming</a> (電子書)  </p><h2>Printer</h2>
-<p>這裡所指的 Printer 是 3D 列印機。</p>
-<p><a href="https://en.wikipedia.org/wiki/3D_printing">3D Printing</a>:</p>
-<p><b>3D printing</b>, or<span> </span><b>additive manufacturing</b>, is the<span> </span><a href="https://en.wikipedia.org/wiki/Manufacturing" title="Manufacturing">construction</a><span> </span>of a<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Three-dimensional_object" title="Three-dimensional object">three-dimensional object</a><span> </span>from a<span> </span><a href="https://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">CAD</a><span> </span>model or a digital<span> </span><a href="https://en.wikipedia.org/wiki/3D_modeling" title="3D modeling">3D model</a>.<span> </span>It can be done in a variety of processes in which material is deposited, joined or solidified under<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Computer_Numerical_Control" title="Computer Numerical Control">computer control</a>,<span> </span>with the material being added together (such as plastics, liquids or powder grains being fused), typically layer by layer.</p>
-<p>In the 1980s, 3D printing techniques were considered suitable only for the production of functional or aesthetic prototypes, and a more appropriate term for it at the time was<span> </span><a href="https://en.wikipedia.org/wiki/Rapid_prototyping" title="Rapid prototyping">rapid prototyping</a>.<span> </span>As of 2019, the precision, repeatability, and material range of 3D printing have increased to the point that some 3D printing processes are considered viable as an industrial-production technology; in this context, the term<span> </span><i>additive manufacturing</i><span> </span>can be used synonymously with<span> </span><i>3D printing</i>.One of the key advantages of 3D printing<span> </span>is the ability to produce very complex shapes or geometries that would be otherwise infeasible to construct by hand, including hollow parts or parts with internal<span> </span><a href="https://en.wikipedia.org/wiki/Truss" title="Truss">truss</a><span> </span>structures to reduce weight while creating less material waste.<span> </span><a href="https://en.wikipedia.org/wiki/Fused_filament_fabrication#Fused_deposition_modeling" title="Fused filament fabrication">Fused deposition modeling</a><span> </span>(FDM), which uses a continuous filament of a<span> </span><a href="https://en.wikipedia.org/wiki/Thermoplastic" title="Thermoplastic">thermoplastic</a><span> </span>material, is the most common 3D printing process in use as of 2020.</p>
-<p></p><h1>Projects</h1>
+<h1>Projects</h1>
 <p>利用 NX 繪製 <a href="https://en.wikipedia.org/wiki/Jansen%27s_linkage">Jansen</a> and <a href="https://en.wikipedia.org/wiki/Quick_return_mechanism">Whitworth</a> mechanism 零組件: <a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
 <p>利用 <a href="https://www.onshape.com/en/">Onshape</a> 繪製 <a href="https://en.wikipedia.org/wiki/Jansen%27s_linkage">Jansen</a> and <a href="https://en.wikipedia.org/wiki/Quick_return_mechanism">Whitworth</a> mechanism 零組件: <a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
 <h4>Jansen</h4>
@@ -781,7 +813,16 @@ Exit
 <p><a href="https://github.com/lukicdarkoo/webots-example-visual-tracking">https://github.com/lukicdarkoo/webots-example-visual-tracking</a></p>
 <h4>New Python API (<a href="https://github.com/cyberbotics/webots/pull/3801">Pull Request</a>)</h4>
 <p><a href="https://proceedings.scipy.org/articles/majora-212e5952-016.pdf">https://proceedings.scipy.org/articles/majora-212e5952-016.pdf</a> </p>
-<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div><h1>Brython</h1>
+<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;">
+<h2>Hardware</h2>
+<p><a href="https://link.springer.com/book/10.1007/978-1-4842-9600-4">Essentials of Arduino Boards Programming</a> (電子書)  </p>
+<h2>Printer</h2>
+<p>這裡所指的 Printer 是 3D 列印機。</p>
+<p><a href="https://en.wikipedia.org/wiki/3D_printing">3D Printing</a>:</p>
+<p><b>3D printing</b>, or<span> </span><b>additive manufacturing</b>, is the<span> </span><a href="https://en.wikipedia.org/wiki/Manufacturing" title="Manufacturing">construction</a><span> </span>of a<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Three-dimensional_object" title="Three-dimensional object">three-dimensional object</a><span> </span>from a<span> </span><a href="https://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">CAD</a><span> </span>model or a digital<span> </span><a href="https://en.wikipedia.org/wiki/3D_modeling" title="3D modeling">3D model</a>.<span> </span>It can be done in a variety of processes in which material is deposited, joined or solidified under<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Computer_Numerical_Control" title="Computer Numerical Control">computer control</a>,<span> </span>with the material being added together (such as plastics, liquids or powder grains being fused), typically layer by layer.</p>
+<p>In the 1980s, 3D printing techniques were considered suitable only for the production of functional or aesthetic prototypes, and a more appropriate term for it at the time was<span> </span><a href="https://en.wikipedia.org/wiki/Rapid_prototyping" title="Rapid prototyping">rapid prototyping</a>.<span> </span>As of 2019, the precision, repeatability, and material range of 3D printing have increased to the point that some 3D printing processes are considered viable as an industrial-production technology; in this context, the term<span> </span><i>additive manufacturing</i><span> </span>can be used synonymously with<span> </span><i>3D printing</i>.One of the key advantages of 3D printing<span> </span>is the ability to produce very complex shapes or geometries that would be otherwise infeasible to construct by hand, including hollow parts or parts with internal<span> </span><a href="https://en.wikipedia.org/wiki/Truss" title="Truss">truss</a><span> </span>structures to reduce weight while creating less material waste.<span> </span><a href="https://en.wikipedia.org/wiki/Fused_filament_fabrication#Fused_deposition_modeling" title="Fused filament fabrication">Fused deposition modeling</a><span> </span>(FDM), which uses a continuous filament of a<span> </span><a href="https://en.wikipedia.org/wiki/Thermoplastic" title="Thermoplastic">thermoplastic</a><span> </span>material, is the most common 3D printing process in use as of 2020.</p>
+</div>
+<h1>Brython</h1>
 <p><button id="add1to100">1 add to 100</button></p>
 <p><span node="[object Object]"><!-- 導入 brython 程式庫 --></span></p>
 <p>
