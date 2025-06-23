@@ -5,6 +5,7 @@
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_CAD_CAE.7z">NX2312_CAD_CAE.7z</a> (2.9GB)</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_full_portable.7z">NX2312_full_portable.7z</a> (9.4GB)</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a></p>
 <p>Teams 線上教學:</p>
 <p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
 <p style="padding-left: 30px;">MS Teams 團隊代碼: wpv2s7j</p>
@@ -128,7 +129,15 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
 <p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
-<h3>License</h3>
+<p>在自己的電腦上，以可攜方式執行 NX2312:</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_CAD_CAE.7z">NX2312_CAD_CAE.7z</a> (2.9GB)</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a></p>
+<p style="padding-left: 30px;">下載上列三個檔案後，先解開可攜程式套件後，將 NX2312 解開至可攜套件 data 目錄下，將目錄名稱命名為 NX，再安裝 MS VC 可轉散發套件。    </p>
+<p style="padding-left: 30px;">接著以 start_2023b.bat 開啟可攜套件後，置入 NX2312 的認證授權設定後，在命令列視窗中，以 ugraf.exe -nx 開啟 NX。</p>
+<p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
+<p style="padding-left: 30px;">修改 start_2023b.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
+<p></p><h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開援軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
@@ -145,7 +154,9 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p><a href="https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html">https://introduction-to-autonomous-robots.github.io/lab-manipulation-introduction.html</a> </p>
 <p><a href="https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/">https://www.instructables.com/Vacuum-Cleaner-Robot-in-Webots/</a> </p>
 <p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p>
-<h3>TimeStep</h3>
+<p>在自己的電腦上，以可攜方式執行 Webots:</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
+<p style="padding-left: 30px;">下載後，解開可攜程式套件後，以 start_2023b.bat 開啟可攜套件，在命令列視窗中輸入 webotsw 開啟 Webots。</p><h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>

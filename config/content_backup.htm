@@ -5,7 +5,10 @@
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_CAD_CAE.7z">NX2312_CAD_CAE.7z</a> (2.9GB)</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_full_portable.7z">NX2312_full_portable.7z</a> (9.4GB)</p>
-<p>MS Teams 團隊代碼: wpv2s7j</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a></p>
+<p>Teams 線上教學:</p>
+<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
+<p style="padding-left: 30px;">MS Teams 團隊代碼: wpv2s7j</p>
 <p>課程評分:</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">課程參與 (60%)</span> - MS Teams 線上參與，6人一組每三週發表學習心得。</p>
 <p style="padding-left: 60px;">w3、w7、w10、w14、w17、w18</p>
@@ -29,8 +32,7 @@
 <p style="padding-left: 30px;">2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w11 11/21 全校運動會)</p>
 <p style="padding-left: 30px;">2b 上課時段: 每週二 09:10 - 12:00</p>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei"> 全頁檢視 </a></p>
-<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
-<h2>Mind-Map</h2>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Mind-Map</h2>
 <p><object data="/images/cad2025.svg" height="817" type="image/svg+xml" width="670"></object></p>
 <p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p>
 <h2>Commands</h2>
@@ -127,7 +129,15 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
 <p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
-<h3>License</h3>
+<p>在自己的電腦上，以可攜方式執行 NX2312:</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_wcm2025_w10.7z">portable_wcm2025_w10.7z</a></p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/NX2312_CAD_CAE.7z">NX2312_CAD_CAE.7z</a> (2.9GB)</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a></p>
+<p style="padding-left: 30px;">下載上列三個檔案後，先解開可攜程式套件後，將 NX2312 解開至可攜套件 data 目錄下，將目錄名稱命名為 NX，再安裝 MS VC 可轉散發套件。    </p>
+<p style="padding-left: 30px;">接著以 start_2023b.bat 開啟可攜套件後，置入 NX2312 的認證授權設定後，在命令列視窗中，以 ugraf.exe -nx 開啟 NX。</p>
+<p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
+<p style="padding-left: 30px;">修改 start_2023b.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
+<p></p><h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開援軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
