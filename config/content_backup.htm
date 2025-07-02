@@ -113,6 +113,7 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p></p><h2>HW3</h2>
 <p>一個五連桿平面機構，固定點 A 與 E 的座標分別為 (0, 0), (-50, 0), link1 從 A 點連接向 B 點長度, 為一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45, link2 從 B 點連接向 C 點, 長度為 110, link3 從 C 點連接向 D 點長度也是 110, 而最後 link4 從 D 點連接向 E 點 長度也是一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45。請問 link1 及 llink4 的長度分別為多少?<br/><br/>假設 A 點與 E 點分別裝設步進馬達, 其 A 點的旋轉角度是由其點右邊延伸水平線作為旋轉 0 度點，B 點起始點位於 X 軸上, 且旋轉方向為順時針方向, 而 E 點的旋轉角度則是由其點左邊延伸水平線作為旋轉 0 度點, D 點起始點也是位於 X 軸上, 且旋轉方向為逆時針方向旋轉, link1 的旋轉角度設為 theta1, 角度單位為 degree, 而 link4 的旋轉角度設為 theta2, 角度單位也是 degree, 請先利用此平面機構的兩個輸入角度作為函式的輸入變數, 用 link1 、link2、link3、link4 代表這四個連桿長度的符號名稱，且將此函數命名為 forward(theta1, theta2), 請利用正向運動學 (Forward Kinematics) 的方式，採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 forward 函式的輸出為點 C 的 X 與 Y 座標。 請推導。 另外也請利用逆向運動學 (Inverse Kinematics) 的方式, 採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 Inverse(C 點的 X 座標, C 點的 Y 座標) 函式的輸出為對應的 theta1 與 theta2 的轉角表示式。 請推導, 且各推導過程均列出機構各點的 floating point 座標點的位置.</p>
 <p><a href="/downloads/fivebar_robot_2d.slvs">fivebar_robot_2d.slvs</a></p>
+<p><img alt="" height="303" src="/images/fivebar_linkage_2d.png" width="300"/></p>
 <p><!--StartFragment --></p>
 <p>利用畢氏定理計算 link1 與 link4 的長度：</p>
 <p>\[\sqrt{50^2 + 45^2} = \sqrt{2500 + 2025} = \sqrt{4525} \approx 67.24\]</p>
