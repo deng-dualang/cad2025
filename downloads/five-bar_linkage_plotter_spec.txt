@@ -1,0 +1,185 @@
+一個五連桿平面機構，固定點 A 與 E 的座標分別為 (0, 0), (-50, 0), link1 從 A 點連接向 B 點長度, 為一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45, link2 從 B 點連接向 C 點, 長度為 110, link3 從 C 點連接向 D 點長度也是 110, 而最後 link4 從 D 點連接向 E 點 長度也是一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45。請問 link1 及 llink4 的長度分別為多少?
+
+假設 A 點與 E 點分別裝設步進馬達, 其旋轉角度都是由其點右邊延伸水平線作為旋轉 0 度點，且讓這兩個馬達以逆時針方向旋轉, link1 的旋轉角度設為 theta1, 而 link4 的旋轉角度設為 theta2. 請先利用此平面機構的兩個輸入角度作為函式的輸入變數, 用 link1 、link2、link3、link4 代表這四個連桿長度的符號名稱，且將此函數命名為 forward(theta1, theta2), 請利用正向運動學 (Forward Kinematics) 的方式，採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 forward 函式的輸出為點 C 的 X 與 Y 座標。 請推導。 另外也請利用逆向運動學 (Inverse Kinematics) 的方式, 採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 Inverse(C 點的 X 座標, C 點的 Y 座標) 函式的輸出為對應的 theta1 與 theta2 的轉角表示式。 請推導。
+
+Forward Kinematics:
+
+import sympy as sp
+
+# 定義符號變數
+theta1, theta2 = sp.symbols('theta1 theta2')
+L1, L2, L3, L4 = sp.symbols('L1 L2 L3 L4')
+
+# 點 A 與 E
+Ax, Ay = (0, 0)
+Ex, Ey = (-50, 0)
+
+# 點 B
+Bx = L1 * sp.cos(theta1)
+By = L1 * sp.sin(theta1)
+
+# 點 D
+Dx = Ex + L4 * sp.cos(theta2)
+Dy = Ey + L4 * sp.sin(theta2)
+
+# 計算向量 BD，並用弦長為 110 + 110
+vec_BD = sp.Matrix([Dx - Bx, Dy - By])
+vec_BD_unit = vec_BD / vec_BD.norm()
+vec_BC = vec_BD_unit * L2
+
+# 點 C = B + vec_BC
+Cx = Bx + vec_BC[0]
+Cy = By + vec_BC[1]
+
+# 定義 forward 函式
+def forward(theta1_val, theta2_val):
+    subs = {
+        theta1: theta1_val,
+        theta2: theta2_val,
+        L1: sp.sqrt(45**2 + 50**2),
+        L2: 110,
+        L3: 110,
+        L4: sp.sqrt(45**2 + 50**2)
+    }
+    return Cx.subs(subs), Cy.subs(subs)
+    
+Inverse Kinematics:
+
+# C 點座標輸入
+Cx_val, Cy_val = sp.symbols('Cx_val Cy_val')
+
+# 反推 theta1
+theta1_expr = sp.atan2(Cy_val, Cx_val) - sp.acos(
+    (Cx_val**2 + Cy_val**2 + L1**2 - L2**2) / (2 * L1 * sp.sqrt(Cx_val**2 + Cy_val**2))
+)
+
+# 反推 theta2
+Cx_rel, Cy_rel = Cx_val - Ex, Cy_val - Ey
+theta2_expr = sp.atan2(Cy_rel, Cx_rel) - sp.acos(
+    (Cx_rel**2 + Cy_rel**2 + L4**2 - L3**2) / (2 * L4 * sp.sqrt(Cx_rel**2 + Cy_rel**2))
+)
+
+# 定義 Inverse 函式
+def inverse(Cx_input, Cy_input):
+    subs = {
+        Cx_val: Cx_input,
+        Cy_val: Cy_input,
+        L1: sp.sqrt(45**2 + 50**2),
+        L2: 110,
+        L3: 110,
+        L4: sp.sqrt(45**2 + 50**2)
+    }
+    return theta1_expr.subs(subs), theta2_expr.subs(subs)
+    
+太精彩了！這題結合了幾何、機構學和符號計算，讓我們逐步來進行推導 📐🐍。
+
+---
+
+## 📏 步驟一：已知條件與連桿長度
+
+利用畢氏定理計算 link1 與 link4 的長度：
+\[
+\text{length} = \sqrt{50^2 + 45^2} = \sqrt{2500 + 2025} = \sqrt{4525} \approx 67.24
+\]
+
+因此定義如下：
+```python
+L1 = L4 = sp.sqrt(45**2 + 50**2)  # ≈ 67.24
+L2 = 110
+L3 = 110
+```
+
+---
+
+## 步驟二：Forward Kinematics
+
+目標是定義 `forward(theta1, theta2)` 輸出點 C 的 \((x, y)\)。
+
+### 幾何分析
+- 點 A 為原點 \((0, 0)\)，link1 由 A 旋轉 \(\theta_1\) 延伸至點 B。
+- 點 E 座標為 \((-50, 0)\)，link4 由 E 旋轉 \(\theta_2\) 延伸至點 D。
+- B 與 D 透過兩段連桿（link2 與 link3）連接，經過點 C。
+
+我們先定義這些變數並推導 B、D、C 的位置。
+
+### 🧮 Python 符號定義（forward 函式）
+```python
+import sympy as sp
+
+# 定義符號變數
+theta1, theta2 = sp.symbols('theta1 theta2')
+L1, L2, L3, L4 = sp.symbols('L1 L2 L3 L4')
+
+# 點 A 與 E
+Ax, Ay = (0, 0)
+Ex, Ey = (-50, 0)
+
+# 點 B
+Bx = L1 * sp.cos(theta1)
+By = L1 * sp.sin(theta1)
+
+# 點 D
+Dx = Ex + L4 * sp.cos(theta2)
+Dy = Ey + L4 * sp.sin(theta2)
+
+# 計算向量 BD，並用弦長為 110 + 110
+vec_BD = sp.Matrix([Dx - Bx, Dy - By])
+vec_BD_unit = vec_BD / vec_BD.norm()
+vec_BC = vec_BD_unit * L2
+
+# 點 C = B + vec_BC
+Cx = Bx + vec_BC[0]
+Cy = By + vec_BC[1]
+
+# 定義 forward 函式
+def forward(theta1_val, theta2_val):
+    subs = {
+        theta1: theta1_val,
+        theta2: theta2_val,
+        L1: sp.sqrt(45**2 + 50**2),
+        L2: 110,
+        L3: 110,
+        L4: sp.sqrt(45**2 + 50**2)
+    }
+    return Cx.subs(subs), Cy.subs(subs)
+```
+
+---
+
+## 步驟三：Inverse Kinematics
+
+現在要從點 C 的座標反推出 \(\theta_1, \theta_2\)。這部分相當複雜，因為存在多組解，因此我們專注於符號推導步驟。
+
+### 💡 幾何回推：
+- 點 C 與 A 的距離可以求得向量 AC
+- 利用反三角函數（atan2）來表示 \(\theta_1\)
+- 同理，利用點 C 與 E 的關係推回 \(\theta_2\)
+
+```python
+# C 點座標輸入
+Cx_val, Cy_val = sp.symbols('Cx_val Cy_val')
+
+# 反推 theta1
+theta1_expr = sp.atan2(Cy_val, Cx_val) - sp.acos(
+    (Cx_val**2 + Cy_val**2 + L1**2 - L2**2) / (2 * L1 * sp.sqrt(Cx_val**2 + Cy_val**2))
+)
+
+# 反推 theta2
+Cx_rel, Cy_rel = Cx_val - Ex, Cy_val - Ey
+theta2_expr = sp.atan2(Cy_rel, Cx_rel) - sp.acos(
+    (Cx_rel**2 + Cy_rel**2 + L4**2 - L3**2) / (2 * L4 * sp.sqrt(Cx_rel**2 + Cy_rel**2))
+)
+
+# 定義 Inverse 函式
+def inverse(Cx_input, Cy_input):
+    subs = {
+        Cx_val: Cx_input,
+        Cy_val: Cy_input,
+        L1: sp.sqrt(45**2 + 50**2),
+        L2: 110,
+        L3: 110,
+        L4: sp.sqrt(45**2 + 50**2)
+    }
+    return theta1_expr.subs(subs), theta2_expr.subs(subs)
+```
+
