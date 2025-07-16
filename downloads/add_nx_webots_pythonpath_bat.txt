@@ -1,0 +1,7 @@
+@echo off
+set Disk=Y
+
+REM add Webots and NX python module path
+set PYTHONPATH=%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python
+
+cmd /k

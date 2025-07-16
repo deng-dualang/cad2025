@@ -144,7 +144,65 @@ img.add_border {
         </header>
     <div id="tipue_search_content">Projects << <a href='Projects.html'>Previous</a> <a href='Printer.html'>Next</a> >> Printer<br /><h1>Control</h1>
 <p><a href="https://link.springer.com/book/10.1007/978-1-4842-9600-4">Essentials of Arduino Boards Programming</a> (電子書)  </p>
-<p><a href="./../downloads/PythonForControl.pdf">PythonForControl.pdf</a></p><br />Projects << <a href='Projects.html'>Previous</a> <a href='Printer.html'>Next</a> >> Printer</div>
+<p><a href="./../downloads/PythonForControl.pdf">PythonForControl.pdf</a></p>
+<p><a href="https://openmodelica.org/">OpenModelica</a> + <a href="https://github.com/modelon-community/PyFMI">Pyfmi</a> + Webots</p>
+<p>1. 在 Modelica 建立控制器:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">model SimplePIDController
+  input Real position;
+  output Real torque;
+
+  parameter Real Kp = 2.0;
+  parameter Real Kd = 0.5;
+
+  Real error;
+  Real derror;
+initial equation
+  error = 0;
+  derror = 0;
+equation
+  error = 0 - position;
+  derror = der(error);
+  torque = Kp * error + Kd * derror;
+end SimplePIDController;
+</pre>
+<p>2. 匯出為 FMU</p>
+<p>用 OpenModelica，匯出此模型為 FMU：<br/><br/>    使用 OMEdit ➜ 選擇 Export ➜ FMI<br/><br/>    勾選：<br/><br/>        ✔ FMU for Co-Simulation<br/><br/>        或 ✔ FMU for Model Exchange（自行利用 PyFMI 提供 solver）</p>
+<p>會產生一個 .fmu 檔（zip 檔格式）。</p>
+<p>3. Webots 中撰寫 Python 控制器:</p>
+<p>以便讓 Webots 的機器人由 FMU 控制。</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+from pyfmi import load_fmu
+
+# Webots 設定
+robot = Robot()
+timestep = int(robot.getBasicTimeStep())
+
+# 載入 FMU 控制器
+controller = load_fmu("SimplePIDController.fmu")
+controller.initialize()
+
+# 獲取感測器與馬達
+joint_sensor = robot.getPositionSensor("my_joint_sensor")
+joint_sensor.enable(timestep)
+
+motor = robot.getMotor("my_joint_motor")
+
+while robot.step(timestep) != -1:
+    position = joint_sensor.getValue()
+    
+    # 設定 FMU 輸入
+    controller.set("position", position)
+    
+    # 執行一步 FMU 模型
+    controller.do_step(current_t=robot.getTime(), step_size=timestep / 1000.0)
+    
+    # 取得輸出
+    torque = controller.get("torque")
+    
+    # 輸出至 Webots 馬達
+    motor.setTorque(torque)
+</pre>
+<p></p><br />Projects << <a href='Projects.html'>Previous</a> <a href='Printer.html'>Next</a> >> Printer</div>
         
     <!-- footer -->
       <div class="container">

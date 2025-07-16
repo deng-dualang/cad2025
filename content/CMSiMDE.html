@@ -143,7 +143,19 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">Git << <a href='Git.html'>Previous</a> <a href='Flask.html'>Next</a> >> Flask<br /><h1>CMSiMDE</h1>
-<br />Git << <a href='Git.html'>Previous</a> <a href='Flask.html'>Next</a> >> Flask</div>
+<p>可攜 Python 程式環境，使用 miniconda3:</p>
+<p style="padding-left: 30px;">Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.<br/><br/>If you need more packages, use the conda install command to install from thousands of packages available by default in Anaconda’s public repo, or from other channels, like conda-forge or bioconda.</p>
+<p style="padding-left: 30px;">授權方式    BSD 3-Clause License（自由軟體）<br/>是否開源    是（可以查閱與修改原始碼）<br/>是否免費    是（個人與商業皆免費使用）<br/>用途限制    無限制，可用於學術、商業、開發、產品部署等<br/>提供單位    Anaconda, Inc.</p>
+<p style="padding-left: 30px;">官方網站: https://www.anaconda.com/docs/getting-started/miniconda/main</p>
+<p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1ozhZ2U8Ei1ctKklnC589Xs1ouCHnqgTa/view?usp=drive_link">miniconda3.7z</a></p>
+<p style="padding-left: 60px;"><a href="./../downloads/start_miniconda3_bat.txt">start_miniconda3_bat.txt</a></p>
+<p style="padding-left: 60px;"><a href="./../downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
+<p style="padding-left: 30px;">check python path: python -c "import sys; print(sys.executable)"</p>
+<p>啟動後 Python 環境位於 base，利用下列指令建立 cmsimde 虛擬環境:</p>
+<p style="padding-left: 30px;">conda create -p ./envs/cmsimde python=3.13</p>
+<p style="padding-left: 30px;">conda activate y:\envs\cmsimde</p>
+<p style="padding-left: 30px;">conda install -c conda-forge flask flask_cors bs4 lxml pelican markdown gevent</p>
+<p style="padding-left: 30px;">之後就可以 cd tmp/cad2025 後，以 cms 啟動網頁編輯。</p><br />Git << <a href='Git.html'>Previous</a> <a href='Flask.html'>Next</a> >> Flask</div>
         
     <!-- footer -->
       <div class="container">

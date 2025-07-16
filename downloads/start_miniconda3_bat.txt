@@ -1,0 +1,110 @@
+@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_ipv6
+set HomeDrive=%Disk%:\home_ipv6
+set Home=%Disk%:\home_ipv6
+set USERPROFILE=%Disk%:\home_ipv6
+
+REM set Python io encoding as utf-8
+set PYTHONIOENCODING="utf-8"
+
+rem set PYTHONPATH=%Disk%:\miniconda3\DLLs;%Disk%:\miniconda3\Lib;%Disk%:\miniconda3\Lib\site-packages;%Disk%:\NX\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;
+rem set PYTHONHOME=%Disk%:\miniconda3
+REM for Webots
+set PYTHON_PATH=%Disk%:\miniconda3
+set WEBOTS_HOME=%Disk%:\Webots_2023b
+
+REM for putty
+set GIT_SSH=%Disk%:\PuTTY\plink.exe
+
+REM python interpreter path
+set path_python=%Disk%:\miniconda3;%Disk%:\miniconda3\Scripts;
+
+REM git command path
+set path_git=%Disk%:\portablegit\bin;
+
+REM set msys2 64 bit binary path
+REM %Disk%:\msys64\mingw64\bin is for GD library
+set path_msys2=%Disk%:\msys64\ucrt64\bin;%Disk%:\msys64\mingw64\bin;
+
+REM for postgresql
+set path_postgresql=%Disk%:\postgresql13\bin;
+
+REM add PostgreSQL environment variables
+@SET PGDATA=%Disk%:\postgresql13\data
+@SET PGDATABASE=postgres
+@SET PGUSER=postgres
+@SET PGPORT=5432
+@SET PGLOCALEDIR=%Disk%:\postgresql13\share\locale
+
+REM for CMake
+set CMAKE_C_COMPILER=%Disk%:\msys64\ucrt64\bin\gcc;
+set CMAKE_CXX_COMPILER=%Disk%:\msys64\ucrt64\bin\g++;
+
+REM for execute scite directly
+set path_scite=%Disk%:\wscite\;
+
+REM for OpenSSL
+Set OPENSSL_CONF=%Disk%:\OpenSSL-Win64\SSL\openssl.cnf
+set path_openssl=%Disk%:\OpenSSL-Win64\bin;
+
+REM for textract
+set path_poppler=%Disk%:\poppler-24.07.0\Library\bin;
+
+REM for tiny C compiler
+set path_tcc=%Disk%:\tcc;
+
+REM for webots
+set  path_webots=%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\msys64\usr\bin
+
+REM for blender
+set path_blender=%Disk%:\Blender 4.2;
+
+REM for Clang
+set path_clang=%Disk%:\clang+llvm-18.1.8-x86_64-pc-windows-msvc\bin;
+
+REM for V
+set path_v=%Disk%:\V;
+
+REM for gnuplot
+set path_gnuplot=%Disk%:\gnuplot\bin;
+
+REM for miniconda3
+set CONDA_ROOT=%Disk%:\miniconda3
+set ENV_NAME=base
+
+path=%Disk%:;%path_python%;%path_git%;%path_msys2%;%path_tcc%;%path_postgresql%;%path_vscode%;%path_scite%;%path_xsltproc%;%path_gnuplot%;%path_openssl%;%path_webots%;%path_blender%;%path_clang%;%path_v%;%CONDA_ROOT%;%CONDA_ROOT%\Library\bin;%CONDA_ROOT%\Scripts;%path%;
+
+REM for NX2312, must after path setup 
+set SPLM_LICENSE_SERVER=29000@your_nx_license_server
+set UGII_LANG=english
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_BASE_DIR=%Disk%:\NX\
+set UGII_TMP_DIR=%Disk%:\NX\temp
+set UGII_LIB_PATH=%Disk%:\NX\NXBIN\python
+set ugii=%Disk%:\NX\ugii;%Disk%:\NX\nxbin;
+path = %ugii%;%path%
+REM Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y
+
+REM start ugraf -nx
+
+REM python %Disk%:\tmp\nx_ex\new_part.py
+
+REM activate miniconda3
+call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME%
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wscite\SciTE.exe
+start /MIN %Disk%:\wscite\SciTE.exe
+
+REM start webotsw.exe
+
+Exit
