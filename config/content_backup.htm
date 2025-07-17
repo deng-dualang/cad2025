@@ -3,7 +3,12 @@
 <p>Web: <a href="https://mde.tw/cad2025">https://mde.tw/cad2025</a></p>
 <p>可攜程式套件:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
 <p>Teams 線上教學:</p>
 <p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
@@ -23,12 +28,13 @@
 <p style="padding-left: 60px;">課餘時間預約 (由助教安排) </p>
 <p style="padding-left: 30px;">Five-bar Linkage: 五連桿平面繪圖機構系統的設計模擬與製作。</p>
 <p style="padding-left: 60px;"><a href="https://mde.tw/cad2025/downloads/fivebar_parallel_linkage.7z">fivebar_parallel_linkage.7z</a> (in Solidworks and NX2312)</p>
+<p style="padding-left: 60px;"><a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
 <p>行事曆:</p>
 <p style="padding-left: 30px;">2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w11 11/21 全校運動會)</p>
 <p style="padding-left: 30px;">2b 上課時段: 每週二 09:10 - 12:00</p>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei"> 全頁檢視 </a></p>
 <p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Mind-Map</h2>
-<p><object data="/images/cad2025.svg" height="878" type="image/svg+xml" width="1067"></object></p>
+<p><object data="/images/cad2025.svg" height="943" type="image/svg+xml" width="1321"></object></p>
 <p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p><h2>Commands</h2>
 <p>Allow ping ICMPv4 powershell:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
@@ -48,7 +54,12 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p style="padding-left: 30px;">Teams 團隊代碼: wpv2s7j</p>
 <p>下載可攜程式套件:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
 <p>複習如何開啟可攜套件、關閉可攜套件</p>
 <p style="padding-left: 30px;">尚未有 Github 帳號者，必須自行<a href="https://docs.github.com/zh/get-started/start-your-journey/creating-an-account-on-github">建立 Github 帳號</a></p>
@@ -284,16 +295,17 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p>可攜 Python 程式環境，使用 miniconda3:</p>
 <p style="padding-left: 30px;">Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.<br/><br/>If you need more packages, use the conda install command to install from thousands of packages available by default in Anaconda’s public repo, or from other channels, like conda-forge or bioconda.</p>
 <p style="padding-left: 30px;">授權方式    BSD 3-Clause License（自由軟體）<br/>是否開源    是（可以查閱與修改原始碼）<br/>是否免費    是（個人與商業皆免費使用）<br/>用途限制    無限制，可用於學術、商業、開發、產品部署等<br/>提供單位    Anaconda, Inc.</p>
-<p style="padding-left: 30px;">官方網站: https://www.anaconda.com/docs/getting-started/miniconda/main</p>
+<p style="padding-left: 30px;">官方網站: <a href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a> </p>
 <p style="padding-left: 30px;"><a href="https://drive.google.com/file/d/1ozhZ2U8Ei1ctKklnC589Xs1ouCHnqgTa/view?usp=drive_link">miniconda3.7z</a></p>
 <p style="padding-left: 60px;"><a href="/downloads/start_miniconda3_bat.txt">start_miniconda3_bat.txt</a></p>
-<p style="padding-left: 60px;"><a href="/downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
+<p style="padding-left: 60px;">啟動 miniconda3 虛擬環境後，在命令列中執行下列批次檔案，可以導入 NX2312 與 Webots 所需的 Python 模組目錄設定。</p>
+<p style="padding-left: 90px;"><a href="/downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
 <p style="padding-left: 30px;">check python path: python -c "import sys; print(sys.executable)"</p>
 <p>啟動後 Python 環境位於 base，利用下列指令建立 cmsimde 虛擬環境:</p>
 <p style="padding-left: 30px;">conda create -p ./envs/cmsimde python=3.13</p>
 <p style="padding-left: 30px;">conda activate y:\envs\cmsimde</p>
 <p style="padding-left: 30px;">conda install -c conda-forge flask flask_cors bs4 lxml pelican markdown gevent</p>
-<p style="padding-left: 30px;">之後就可以 cd tmp/cad2025 後，以 cms 啟動網頁編輯。</p><h3>Flask</h3>
+<p style="padding-left: 30px;">之後就可以 cd tmp/your_hw_repository 後，以 cms 啟動網頁編輯。</p><h3>Flask</h3>
 <h2>Solvespace</h2>
 <p>Solvespace: <a href="https://solvespace.com">https://solvespace.com</a></p>
 <p><a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
@@ -302,16 +314,38 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <h2>NX2312</h2>
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/documents/209349590/PL20230425446868577">NX2312 Documentation</a></p>
 <p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
+<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.nxopen_prog_guide/xid2250951">Setup NXOpen Python Intellisense</a></p>
 <p>在自己的電腦上，以可攜方式執行 NX2312:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
-<p style="padding-left: 30px;">下載上列三個檔案後，先解開可攜程式套件後，將 NX2312 解開至可攜套件 data 目錄下，將目錄名稱命名為 NX，再安裝 MS VC 可轉散發套件。    </p>
-<p style="padding-left: 30px;">接著以 start_2023b.bat 開啟可攜套件後，置入 NX2312 的認證授權設定後，在命令列視窗中，以 ugraf.exe -nx 開啟 NX。</p>
 <p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
-<p style="padding-left: 30px;">修改 start_2023b.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
-<p></p><h3>License</h3>
+<p style="padding-left: 30px;">修改 start_miniconda3.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
+<p>NX2312 NXOpen Python 動態連結程式庫版本: Python 3.10.9</p>
+<p style="padding-left: 30px;">在可攜程式環境中利用 miniconda3 建立 nxopen 虛擬環境 (注意: 必須使用反斜線分隔目錄名稱):</p>
+<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda create -p y:\envs\nxopen python=3.10</span> 指定建立 nxopen Python 環境，並使用 3.10 版。</p>
+<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda activate y:\envs\nxopen</span> 將 Python 環境切換到 nxopen env。</p>
+<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">where python</span> 查詢目前 env 所使用的 Python 所在目錄位置。</p>
+<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda clean --all</span> 刪除安裝 env 時所下載的安裝套件以及暫存檔案。</p>
+<p style="padding-left: 60px;">進入 nxopen 虛擬環境後，在命令列執行下列 PYTHONPATH 設定，可以使用 Python </p>
+<p style="padding-left: 60px;"><a href="/downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
+<p style="padding-left: 60px;">若要在 SciTE 編輯器中指令使用 nxopen env 中的 Python，可以先在命令列中以 conda activate nxopen 後，接著以 where python 查詢所使用 python.exe 所在目錄後，利用處於同樣目錄的 pythonw.exe 設定 python.properties:</p>
+<p style="padding-left: 90px;">if PLAT_WIN<br/>    python.command=y:\envs\nxopen\python.exe</p>
+<p style="padding-left: 60px;">完成 python.properties 設定修改後，在命令列中利用 start /MIN y:\wscite\SciTE.exe  開啟編輯器後，以下列程式查詢所使用的 conda env，以及所使用的 Python 版本:</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
+import os
+
+conda_env = os.environ.get("CONDA_DEFAULT_ENV")
+print(f"Conda env：{conda_env}")
+print(f"Python version: {sys.version}")</pre>
+<p style="padding-left: 60px;"></p><h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開源軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
@@ -329,9 +363,22 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p>
 <p>在自己的電腦上，以可攜方式執行 Webots:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
-<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a></p>
-<p style="padding-left: 30px;">下載後，解開可攜程式套件後，以 start_2023b.bat 開啟可攜套件，在命令列視窗中輸入 webotsw 開啟 Webots。</p><h3>TimeStep</h3>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf --nx 可啟動 NX2312。</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
+<p>由於 NX2312 中的 NXOpen Python 必須使用 Python 3.10 版的解譯器，才能與位於 y:\NX\NXBIN\python 目錄中的動態連結程式結合。</p>
+<p>而 Webots_2023b 若要採 extern 外部控制器設定，則必須在切換 env 後，額外設定 PYTHONPATH 至 y:\Webots_2023b\msys64\mingw64\bin 以及 y:\Webots_2023b\lib\controller\python，才可連結其內建的 Python 控制器模組，只是 Webots 的控制器模組採 Python 程式碼編寫，因此可以在 Python 3.10 以上的版本中執行，因此只要 PYTHONPATH 納入 Webots 控制器模組後，可以選擇 base、cmsimde 或 nxopen 等 env 中的 Python 進行配置。</p>
+<p>若 Webots Python 控制器需要額外安裝 numpy、scipy、opencv-python、matplotlib 或其他模組，也可以獨立配置一個 webots env 提供使用:</p>
+<p style="padding-left: 30px;">conda create -p y:\envs\webots python=3.13</p>
+<p style="padding-left: 30px;">conda activate y:\envs\webots</p>
+<p style="padding-left: 30px;">where python</p>
+<p style="padding-left: 30px;">conda clean --all</p>
+<p style="padding-left: 30px;">並將 Webots 下拉式功能表中的 Tools - Preferences - Python command 欄位指向 webots env 所對應的 python，或者將控制器設為 extern，然後由 SciTE 選擇使用 Webots 合用的 Python 版本與模組套件。</p>
+<p></p><h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>
@@ -982,6 +1029,7 @@ Exit
 <p style="padding-left: 30px;"><a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
 <p style="padding-left: 30px;"><img alt="" height="300" src="/images/5bar_simulation.gif" width="300"/></p>
 <p style="padding-left: 30px;"><img alt="" height="300" src="/images/mickey_mouse_plot.gif" width="300"/></p>
+<p style="padding-left: 30px;"><img caption="false" height="348" src="/images/fivebar_plotter.gif" width="500"/></p>
 <p style="padding-left: 30px;"><a href="/downloads/fivebar_parallel_linkage.7z">fivebar_parallel_linkage.7z</a> (in Solidworks and NX2312)</p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/5-Bar-Parallel-Robot-Kinematics-Simulation">https://github.com/mdecycu/5-Bar-Parallel-Robot-Kinematics-Simulation</a> </p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/parallel-five-bar-robot">https://github.com/mdecycu/parallel-five-bar-robot</a> </p>

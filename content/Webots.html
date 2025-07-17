@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li class='has-children'><a href='Commands.html'>Commands</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a></li></li></ul></ul><li><a href='Topics.html'>Topics</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a></li></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a></li></ul><li><a href='Brython.html'>Brython</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li class='has-children'><a href='Commands.html'>Commands</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a></li></li></ul></ul><li><a href='Topics.html'>Topics</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a></li></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li><a href='Otto_ninja.html'>Otto_ninja</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -150,9 +150,22 @@ img.add_border {
 <p><a href="https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf">https://www.eecs.ucf.edu/cssd/fall13/ucfsr/files/FinalDoc.pdf</a> </p>
 <p>在自己的電腦上，以可攜方式執行 Webots:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf --nx 可啟動 NX2312。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
-<p style="padding-left: 30px;">下載後，解開可攜程式套件後，以 start_2023b.bat 開啟可攜套件，在命令列視窗中輸入 webotsw 開啟 Webots。</p><br />Onshape << <a href='Onshape.html'>Previous</a> <a href='TimeStep.html'>Next</a> >> TimeStep</div>
+<p>由於 NX2312 中的 NXOpen Python 必須使用 Python 3.10 版的解譯器，才能與位於 y:\NX\NXBIN\python 目錄中的動態連結程式結合。</p>
+<p>而 Webots_2023b 若要採 extern 外部控制器設定，則必須在切換 env 後，額外設定 PYTHONPATH 至 y:\Webots_2023b\msys64\mingw64\bin 以及 y:\Webots_2023b\lib\controller\python，才可連結其內建的 Python 控制器模組，只是 Webots 的控制器模組採 Python 程式碼編寫，因此可以在 Python 3.10 以上的版本中執行，因此只要 PYTHONPATH 納入 Webots 控制器模組後，可以選擇 base、cmsimde 或 nxopen 等 env 中的 Python 進行配置。</p>
+<p>若 Webots Python 控制器需要額外安裝 numpy、scipy、opencv-python、matplotlib 或其他模組，也可以獨立配置一個 webots env 提供使用:</p>
+<p style="padding-left: 30px;">conda create -p y:\envs\webots python=3.13</p>
+<p style="padding-left: 30px;">conda activate y:\envs\webots</p>
+<p style="padding-left: 30px;">where python</p>
+<p style="padding-left: 30px;">conda clean --all</p>
+<p style="padding-left: 30px;">並將 Webots 下拉式功能表中的 Tools - Preferences - Python command 欄位指向 webots env 所對應的 python，或者將控制器設為 extern，然後由 SciTE 選擇使用 Webots 合用的 Python 版本與模組套件。</p>
+<p></p><br />Onshape << <a href='Onshape.html'>Previous</a> <a href='TimeStep.html'>Next</a> >> TimeStep</div>
         
     <!-- footer -->
       <div class="container">

@@ -1,0 +1,49 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.19992174221399062 0.19793458150463475 0.9596109620230001 1.6220048394546265
+  position 0.02706371634269001 -1.5219810900251078 0.8212190369635823
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  children [
+    Solid {
+      translation -0.17 0.09 0.041
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../stl/split_parts/part_6.obj"
+            ]
+          }
+        }
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../../../../../cp2025/downloads/otto_ninja/webots/stl/split_parts/part_12.obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
