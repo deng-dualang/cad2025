@@ -1,0 +1,175 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.03708368298527387 -0.02950509467167303 0.9988764937892288 1.3695243602645966
+  position -0.0732607863051466 -0.5256584352394273 0.07892732075410458
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF mini_robot Robot {
+  children [
+    DEF body Solid {
+      translation 0 0 0.041
+      children [
+        DEF body_shape Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 1 0
+            }
+          }
+          geometry DEF body_mesh Mesh {
+            url [
+              "../../mini_assembly/split_parts/body.obj"
+            ]
+          }
+        }
+      ]
+      name "body"
+      boundingObject USE body_shape
+      physics Physics {
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0 0 0.041
+      }
+      device [
+        RotationalMotor {
+          name "left_motory"
+        }
+      ]
+      endPoint DEF left_wheel_holder Solid {
+        translation 0 0 0.041
+        rotation 0 1 0 0
+        children [
+          DEF left_wheel_holder_shape Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 1 0
+              }
+            }
+            geometry DEF left_wheel_holder_mesh Mesh {
+              url [
+                "../../mini_assembly/split_parts/left_wheel_holder.obj"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor -0.031 0.028 0.01
+            }
+            device [
+              RotationalMotor {
+                name "left_motorz"
+              }
+            ]
+            endPoint Solid {
+              children [
+                DEF left_wheel_shape Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry DEF left_wheel_mesh Mesh {
+                    url [
+                      "../../mini_assembly/split_parts/left_wheel.obj"
+                    ]
+                  }
+                }
+              ]
+              name "left_wheel"
+              boundingObject USE left_wheel_shape
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "left_wheel_holder"
+        boundingObject USE left_wheel_holder_shape
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.096 0 0.041
+      }
+      device [
+        RotationalMotor {
+          name "right_motory"
+          maxTorque 2000
+        }
+      ]
+      endPoint DEF right_wheel_holder Solid {
+        translation 0 0 0.041
+        rotation 0 1 0 0
+        children [
+          DEF right_wheel_holder_shape Shape {
+            appearance Appearance {
+              material Material {
+                diffuseColor 0 1 0
+              }
+            }
+            geometry DEF right_wheel_holder_mesh Mesh {
+              url [
+                "../../mini_assembly/split_parts/right_wheel_holder.obj"
+              ]
+            }
+          }
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor 0.127 0.028 0.01
+            }
+            device [
+              RotationalMotor {
+                name "right_motorz"
+              }
+            ]
+            endPoint DEF right_wheel Solid {
+              translation -7.544775915135915e-11 1.7502231990096373e-09 -6.824808899963397e-07
+              rotation -0.5759966999960808 -0.5017068813400872 0.6453820626649213 6.283185307179586
+              children [
+                DEF right_wheel_shape Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry DEF right_wheel_mesh Mesh {
+                    url [
+                      "../../mini_assembly/split_parts/right_wheel.obj"
+                    ]
+                  }
+                }
+              ]
+              name "right_wheel"
+              boundingObject USE right_wheel_shape
+              physics Physics {
+              }
+            }
+          }
+        ]
+        boundingObject USE right_wheel_holder_shape
+        physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE body_shape
+  physics Physics {
+  }
+  controller "robot_controller"
+}
