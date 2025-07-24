@@ -153,6 +153,8 @@ img.add_border {
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
 <p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
 <p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
+<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
 <p>Teams 線上教學:</p>
 <p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>

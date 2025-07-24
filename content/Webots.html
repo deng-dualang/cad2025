@@ -156,6 +156,8 @@ img.add_border {
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
 <p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
 <p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf --nx 可啟動 NX2312。</p>
+<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
 <p>由於 NX2312 中的 NXOpen Python 必須使用 Python 3.10 版的解譯器，才能與位於 y:\NX\NXBIN\python 目錄中的動態連結程式結合。</p>
 <p>而 Webots_2023b 若要採 extern 外部控制器設定，則必須在切換 env 後，額外設定 PYTHONPATH 至 y:\Webots_2023b\msys64\mingw64\bin 以及 y:\Webots_2023b\lib\controller\python，才可連結其內建的 Python 控制器模組，只是 Webots 的控制器模組採 Python 程式碼編寫，因此可以在 Python 3.10 以上的版本中執行，因此只要 PYTHONPATH 納入 Webots 控制器模組後，可以選擇 base、cmsimde 或 nxopen 等 env 中的 Python 進行配置。</p>
