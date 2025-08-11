@@ -35,9 +35,11 @@
 <p style="padding-left: 30px;">2a 上課時段: 每週五 13:20 - 16:10 (w5 10/10 國慶日放假, w11 11/21 全校運動會)</p>
 <p style="padding-left: 30px;">2b 上課時段: 每週二 09:10 - 12:00</p>
 <p><a href="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei"> 全頁檢視 </a></p>
-<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p><h2>Mind-Map</h2>
+<p><iframe height="600" src="https://calendar.google.com/calendar/embed?src=mde.nfu.edu.tw_3439313938333136353439%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;mode=week&amp;src=mde.nfu.edu.tw_35303530373431313438%40resource.calendar.google.com&amp;ctz=Asia%2FTaipei&amp;src=yen%40gm.nfu.edu.tw&amp;ctz=Asia%2FTaipei" width="800"></iframe></p>
+<h2>Mind-Map</h2>
 <p><object data="/images/cad2025.svg" height="943" type="image/svg+xml" width="1321"></object></p>
-<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p><h2>Commands</h2>
+<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p>
+<h2>Commands</h2>
 <p>Allow ping ICMPv4 powershell:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
 New-NetFirewallRule -Name "Allow ICMPv4-In" -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow</pre>
@@ -87,7 +89,8 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p style="padding-left: 30px;">Python Controller 程式的應用</p>
 <p>參考: </p>
 <p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2024/content/CAD.html">http://wcm.cycu.org:88/github/cad2024/content/CAD.html</a> </p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/pymadcad">https://github.com/mdecycu/pymadcad</a> </p><h1>Homework</h1>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/pymadcad">https://github.com/mdecycu/pymadcad</a> </p>
+<h1>Homework</h1>
 <p>HW1:</p>
 <p style="padding-left: 30px;">利用 NX2312、<a href="https://www.onshape.com/en/">Onshape</a>、Solvespace 或自選 CAD 套件繪製五連桿機構零組件。</p>
 <p style="padding-left: 60px;">參考資料: <a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
@@ -103,7 +106,8 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p style="padding-left: 30px;"></p>
 <p></p>
 <p style="padding-left: 30px;"></p>
-<p></p><h2>HW2</h2>
+<p></p>
+<h2>HW2</h2>
 <p>一個五連桿平面機構，固定點 A 與 E 的座標分別為 (0, 0), (-50, 0), link1 從 A 點連接向 B 點長度, 為一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45, link2 從 B 點連接向 C 點, 長度為 110, link3 從 C 點連接向 D 點長度也是 110, 而最後 link4 從 D 點連接向 E 點 長度也是一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45。請問 link1 及 llink4 的長度分別為多少?<br/><br/>假設 A 點與 E 點分別裝設步進馬達, 其 A 點的旋轉角度是由其點右邊延伸水平線作為旋轉 0 度點，B 點起始點位於 X 軸上, 且旋轉方向為順時針方向, 而 E 點的旋轉角度則是由其點左邊延伸水平線作為旋轉 0 度點, D 點起始點也是位於 X 軸上, 且旋轉方向為逆時針方向旋轉, link1 的旋轉角度設為 theta1, 角度單位為 degree, 而 link4 的旋轉角度設為 theta2, 角度單位也是 degree, 請先利用此平面機構的兩個輸入角度作為函式的輸入變數, 用 link1 、link2、link3、link4 代表這四個連桿長度的符號名稱，且將此函數命名為 forward(theta1, theta2), 請利用正向運動學 (Forward Kinematics) 的方式，採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 forward 函式的輸出為點 C 的 X 與 Y 座標。 請推導。 另外也請利用逆向運動學 (Inverse Kinematics) 的方式, 採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 Inverse(C 點的 X 座標, C 點的 Y 座標) 函式的輸出為對應的 theta1 與 theta2 的轉角表示式。 請推導, 且各推導過程均列出機構各點的 floating point 座標點的位置.</p>
 <p><a href="/downloads/fivebar_robot_2d.slvs">fivebar_robot_2d.slvs</a></p>
 <p><img alt="" height="303" src="/images/fivebar_linkage_2d.png" width="300"/></p>
@@ -264,12 +268,82 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p><br/><br/></p>
 <p>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</p><h1>Network</h1>
+</p>
+<h3>Plotter</h3>
+<p dir="auto" style="white-space: pre-wrap;">To determine the drawable workspace of the five-bar linkage mechanism described in the provided Webots controller code and to outline it with a green contour, we need to compute the reachable workspace of the end-effector (point C) based on the kinematic constraints of the mechanism. Then, we will generate the outer and inner boundary contours and instruct the plotter to trace these contours. Below is the step-by-step solution.</p>
+<hr/>
+<h4 dir="auto">Step 1: Understanding the Five-Bar Linkage and Workspace</h4>
+<p dir="auto" style="white-space: pre-wrap;">The five-bar linkage mechanism consists of two fixed points (A and E) and two actuated joints (θ1 and θ2) that control the positions of points B and D, respectively. Point C is the end-effector, determined by the intersection of two circles centered at B (radius L2) and D (radius L3). The mechanism parameters are:</p>
+<ul dir="auto">
+<li><strong>L1 = L4 = 0.1682 m</strong> (lengths of the first and fourth links)</li>
+<li><strong>L2 = L3 = 0.275 m</strong> (lengths of the second and third links)</li>
+<li><strong>A = [0.0625, 0.15] m</strong> (fixed pivot for θ1)</li>
+<li><strong>E = [-0.0625, 0.15] m</strong> (fixed pivot for θ2)</li>
+<li><strong>offset = 41.9872°</strong> (affects the angle calculations)</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The workspace is the set of all possible positions of point C, constrained by the joint angles θ1 and θ2 (ranging from -180° to 180°) and the geometric constraints of the linkage. The workspace is typically an annulus-like region (a ring-shaped area) due to the fixed distances from A to B (L1), B to C (L2), E to D (L4), and D to C (L3).</p>
+<h4 dir="auto">Step 2: Computing the Workspace Boundaries</h4>
+<p dir="auto" style="white-space: pre-wrap;">To find the workspace, we need to determine the outer and inner boundaries of the region where point C can exist. This involves:</p>
+<ul dir="auto">
+<li><strong>Outer boundary</strong>: The maximum extent of point C when the linkage is fully extended.</li>
+<li><strong>Inner boundary</strong>: The minimum extent when the linkage is folded inward, subject to valid kinematic solutions.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The workspace can be approximated by sampling the joint angles θ1 and θ2 over their range and computing the corresponding positions of point C using the forward kinematics function. The boundaries are traced by finding the extreme points (maximum and minimum radial distances from a reference point, e.g., the origin or the midpoint between A and E).</p>
+<h4 dir="auto">Forward Kinematics Recap</h4>
+<p dir="auto" style="white-space: pre-wrap;">The <span>forward_kinematics(theta1_rad, theta2_rad)</span> function computes point C as follows:</p>
+<ol dir="auto">
+<li><strong>Point B</strong>: <span>B = A + L1 * [cos(θ1 + offset), -sin(θ1 + offset)]</span></li>
+<li><strong>Point D</strong>: <span>D = E - L4 * [cos(θ2 + offset), sin(θ2 + offset)]</span></li>
+<li><strong>Point C</strong>: The intersection of a circle centered at B with radius L2 and a circle centered at D with radius L3. The function selects the intersection with the smaller y-coordinate (elbow-down configuration).</li>
+</ol>
+<h4 dir="auto">Workspace Boundary Calculation</h4>
+<p dir="auto" style="white-space: pre-wrap;">To trace the workspace boundaries:</p>
+<ul dir="auto">
+<li><strong>Outer boundary</strong>: Occurs when the linkage is fully extended, e.g., when B and C are aligned such that the distance from A to C is maximized (approximately L1 + L2 = 0.1682 + 0.275 = 0.4432 m).</li>
+<li><strong>Inner boundary</strong>: Occurs when the linkage is folded, and the distance from A to C is minimized, subject to valid intersections between the circles at B and D.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">We can sample θ1 and θ2 over [-180°, 180°] with a fine grid (e.g., 360 points per angle) to compute all possible C points. The convex hull of these points approximates the outer boundary, while the inner boundary requires identifying configurations where the distance from a reference point (e.g., the origin) is minimized, often when the linkage is folded inward.</p>
+<p dir="auto" style="white-space: pre-wrap;">To simplify, we assume the workspace is symmetric around the line connecting A and E (y = 0.15 m) due to the symmetry in L1 = L4 and L2 = L3. We compute the workspace by:</p>
+<ol dir="auto">
+<li>Sampling θ1 and θ2 in increments (e.g., 5°).</li>
+<li>Computing C for each (θ1, θ2) pair using <span>forward_kinematics</span>.</li>
+<li>Collecting valid C points (where intersections exist).</li>
+<li>Determining the outer and inner boundaries by finding the maximum and minimum radial distances from a reference point (e.g., the origin [0, 0]) for each angular direction.</li>
+</ol>
+<h4 dir="auto">Step 3: Generating the Workspace Contours</h4>
+<p dir="auto" style="white-space: pre-wrap;">To generate the outer and inner contours:</p>
+<ul dir="auto">
+<li><strong>Outer contour</strong>: For each angle φ around the origin (0, 0), find the C point with the maximum radial distance |C| = sqrt(x² + y²).</li>
+<li><strong>Inner contour</strong>: For each angle φ, find the C point with the minimum radial distance, ensuring valid kinematic solutions.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The algorithm to compute the contours is as follows:</p>
+<ol dir="auto">
+<li>Define a range of angles φ (0 to 360°, e.g., 360 points).</li>
+<li>For each φ, iterate over a grid of θ1 and θ2 values (e.g., 72 points each, 5° increments).</li>
+<li>Compute C for each (θ1, θ2) using <span>forward_kinematics</span>.</li>
+<li>Calculate the radial distance |C| and the angle of C relative to the origin.</li>
+<li>Group C points by their angle φ (within a small tolerance, e.g., ±2.5°).</li>
+<li>Select the maximum (outer) and minimum (inner) |C| for each φ bin.</li>
+<li>Sort the points by φ to create smooth contours.</li>
+</ol>
+<h4 dir="auto">Step 4: Plotting the Contours in Webots</h4>
+<p dir="auto" style="white-space: pre-wrap;">The provided code already includes a mechanism to draw a green line in Webots using an <span>IndexedLineSet</span>. We will modify this to draw two separate contours (outer and inner) in green, ensuring they are closed loops if the workspace is continuous.</p>
+<h4 dir="auto">Step 5: Sweeping the Contours with the Plotter</h4>
+<p dir="auto" style="white-space: pre-wrap;">To make the plotter trace the outer and inner contours:</p>
+<ol dir="auto">
+<li>Use the <span>inverse_kinematics</span> function to compute (θ1, θ2) for each point on the outer and inner contours.</li>
+<li>Apply the same interpolation and control logic as in the original code to move the plotter along each contour sequentially.</li>
+<li>Ensure smooth transitions between points using linear interpolation in joint space, as done in the original code.</li>
+</ol>
+<h4 dir="auto">Implementation</h4>
+<p dir="auto" style="white-space: pre-wrap;">Below is the modified code to compute the workspace boundaries, draw the green contours, and control the plotter to trace both contours. This code extends the original by adding workspace computation and contour tracing.</p>
+<h1>Network</h1>
 <p>這裡所指的 Network 是 Computer Network，電腦網路可說是目前電腦輔助設計流程的基礎設施，許多輔助設計的軟體透過電腦網路執行認證、協同設計或及時擷取資源。因此進行電腦輔助設計流程之前，必須對所依附使用的電腦網路系統與架構有所了解。</p>
 <p><a href="https://en.wikipedia.org/wiki/Computer_network">Computer Network</a>:</p>
 <p>A<span> </span><b>computer network</b><span> </span>is a collection of communicating<span> </span><a href="https://en.wikipedia.org/wiki/Computer" title="Computer">computers</a><span> </span>and other devices, such as printers and smart phones. In order to communicate, the computers and devices must be connected by wired media like copper cables,<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Optical_fibers" title="Optical fibers">optical fibers</a>, or by<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Wireless_communication" title="Wireless communication">wireless communication</a>. The devices may be connected in a variety of<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Network_topologies" title="Network topologies">network topologies</a>. In order to communicate over the network, computers use agreed-on rules, called<span> </span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communication protocols</a>, over whatever medium is used.</p>
 <p>The computer network can include<span> </span><a href="https://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computers</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Server_(computing)" title="Server (computing)">servers</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Networking_hardware" title="Networking hardware">networking hardware</a>, or other specialized or general-purpose<span> </span><a href="https://en.wikipedia.org/wiki/Host_(network)" title="Host (network)">hosts</a>. They are identified by<span> </span><a href="https://en.wikipedia.org/wiki/Network_address" title="">network addresses</a><span> </span>and may have<span> </span><a href="https://en.wikipedia.org/wiki/Hostname" title="Hostname">hostnames</a>. Hostnames serve as memorable labels for the nodes and are rarely changed after initial assignment. Network addresses serve for locating and identifying the nodes by communication protocols such as the<span> </span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a>.</p>
-<p></p><h2>IPv6</h2>
+<p></p>
+<h2>IPv6</h2>
 <p>IPv6 網路協定是用來解決 IPv4 網路不敷使用的問題而產生。但是目前許多伺服器尚未全面支援 IPv6 網路協定，其原因很多，其中包括使用者欠缺對於 IPv6 網路協定的認識，或者因為伺服器上的用戶程式並未做好支援 IPv6 的準備。無論如何當決定在電腦輔助設計流程使用 IPv6 網路協定後，必須設法因應各種問題，讓採純 IPv6 網路協定設計的環境能夠連線至各個伺服器。</p>
 <p><a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a>: </p>
 <p><b>Internet Protocol version 6</b><span><span> </span>(</span><b>IPv6</b><span>) is the most recent version of the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a><span><span> </span>(IP), the<span> </span></span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communications protocol</a><span><span> </span>that provides an identification and location system for computers on networks and routes traffic across the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a><span>. IPv6 was developed by the<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a><span><span> </span>(IETF) to deal with the long-anticipated problem of<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4_address_exhaustion" title="IPv4 address exhaustion">IPv4 address exhaustion</a><span>, and was intended to replace<span> </span></span><a href="https://en.wikipedia.org/wiki/IPv4" title="IPv4">IPv4</a><span>.</span><span><span> </span>In December 1998, IPv6 became a Draft Standard for the IETF,</span><span><span> </span>which subsequently ratified it as an<span> </span></span><a href="https://en.wikipedia.org/wiki/Internet_Standard" title="Internet Standard">Internet Standard</a><span><span> </span>on 14 July 2017.</span></p>
@@ -295,7 +369,8 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <h2>Git</h2>
 <p>Git and Github</p>
 <p>電腦輔助機械設計流程:</p>
-<p style="padding-left: 30px;">每六位學員一組，請自選套件協同完成平面<a href="https://en.wikipedia.org/wiki/Four-bar_linkage">四連桿機構</a>的零組件設計繪圖。完成後請詳細說明設計與繪圖過程。</p><h2>CMSiMDE</h2>
+<p style="padding-left: 30px;">每六位學員一組，請自選套件協同完成平面<a href="https://en.wikipedia.org/wiki/Four-bar_linkage">四連桿機構</a>的零組件設計繪圖。完成後請詳細說明設計與繪圖過程。</p>
+<h2>CMSiMDE</h2>
 <p>可攜 Python 程式環境，使用 miniconda3:</p>
 <p style="padding-left: 30px;">Miniconda is a free, miniature installation of Anaconda Distribution that includes only conda, Python, the packages they both depend on, and a small number of other useful packages.<br/><br/>If you need more packages, use the conda install command to install from thousands of packages available by default in Anaconda’s public repo, or from other channels, like conda-forge or bioconda.</p>
 <p style="padding-left: 30px;">授權方式    BSD 3-Clause License（自由軟體）<br/>是否開源    是（可以查閱與修改原始碼）<br/>是否免費    是（個人與商業皆免費使用）<br/>用途限制    無限制，可用於學術、商業、開發、產品部署等<br/>提供單位    Anaconda, Inc.</p>
@@ -309,7 +384,8 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p style="padding-left: 30px;">conda create -p ./envs/cmsimde python=3.13</p>
 <p style="padding-left: 30px;">conda activate y:\envs\cmsimde</p>
 <p style="padding-left: 30px;">conda install -c conda-forge flask flask_cors bs4 lxml pelican markdown gevent</p>
-<p style="padding-left: 30px;">之後就可以 cd tmp/your_hw_repository 後，以 cms 啟動網頁編輯。</p><h3>Flask</h3>
+<p style="padding-left: 30px;">之後就可以 cd tmp/your_hw_repository 後，以 cms 啟動網頁編輯。</p>
+<h3>Flask</h3>
 <h2>Solvespace</h2>
 <p>Solvespace: <a href="https://solvespace.com">https://solvespace.com</a></p>
 <p><a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
@@ -329,6 +405,8 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
 <p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
 <p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
+<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
 <p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
 <p style="padding-left: 30px;">修改 start_miniconda3.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
@@ -349,7 +427,8 @@ import os
 conda_env = os.environ.get("CONDA_DEFAULT_ENV")
 print(f"Conda env：{conda_env}")
 print(f"Python version: {sys.version}")</pre>
-<p style="padding-left: 60px;"></p><h3>License</h3>
+<p style="padding-left: 60px;"></p>
+<h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開源軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
@@ -357,7 +436,8 @@ print(f"Python version: {sys.version}")</pre>
 <p><a href="https://support.sdasoftware.com/portal/en/kb/articles/siemens-license-server-installation-and-setup">https://support.sdasoftware.com/portal/en/kb/articles/siemens-license-server-installation-and-setup</a> </p>
 <p>NX2212 之後的認證伺服器變更: <a href="https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html">https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html</a> </p>
 <p>一旦全面 SaaS 化之後的 Siemens Nx，客戶端的使用認證將不再依賴近端的認證伺服器。</p>
-<p style="padding-left: 30px;">SaaS 之後的 Siemens NX X: <a href="https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/">https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/</a> </p><h2>Onshape</h2>
+<p style="padding-left: 30px;">SaaS 之後的 Siemens NX X: <a href="https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/">https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/</a> </p>
+<h2>Onshape</h2>
 <p>OnShape: <a href="https://www.onshape.com/en/">https://www.onshape.com/en/</a></p>
 <h2>Webots</h2>
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
@@ -384,7 +464,8 @@ print(f"Python version: {sys.version}")</pre>
 <p style="padding-left: 30px;">where python</p>
 <p style="padding-left: 30px;">conda clean --all</p>
 <p style="padding-left: 30px;">並將 Webots 下拉式功能表中的 Tools - Preferences - Python command 欄位指向 webots env 所對應的 python，或者將控制器設為 extern，然後由 SciTE 選擇使用 Webots 合用的 Python 版本與模組套件。</p>
-<p></p><h3>TimeStep</h3>
+<p>Webots 啟動:</p>
+<p style="padding-left: 30px;">webotsw --mode=pause (啟動時不會自動執行 controller)</p><h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>
@@ -1054,7 +1135,8 @@ Exit
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-98020-1_28">Kinematic Design of Five-Bar Parallel Robot by Kinematically Defined Performance Index for Energy Consumption</a></p>
 <p><a href="https://github.com/Phylliade/ikpy">https://github.com/Phylliade/ikpy</a> </p>
 <p><a href="https://hackaday.io/project/173325-educational-five-bar-parallel-robot">https://hackaday.io/project/173325-educational-five-bar-parallel-robot</a></p>
-<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div><h2>Control</h2>
+<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div>
+<h2>Control</h2>
 <p><a href="https://link.springer.com/book/10.1007/978-1-4842-9600-4">Essentials of Arduino Boards Programming</a> (電子書)  </p>
 <p><a href="/downloads/PythonForControl.pdf">PythonForControl.pdf</a></p>
 <p><a href="https://openmodelica.org/">OpenModelica</a> + <a href="https://github.com/modelon-community/PyFMI">Pyfmi</a> + Webots</p>
@@ -1114,14 +1196,18 @@ while robot.step(timestep) != -1:
     # 輸出至 Webots 馬達
     motor.setTorque(torque)
 </pre>
-<p></p><h2>Printer</h2>
+<p></p>
+<h2>Printer</h2>
 <p>這裡所指的 Printer 是 3D 列印機。</p>
 <p><a href="https://en.wikipedia.org/wiki/3D_printing">3D Printing</a>:</p>
 <p><b>3D printing</b>, or<span> </span><b>additive manufacturing</b>, is the<span> </span><a href="https://en.wikipedia.org/wiki/Manufacturing" title="Manufacturing">construction</a><span> </span>of a<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Three-dimensional_object" title="Three-dimensional object">three-dimensional object</a><span> </span>from a<span> </span><a href="https://en.wikipedia.org/wiki/Computer-aided_design" title="Computer-aided design">CAD</a><span> </span>model or a digital<span> </span><a href="https://en.wikipedia.org/wiki/3D_modeling" title="3D modeling">3D model</a>.<span> </span>It can be done in a variety of processes in which material is deposited, joined or solidified under<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Computer_Numerical_Control" title="Computer Numerical Control">computer control</a>,<span> </span>with the material being added together (such as plastics, liquids or powder grains being fused), typically layer by layer.</p>
 <p>In the 1980s, 3D printing techniques were considered suitable only for the production of functional or aesthetic prototypes, and a more appropriate term for it at the time was<span> </span><a href="https://en.wikipedia.org/wiki/Rapid_prototyping" title="Rapid prototyping">rapid prototyping</a>.<span> </span>As of 2019, the precision, repeatability, and material range of 3D printing have increased to the point that some 3D printing processes are considered viable as an industrial-production technology; in this context, the term<span> </span><i>additive manufacturing</i><span> </span>can be used synonymously with<span> </span><i>3D printing</i>.One of the key advantages of 3D printing<span> </span>is the ability to produce very complex shapes or geometries that would be otherwise infeasible to construct by hand, including hollow parts or parts with internal<span> </span><a href="https://en.wikipedia.org/wiki/Truss" title="Truss">truss</a><span> </span>structures to reduce weight while creating less material waste.<span> </span><a href="https://en.wikipedia.org/wiki/Fused_filament_fabrication#Fused_deposition_modeling" title="Fused filament fabrication">Fused deposition modeling</a><span> </span>(FDM), which uses a continuous filament of a<span> </span><a href="https://en.wikipedia.org/wiki/Thermoplastic" title="Thermoplastic">thermoplastic</a><span> </span>material, is the most common 3D printing process in use as of 2020.</p>
 <h2>Otto_ninja</h2>
 <p><a href="https://www.printables.com/model/231580-otto-ninja-starter-robot/files">https://www.printables.com/model/231580-otto-ninja-starter-robot/files</a> </p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NDIwhuxQPN8?si=ED_FAObUkAVFT5L-" title="YouTube video player" width="560"></iframe></p><h1>Brython</h1>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NDIwhuxQPN8?si=ED_FAObUkAVFT5L-" title="YouTube video player" width="560"></iframe></p>
+<h3>Simplify</h3>
+<p>利用 Blender scripting 簡化 OBJ 組立檔中的個別零件: </p>
+<p><a href="/downloads/simplify_parts_v2.py">simplify_parts_v2.py</a></p><h1>Brython</h1>
 <p><button id="add1to100">1 add to 100</button></p>
 <p><span node="[object Object]"><!-- 導入 brython 程式庫 --></span></p>
 <p>

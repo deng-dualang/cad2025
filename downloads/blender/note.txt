@@ -1,0 +1,186 @@
+Read blend: "Y:\tmp\cad2025\downloads\blender\simplfy_obj_assembly.blend"
+🚀 開始執行完整處理流程...
+🧹 場景已清空。
+OBJ import of 'part_1.obj' took 2.39 ms
+✅ 成功匯入零件: part_1
+OBJ import of 'part_10.obj' took 0.56 ms
+✅ 成功匯入零件: part_10
+OBJ import of 'part_11.obj' took 0.55 ms
+✅ 成功匯入零件: part_11
+OBJ import of 'part_12.obj' took 2.63 ms
+✅ 成功匯入零件: part_12
+OBJ import of 'part_13.obj' took 0.77 ms
+✅ 成功匯入零件: part_13
+OBJ import of 'part_14.obj' took 0.72 ms
+✅ 成功匯入零件: part_14
+OBJ import of 'part_15.obj' took 2.70 ms
+✅ 成功匯入零件: part_15
+OBJ import of 'part_2.obj' took 1.66 ms
+✅ 成功匯入零件: part_2
+OBJ import of 'part_3.obj' took 3.20 ms
+✅ 成功匯入零件: part_3
+OBJ import of 'part_4.obj' took 1.54 ms
+✅ 成功匯入零件: part_4
+OBJ import of 'part_5.obj' took 0.39 ms
+✅ 成功匯入零件: part_5
+OBJ import of 'part_6.obj' took 0.33 ms
+✅ 成功匯入零件: part_6
+OBJ import of 'part_7.obj' took 1.03 ms
+✅ 成功匯入零件: part_7
+OBJ import of 'part_8.obj' took 1.49 ms
+✅ 成功匯入零件: part_8
+OBJ import of 'part_9.obj' took 0.82 ms
+✅ 成功匯入零件: part_9
+📥 匯入完成，共 15 個物件。
+  > 成功獲取 'part_1' 的物理屬性。
+  ✨ 已為零件 'part_1' 創建並匹配簡化凸包 'part_1_simplified'。
+  🔍 零件 'part_1' 簡化前後比較：
+    - 頂點數: 原始 741 → 簡化 148 (減少 80.03%)
+    - 多邊形數: 原始 1482 → 簡化 296 (減少 80.03%)
+    - 表面積: 原始 0.0383 → 簡化 0.0371
+    - 體積: 原始 6.22657596039637e-05 → 簡化 6.0223104692062795e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_1_simplified.obj
+OBJ export of 'part_1_simplified.obj' took 1.13 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_1_simplified.obj
+  > 成功獲取 'part_10' 的物理屬性。
+  ✨ 已為零件 'part_10' 創建並匹配簡化凸包 'part_10_simplified'。
+  🔍 零件 'part_10' 簡化前後比較：
+    - 頂點數: 原始 84 → 簡化 16 (減少 80.95%)
+    - 多邊形數: 原始 168 → 簡化 32 (減少 80.95%)
+    - 表面積: 原始 0.0151 → 簡化 0.0138
+    - 體積: 原始 5.8323805852449756e-05 → 簡化 4.6541618399654916e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_10_simplified.obj
+OBJ export of 'part_10_simplified.obj' took 0.65 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_10_simplified.obj
+  > 成功獲取 'part_11' 的物理屬性。
+  ✨ 已為零件 'part_11' 創建並匹配簡化凸包 'part_11_simplified'。
+  🔍 零件 'part_11' 簡化前後比較：
+    - 頂點數: 原始 84 → 簡化 16 (減少 80.95%)
+    - 多邊形數: 原始 168 → 簡化 32 (減少 80.95%)
+    - 表面積: 原始 0.0151 → 簡化 0.0138
+    - 體積: 原始 5.832378748787046e-05 → 簡化 4.6541606473367e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_11_simplified.obj
+OBJ export of 'part_11_simplified.obj' took 0.69 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_11_simplified.obj
+  > 成功獲取 'part_12' 的物理屬性。
+  ✨ 已為零件 'part_12' 創建並匹配簡化凸包 'part_12_simplified'。
+  🔍 零件 'part_12' 簡化前後比較：
+    - 頂點數: 原始 1340 → 簡化 268 (減少 80.00%)
+    - 多邊形數: 原始 2680 → 簡化 536 (減少 80.00%)
+    - 表面積: 原始 0.0106 → 簡化 0.0106
+    - 體積: 原始 2.086112854417166e-05 → 簡化 2.026906120666625e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_12_simplified.obj
+OBJ export of 'part_12_simplified.obj' took 1.30 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_12_simplified.obj
+  > 成功獲取 'part_13' 的物理屬性。
+  ✨ 已為零件 'part_13' 創建並匹配簡化凸包 'part_13_simplified'。
+  🔍 零件 'part_13' 簡化前後比較：
+    - 頂點數: 原始 136 → 簡化 27 (減少 80.15%)
+    - 多邊形數: 原始 272 → 簡化 54 (減少 80.15%)
+    - 表面積: 原始 0.0096 → 簡化 0.0081
+    - 體積: 原始 2.1714734885880728e-05 → 簡化 1.6418564486994892e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_13_simplified.obj
+OBJ export of 'part_13_simplified.obj' took 0.70 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_13_simplified.obj
+  > 成功獲取 'part_14' 的物理屬性。
+  ✨ 已為零件 'part_14' 創建並匹配簡化凸包 'part_14_simplified'。
+  🔍 零件 'part_14' 簡化前後比較：
+    - 頂點數: 原始 136 → 簡化 27 (減少 80.15%)
+    - 多邊形數: 原始 272 → 簡化 54 (減少 80.15%)
+    - 表面積: 原始 0.0096 → 簡化 0.0079
+    - 體積: 原始 2.1714735450868004e-05 → 簡化 1.798698475477813e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_14_simplified.obj
+OBJ export of 'part_14_simplified.obj' took 0.64 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_14_simplified.obj
+  > 成功獲取 'part_15' 的物理屬性。
+  ✨ 已為零件 'part_15' 創建並匹配簡化凸包 'part_15_simplified'。
+  🔍 零件 'part_15' 簡化前後比較：
+    - 頂點數: 原始 1340 → 簡化 268 (減少 80.00%)
+    - 多邊形數: 原始 2680 → 簡化 536 (減少 80.00%)
+    - 表面積: 原始 0.0106 → 簡化 0.0106
+    - 體積: 原始 2.08611301945625e-05 → 簡化 2.024359032692105e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_15_simplified.obj
+OBJ export of 'part_15_simplified.obj' took 1.44 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_15_simplified.obj
+  > 成功獲取 'part_2' 的物理屬性。
+  ✨ 已為零件 'part_2' 創建並匹配簡化凸包 'part_2_simplified'。
+  🔍 零件 'part_2' 簡化前後比較：
+    - 頂點數: 原始 758 → 簡化 151 (減少 80.08%)
+    - 多邊形數: 原始 1516 → 簡化 302 (減少 80.08%)
+    - 表面積: 原始 0.0383 → 簡化 0.0371
+    - 體積: 原始 6.22609593654709e-05 → 簡化 5.9422110920866806e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_2_simplified.obj
+OBJ export of 'part_2_simplified.obj' took 1.05 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_2_simplified.obj
+  > 成功獲取 'part_3' 的物理屬性。
+  ✨ 已為零件 'part_3' 創建並匹配簡化凸包 'part_3_simplified'。
+  🔍 零件 'part_3' 簡化前後比較：
+    - 頂點數: 原始 1813 → 簡化 349 (減少 80.75%)
+    - 多邊形數: 原始 3658 → 簡化 730 (減少 80.04%)
+    - 表面積: 原始 0.1188 → 簡化 0.1145
+    - 體積: 原始 0.0003157478420066655 → 簡化 0.0002961029090718177
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_3_simplified.obj
+OBJ export of 'part_3_simplified.obj' took 1.55 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_3_simplified.obj
+  > 成功獲取 'part_4' 的物理屬性。
+  ✨ 已為零件 'part_4' 創建並匹配簡化凸包 'part_4_simplified'。
+  🔍 零件 'part_4' 簡化前後比較：
+    - 頂點數: 原始 613 → 簡化 111 (減少 81.89%)
+    - 多邊形數: 原始 1254 → 簡化 250 (減少 80.06%)
+    - 表面積: 原始 0.1358 → 簡化 0.1257
+    - 體積: 原始 0.0002466529123806211 → 簡化 0.00014052768494018843
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_4_simplified.obj
+OBJ export of 'part_4_simplified.obj' took 1.05 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_4_simplified.obj
+  > 成功獲取 'part_5' 的物理屬性。
+  ✨ 已為零件 'part_5' 創建並匹配簡化凸包 'part_5_simplified'。
+  🔍 零件 'part_5' 簡化前後比較：
+    - 頂點數: 原始 8 → 簡化 3 (減少 62.50%)
+    - 多邊形數: 原始 12 → 簡化 2 (減少 83.33%)
+    - 表面積: 原始 0.0053 → 簡化 0.0021
+    - 體積: 原始 8.367180758171607e-06 → 簡化 3.3881317890172014e-21
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_5_simplified.obj
+OBJ export of 'part_5_simplified.obj' took 0.62 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_5_simplified.obj
+  > 成功獲取 'part_6' 的物理屬性。
+  ✨ 已為零件 'part_6' 創建並匹配簡化凸包 'part_6_simplified'。
+  🔍 零件 'part_6' 簡化前後比較：
+    - 頂點數: 原始 8 → 簡化 3 (減少 62.50%)
+    - 多邊形數: 原始 12 → 簡化 2 (減少 83.33%)
+    - 表面積: 原始 0.0042 → 簡化 0.0015
+    - 體積: 原始 9.423696611294766e-06 → 簡化 0.0
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_6_simplified.obj
+OBJ export of 'part_6_simplified.obj' took 0.58 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_6_simplified.obj
+  > 成功獲取 'part_7' 的物理屬性。
+  ✨ 已為零件 'part_7' 創建並匹配簡化凸包 'part_7_simplified'。
+  🔍 零件 'part_7' 簡化前後比較：
+    - 頂點數: 原始 243 → 簡化 47 (減少 80.66%)
+    - 多邊形數: 原始 490 → 簡化 98 (減少 80.00%)
+    - 表面積: 原始 0.0968 → 簡化 0.0868
+    - 體積: 原始 0.00015020507166860472 → 簡化 9.725741155595363e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_7_simplified.obj
+OBJ export of 'part_7_simplified.obj' took 0.73 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_7_simplified.obj
+  > 成功獲取 'part_8' 的物理屬性。
+  ✨ 已為零件 'part_8' 創建並匹配簡化凸包 'part_8_simplified'。
+  🔍 零件 'part_8' 簡化前後比較：
+    - 頂點數: 原始 488 → 簡化 92 (減少 81.15%)
+    - 多邊形數: 原始 988 → 簡化 196 (減少 80.16%)
+    - 表面積: 原始 0.0670 → 簡化 0.0583
+    - 體積: 原始 0.0001705148539380957 → 簡化 0.0001282999396923706
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_8_simplified.obj
+OBJ export of 'part_8_simplified.obj' took 0.90 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_8_simplified.obj
+  > 成功獲取 'part_9' 的物理屬性。
+  ✨ 已為零件 'part_9' 創建並匹配簡化凸包 'part_9_simplified'。
+  🔍 零件 'part_9' 簡化前後比較：
+    - 頂點數: 原始 202 → 簡化 42 (減少 79.21%)
+    - 多邊形數: 原始 400 → 簡化 80 (減少 80.00%)
+    - 表面積: 原始 0.0557 → 簡化 0.0496
+    - 體積: 原始 8.313829588967302e-05 → 簡化 8.581265453342832e-05
+Writing to C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_9_simplified.obj
+OBJ export of 'part_9_simplified.obj' took 1.25 ms
+  📦 已匯出至: C:\Users\yen\Downloads\portable_2026\data\tmp\cad2025\downloads\blender\simplified_export\part_9_simplified.obj
+🎉 所有流程已成功完成！
+Info: Saved "simplfy_obj_assembly.blend"

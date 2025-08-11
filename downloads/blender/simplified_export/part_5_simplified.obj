@@ -1,0 +1,13 @@
+# Blender 4.2.3 LTS
+# www.blender.org
+mtllib part_5_simplified.mtl
+o part_5_simplified
+v 0.103757 -0.032000 0.122008
+v 0.103757 -0.032000 0.103250
+v -0.007757 -0.032000 0.112629
+vn -0.0000 1.0000 -0.0000
+vn -0.0000 -1.0000 -0.0000
+s 0
+usemtl part_5
+f 1//1 2//1 3//1
+f 3//2 2//2 1//2

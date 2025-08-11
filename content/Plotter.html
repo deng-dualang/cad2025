@@ -1,0 +1,263 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li class='has-children'><a href='Commands.html'>Commands</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a></li></li></ul></ul><li><a href='Topics.html'>Topics</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li class='has-children'><a href='HW2.html'>HW2</a><ul class='dropdown'><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Network.html'>Network</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja.html'>Otto_ninja</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></li></ul></ul><li><a href='Brython.html'>Brython</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">HW2 << <a href='HW2.html'>Previous</a> <a href='Network.html'>Next</a> >> Network<br /><h1>Plotter</h1>
+<p dir="auto" style="white-space: pre-wrap;">To determine the drawable workspace of the five-bar linkage mechanism described in the provided Webots controller code and to outline it with a green contour, we need to compute the reachable workspace of the end-effector (point C) based on the kinematic constraints of the mechanism. Then, we will generate the outer and inner boundary contours and instruct the plotter to trace these contours. Below is the step-by-step solution.</p>
+<hr/>
+<h4 dir="auto">Step 1: Understanding the Five-Bar Linkage and Workspace</h4>
+<p dir="auto" style="white-space: pre-wrap;">The five-bar linkage mechanism consists of two fixed points (A and E) and two actuated joints (θ1 and θ2) that control the positions of points B and D, respectively. Point C is the end-effector, determined by the intersection of two circles centered at B (radius L2) and D (radius L3). The mechanism parameters are:</p>
+<ul dir="auto">
+<li><strong>L1 = L4 = 0.1682 m</strong> (lengths of the first and fourth links)</li>
+<li><strong>L2 = L3 = 0.275 m</strong> (lengths of the second and third links)</li>
+<li><strong>A = [0.0625, 0.15] m</strong> (fixed pivot for θ1)</li>
+<li><strong>E = [-0.0625, 0.15] m</strong> (fixed pivot for θ2)</li>
+<li><strong>offset = 41.9872°</strong> (affects the angle calculations)</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The workspace is the set of all possible positions of point C, constrained by the joint angles θ1 and θ2 (ranging from -180° to 180°) and the geometric constraints of the linkage. The workspace is typically an annulus-like region (a ring-shaped area) due to the fixed distances from A to B (L1), B to C (L2), E to D (L4), and D to C (L3).</p>
+<h4 dir="auto">Step 2: Computing the Workspace Boundaries</h4>
+<p dir="auto" style="white-space: pre-wrap;">To find the workspace, we need to determine the outer and inner boundaries of the region where point C can exist. This involves:</p>
+<ul dir="auto">
+<li><strong>Outer boundary</strong>: The maximum extent of point C when the linkage is fully extended.</li>
+<li><strong>Inner boundary</strong>: The minimum extent when the linkage is folded inward, subject to valid kinematic solutions.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The workspace can be approximated by sampling the joint angles θ1 and θ2 over their range and computing the corresponding positions of point C using the forward kinematics function. The boundaries are traced by finding the extreme points (maximum and minimum radial distances from a reference point, e.g., the origin or the midpoint between A and E).</p>
+<h4 dir="auto">Forward Kinematics Recap</h4>
+<p dir="auto" style="white-space: pre-wrap;">The <span>forward_kinematics(theta1_rad, theta2_rad)</span> function computes point C as follows:</p>
+<ol dir="auto">
+<li><strong>Point B</strong>: <span>B = A + L1 * [cos(θ1 + offset), -sin(θ1 + offset)]</span></li>
+<li><strong>Point D</strong>: <span>D = E - L4 * [cos(θ2 + offset), sin(θ2 + offset)]</span></li>
+<li><strong>Point C</strong>: The intersection of a circle centered at B with radius L2 and a circle centered at D with radius L3. The function selects the intersection with the smaller y-coordinate (elbow-down configuration).</li>
+</ol>
+<h4 dir="auto">Workspace Boundary Calculation</h4>
+<p dir="auto" style="white-space: pre-wrap;">To trace the workspace boundaries:</p>
+<ul dir="auto">
+<li><strong>Outer boundary</strong>: Occurs when the linkage is fully extended, e.g., when B and C are aligned such that the distance from A to C is maximized (approximately L1 + L2 = 0.1682 + 0.275 = 0.4432 m).</li>
+<li><strong>Inner boundary</strong>: Occurs when the linkage is folded, and the distance from A to C is minimized, subject to valid intersections between the circles at B and D.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">We can sample θ1 and θ2 over [-180°, 180°] with a fine grid (e.g., 360 points per angle) to compute all possible C points. The convex hull of these points approximates the outer boundary, while the inner boundary requires identifying configurations where the distance from a reference point (e.g., the origin) is minimized, often when the linkage is folded inward.</p>
+<p dir="auto" style="white-space: pre-wrap;">To simplify, we assume the workspace is symmetric around the line connecting A and E (y = 0.15 m) due to the symmetry in L1 = L4 and L2 = L3. We compute the workspace by:</p>
+<ol dir="auto">
+<li>Sampling θ1 and θ2 in increments (e.g., 5°).</li>
+<li>Computing C for each (θ1, θ2) pair using <span>forward_kinematics</span>.</li>
+<li>Collecting valid C points (where intersections exist).</li>
+<li>Determining the outer and inner boundaries by finding the maximum and minimum radial distances from a reference point (e.g., the origin [0, 0]) for each angular direction.</li>
+</ol>
+<h4 dir="auto">Step 3: Generating the Workspace Contours</h4>
+<p dir="auto" style="white-space: pre-wrap;">To generate the outer and inner contours:</p>
+<ul dir="auto">
+<li><strong>Outer contour</strong>: For each angle φ around the origin (0, 0), find the C point with the maximum radial distance |C| = sqrt(x² + y²).</li>
+<li><strong>Inner contour</strong>: For each angle φ, find the C point with the minimum radial distance, ensuring valid kinematic solutions.</li>
+</ul>
+<p dir="auto" style="white-space: pre-wrap;">The algorithm to compute the contours is as follows:</p>
+<ol dir="auto">
+<li>Define a range of angles φ (0 to 360°, e.g., 360 points).</li>
+<li>For each φ, iterate over a grid of θ1 and θ2 values (e.g., 72 points each, 5° increments).</li>
+<li>Compute C for each (θ1, θ2) using <span>forward_kinematics</span>.</li>
+<li>Calculate the radial distance |C| and the angle of C relative to the origin.</li>
+<li>Group C points by their angle φ (within a small tolerance, e.g., ±2.5°).</li>
+<li>Select the maximum (outer) and minimum (inner) |C| for each φ bin.</li>
+<li>Sort the points by φ to create smooth contours.</li>
+</ol>
+<h4 dir="auto">Step 4: Plotting the Contours in Webots</h4>
+<p dir="auto" style="white-space: pre-wrap;">The provided code already includes a mechanism to draw a green line in Webots using an <span>IndexedLineSet</span>. We will modify this to draw two separate contours (outer and inner) in green, ensuring they are closed loops if the workspace is continuous.</p>
+<h4 dir="auto">Step 5: Sweeping the Contours with the Plotter</h4>
+<p dir="auto" style="white-space: pre-wrap;">To make the plotter trace the outer and inner contours:</p>
+<ol dir="auto">
+<li>Use the <span>inverse_kinematics</span> function to compute (θ1, θ2) for each point on the outer and inner contours.</li>
+<li>Apply the same interpolation and control logic as in the original code to move the plotter along each contour sequentially.</li>
+<li>Ensure smooth transitions between points using linear interpolation in joint space, as done in the original code.</li>
+</ol>
+<h4 dir="auto">Implementation</h4>
+<p dir="auto" style="white-space: pre-wrap;">Below is the modified code to compute the workspace boundaries, draw the green contours, and control the plotter to trace both contours. This code extends the original by adding workspace computation and contour tracing.</p>
+<br />HW2 << <a href='HW2.html'>Previous</a> <a href='Network.html'>Next</a> >> Network</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
