@@ -1,0 +1,122 @@
+#VRML_SIM R2023b utf8
+PROTO BallShooter_solid [
+field SFVec3f translation 0 0 0 
+field SFRotation rotation 0 0 1 0
+field SFString name "my proto"
+field SFColor color 0.5 0.5 0.5
+field SFNode physics NULL
+field MFNode extensionSlot [Pose{}]
+]
+{
+    Solid {
+        translation IS translation
+        rotation IS rotation
+        name IS name
+      children [
+        DEF base Solid {
+          children [
+            CadShape {
+              url [
+                "./../split_parts/base.obj"
+              ]
+            }
+          ]
+          name "base"
+          boundingObject Mesh {
+            url [
+              "./../split_parts/base.obj"
+            ]
+          }
+        }
+        DEF joint1 HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+            anchor -0.3 0.22 0
+          }
+          device [
+            DEF motor1 RotationalMotor {
+              name "motor1"
+              maxVelocity 100000
+              maxTorque 100000
+            }
+            DEF motor1_sensor PositionSensor {
+              name "motor1_sensor"
+        }
+          ]
+          endPoint DEF press Solid {
+            children [
+              CadShape {
+                url [
+                  "./../split_parts/press.obj"
+                ]
+              }
+              DEF joint2 HingeJoint {
+                jointParameters HingeJointParameters {
+                  axis 0 0 1
+                  anchor -0.0224 0.148 0
+                }
+                endPoint DEF connector Solid {
+                  children [
+                    DEF connector CadShape {
+                      url [
+                        "./../split_parts/connector.obj"
+                      ]
+                    }
+                    DEF joint3 HingeJoint {
+                      jointParameters HingeJointParameters {
+                        axis 0 0 1
+                        anchor -0.0686 0.7071 0
+                      }
+                      endPoint DEF shooter Solid {
+                        children [
+                          CadShape {
+                            url [
+                              "./../split_parts/shooter.obj"
+                            ]
+                          }
+                        ]
+                        name "shooter"
+                        boundingObject Mesh {
+                          url [
+                            "./../split_parts/shooter.obj"
+                          ]
+                        }
+                        physics Physics {
+                        }
+                      }
+                    }
+                  ]
+                  name "connector"
+                  boundingObject Mesh {
+                    url [
+                      "./../split_parts/connector.obj"
+                    ]
+                  }
+                  physics Physics {
+                  }
+                }
+              }
+            ]
+            name "press"
+            boundingObject Mesh {
+              url [
+                "./../split_parts/press.obj"
+              ]
+            }
+            physics Physics {
+            }
+          }
+        }
+        DEF joint4 HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+            anchor 0.15 0.68 0
+          }
+          endPoint SolidReference {
+            solidName "shooter"
+          }
+        }
+      ]
+      controller "shooter"
+    }
+} 

@@ -1,0 +1,117 @@
+#VRML_SIM R2023b utf8
+PROTO BallShooter_small [
+field SFVec3f translation 0 0 0 
+field SFRotation rotation 0 0 1 0
+field SFString name "my proto"
+field SFColor color 0.5 0.5 0.5
+field SFNode physics NULL
+field MFNode extensionSlot [Pose{}]
+]
+{
+    Solid {
+        translation IS translation
+        rotation IS rotation
+        name IS name
+      children [
+    Solid {
+      children [
+        CadShape {
+          url [
+            "../cad/split_parts/part_4.obj"
+          ]
+        }
+      ]
+      name "BASE"
+      boundingObject Mesh {
+        url [
+          "../cad/split_parts/part_4.obj"
+        ]
+      }
+      physics Physics {
+      }
+    }
+    DEF joint1 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor -0.35 0.15 0
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+        }
+      ]
+      endPoint DEF press Solid {
+        children [
+          CadShape {
+            url [
+              "../cad/split_parts/part_2.obj"
+            ]
+          }
+          DEF joint2 HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor -0.054 0.101 0
+            }
+            endPoint Solid {
+              children [
+                CadShape {
+                  url [
+                    "../cad/split_parts/part_3.obj"
+                  ]
+                }
+                DEF joint3 HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 0 1
+                    anchor -0.08 0.5002 0
+                  }
+                  endPoint Solid {
+                    children [
+                      CadShape {
+                        url [
+                          "../cad/split_parts/part_1.obj"
+                        ]
+                      }
+                      DEF joint4 HingeJoint {
+                        jointParameters HingeJointParameters {
+                          axis 0 0 1
+                          anchor 0.1 0.5 0
+                        }
+                        endPoint SolidReference {
+                          solidName "<static environment>"
+                        }
+                      }
+                    ]
+                    name "shooter"
+                    boundingObject Mesh {
+                      url [
+                        "../cad/split_parts/part_1.obj"
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "connector"
+              boundingObject Mesh {
+                url [
+                  "../cad/split_parts/part_3.obj"
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        boundingObject Mesh {
+          url [
+            "../cad/split_parts/part_2.obj"
+          ]
+        }
+        physics Physics {
+        }
+      }
+    }
+      ]
+    }
+} 
