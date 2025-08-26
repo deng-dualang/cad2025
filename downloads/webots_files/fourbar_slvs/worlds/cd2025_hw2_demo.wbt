@@ -1,0 +1,132 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.41906820726643557 0.42348965642924913 0.8031427946236785 1.797481597279887
+  position 0.45864362383207746 -1.0804098470041215 2.050385315315202
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  children [
+    DEF BASE Solid {
+      children [
+        CadShape {
+          url [
+            "../split_parts/base.obj"
+          ]
+        }
+      ]
+      name "BASE"
+      boundingObject Mesh {
+        url [
+          "../split_parts/base.obj"
+        ]
+      }
+    }
+    DEF BASE2 Solid {
+      children [
+        CadShape {
+          url [
+            "../split_parts/base2.obj"
+          ]
+        }
+      ]
+      name "BASE2"
+      boundingObject Mesh {
+        url [
+          "../split_parts/base2.obj"
+        ]
+      }
+    }
+    DEF JOINT1 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+      }
+      device [
+        RotationalMotor {
+          name "joint_motor1"
+        }
+      ]
+      endPoint DEF LINK1 Solid {
+        children [
+          CadShape {
+            url [
+              "../split_parts/link1.obj"
+            ]
+          }
+          DEF JOINT2 HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 0 1
+              anchor 0 0.4 0
+            }
+            endPoint DEF LINK2 Solid {
+              children [
+                CadShape {
+                  url [
+                    "../split_parts/link2.obj"
+                  ]
+                }
+                DEF JOINT3 HingeJoint {
+                  jointParameters HingeJointParameters {
+                    axis 0 0 1
+                    anchor 0.4963 0.7608 0
+                  }
+                  endPoint DEF LINK3 Solid {
+                    children [
+                      CadShape {
+                        url [
+                          "../split_parts/link3.obj"
+                        ]
+                      }
+                    ]
+                    name "LINK3"
+                    boundingObject Mesh {
+                      url [
+                        "../split_parts/link3.obj"
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "LINK2"
+              boundingObject Mesh {
+                url [
+                  "../split_parts/link2.obj"
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "LINK1"
+        boundingObject Mesh {
+          url [
+            "../split_parts/link1.obj"
+          ]
+        }
+        physics Physics {
+        }
+      }
+    }
+    DEF JOINT4 HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 1 0 0
+      }
+      endPoint SolidReference {
+        solidName "LINK3"
+      }
+    }
+  ]
+  controller "fourbar_controller"
+}

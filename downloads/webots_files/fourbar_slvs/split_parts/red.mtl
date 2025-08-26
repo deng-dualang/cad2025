@@ -1,0 +1,3 @@
+newmtl red
+  map_Ka red.png
+  map_Kd red.png

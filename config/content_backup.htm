@@ -39,17 +39,6 @@
 <h2>Mind-Map</h2>
 <p><object data="/images/cad2025.svg" height="943" type="image/svg+xml" width="1321"></object></p>
 <p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/cad2025.smm">Edit cad2025.smm</a></p>
-<h2>Commands</h2>
-<p>Allow ping ICMPv4 powershell:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
-New-NetFirewallRule -Name "Allow ICMPv4-In" -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow</pre>
-<p>ICMPv6:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv6 Echo Request (ping)
-New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Protocol ICMPv6 -IcmpType 128 -Direction Inbound -Action Allow</pre>
-<p>允許 ICMP/ICMPv6 的安全性考量<br/><br/>ICMP（包括 ICMPv6）不只是用於 ping，它對許多網路功能來說都是必要的，尤其是在 IPv6 環境下。不過，開放 ICMP/ICMPv6 仍然會帶來一些安全性疑慮：<br/><br/>對於 IPv4（ICMP）：<br/><br/>- 攻擊者可以利用 ICMP 進行：<br/>    - 偵查：發現存活主機（ping 掃描）。<br/>    - 淹水攻擊：ICMP flood（阻斷服務攻擊）。<br/>    - 網路映射：例如透過 traceroute 等工具。<br/>- 緩解方式：通常會限制 ICMP 類型（如僅允許 Echo Request/Reply），或限制來源 IP，或進行流量速率限制。<br/><br/>對於 IPv6（ICMPv6）：<br/><br/>- ICMPv6 對於 IPv6 的運作至關重要！<br/>    - 它支援鄰居探索、路徑 MTU 探查，以及位址自動設定。<br/>    - 若封鎖 ICMPv6，可能會導致 IPv6 無法正常運作，因為路由器與主機都仰賴 ICMPv6 完成這些基本功能。<br/>- 安全性疑慮：<br/>    - 偵查：攻擊者仍可發現 IPv6 主機與網段。<br/>    - 潛在濫用：例如 ICMPv6 flood，或偽造鄰居請求（Neighbor Solicitation spoofing）。<br/>- 緩解方式：<br/>    - 不要完全封鎖 ICMPv6，而是只允許必要的訊息類型（如 128/129 為 Echo、133-136 為鄰居探索等）。<br/>    - 考慮使用流量速率限制與監控。<br/>    - 檢查防火牆的預設規則——Windows 及現代防火牆通常對 ICMPv6 已有安全的預設值。<br/><br/><br/></p>
-<h3>Fourbar</h3>
-<p><object data="/images/fourbar.svg" height="2126" type="image/svg+xml" width="3168"></object></p>
-<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/fourbar.smm">Edit fourbar.smm</a></p>
 <h2>AI</h2>
 <p><a href="https://grok.com">https://grok.com</a> </p>
 <p><a href="https://github.com/copilot">https://github.com/copilot</a> </p>
@@ -57,58 +46,11 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p><a href="https://gemini.google.com/app">https://gemini.google.com/app</a> </p>
 <p><a href="https://chat.z.ai">https://chat.z.ai</a> </p>
 <p>提問:</p>
-<p><span style="background-color: #ccffcc;">請說明機械設計相關科系的大二學生該如何學習「電腦輔助設計與實習」課程，並透過虛實整合，驗證機電資控制系統的可行性?</span></p>
+<p><span style="background-color: #ccffcc;">請以目前最具前瞻與權威的教育學者群觀點發言，說明機械設計相關科系的大二學生該如何學習「電腦輔助設計與實習」課程，並透過虛實整合，驗證機電資控制系統的可行性?</span></p>
 <p style="padding-left: 30px;">請就此一主題，建議學習步驟，並列出學生身分可以免費使用的工具。</p>
-<p style="padding-left: 30px;">請就此一主題提供 15 則可以深入取得具體答覆的 AI 系統詢問句</p><h1>Topics</h1>
-<p>電腦輔助設計室電腦硬體與網路使用介紹</p>
-<p style="padding-left: 30px;">C 槽硬碟為 SSD，網路協定可以自行決定使用 IPv4 或 IPv6 (若使用純 IPv6 則必須設定 Proxy 才能連結到 github.com 以及僅支援 IPv4 協定的網站) </p>
-<p>Teams 線上教學:</p>
-<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
-<p style="padding-left: 30px;">Teams 團隊代碼: wpv2s7j</p>
-<p>下載可攜程式套件:</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
-<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
-<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
-<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
-<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
-<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
-<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
-<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
-<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
-<p>1. 複習如何開啟可攜套件、關閉可攜套件</p>
-<p style="padding-left: 30px;">尚未有 Github 帳號者，必須自行<a href="https://docs.github.com/zh/get-started/start-your-journey/creating-an-account-on-github">建立 Github 帳號</a></p>
-<p style="padding-left: 30px;">利用 Python 執行設計運算、組立件分割、控制機電系統並維護倉儲與網站內容</p>
-<p style="padding-left: 60px;"><a href="/downloads/youbot_cart.7z">youbot_cart.7z</a></p>
-<p style="padding-left: 90px;">命令列中執行 webotsw 啟動 Webots</p>
-<p style="padding-left: 90px;">開啟 worlds 目錄中的 youbot_cart.wbt (執行控制程式後，以方向鍵控制 cart 移動)</p>
-<p style="padding-left: 90px;">開啟 worlds 目錄中的 youbot_cart_w_shooter.wbt (按 a 送球，按 m 擊球，按 k 退回)</p>
-<p style="padding-left: 30px;">說明如何建立分組倉儲 Template</p>
-<p>2. 如何開啟 Solvespace、NX2312、Webots 與 Blender</p>
-<p style="padding-left: 30px;">利用 Solvespace、NX2312 或 Onshape 進行零組件繪圖</p>
-<p style="padding-left: 60px;"><a href="https://solvespace.com/tutorial.pl">Solvespace Tutorial</a></p>
-<p style="padding-left: 90px;"><a href="https://youtu.be/vBNAIMiomls">Learn Solvespace</a></p>
-<p style="padding-left: 60px;"><a href="https://www.youtube.com/playlist?list=PLA2s9EGiTDWBuUE55TRoueZdhaFWxWSl4">NX2312 Tutorial</a></p>
-<p style="padding-left: 60px;"><a href="https://www.onshape.com/en/education/">Onshape for Education</a></p>
-<p style="padding-left: 30px;">利用 Webots 建立機電模擬系統 (<a href="https://cyberbotics.com/doc/guide/index">User Guide</a>)</p>
-<p style="padding-left: 60px;"><a href="https://cyberbotics.com/doc/guide/tutorials">Webots Tutorial</a></p>
-<p style="padding-left: 30px;">利用 Blender 檢視組立件分割結果</p>
-<p style="padding-left: 60px;"><a href="https://youtu.be/4haAdmHqGOw">Blender Tutorial</a></p>
-<p>3. Github Classroom 上的分組網站: <a href="https://github.com/mdecad2025">https://github.com/mdecad2025</a> </p>
-<p style="padding-left: 30px;">各組組長建立 Github Classroom 分組團隊，取得分組倉儲 </p>
-<p>4. 利用 Git 與 Github 進行協同設計</p>
-<p style="padding-left: 30px;">各組員維護分組倉儲中的分支，進行協同設計</p>
-<p style="padding-left: 30px;">熟悉 Pull Requests 或各組員開發分支與主分支的合併</p>
-<p>5. 平面五連桿機構零組件繪圖</p>
-<p style="padding-left: 30px;">Solvespace、NX2312 與 Onshape 的操作應用</p>
-<p>6. Webots 五連桿機構系統模擬</p>
-<p style="padding-left: 30px;">零組件的 STL 與 OBJ 格式轉檔</p>
-<p style="padding-left: 30px;">Blender 的零組件檢視應用</p>
-<p style="padding-left: 30px;">Robot、Solid、Shape、CadShape、HingeJoint 與 device 節點的應用</p>
-<p style="padding-left: 30px;">Python Controller 程式的應用</p>
-<p>參考: </p>
-<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2024/content/CAD.html">http://wcm.cycu.org:88/github/cad2024/content/CAD.html</a> </p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/pymadcad">https://github.com/mdecycu/pymadcad</a> </p><h1>Homework</h1>
+<p style="padding-left: 30px;">請就此一主題提供 15 則可以深入取得具體答覆的 AI 系統詢問句</p>
+<p style="padding-left: 60px;">1. 請詳細說明大二學生在學習 Fusion 360 進行機械零件參數化建模時，應該掌握的核心技能有哪些？<br/>2. 如何利用 Onshape 教育版進行團隊協作設計，並確保版本控制與設計一致性？<br/>3. 請列出 FreeCAD 中適合初學者進行機械運動學模擬的模組及使用步驟。<br/>4. 在機械設計課程中，使用 Fusion 360 的 Motion Study 功能進行連桿機構運動模擬，該如何設定拘束條件？<br/>5. 請解釋 Webots 如何整合機械模型與控制程式，並用具體範例說明 PID 控制在其中的應用。<br/>6. 如何用 Tinkercad Circuits 模擬一個包含光電感測器與伺服馬達的簡易自動門控制系統？<br/>7. 請比較 Scilab Xcos 與 MATLAB Simulink 在控制系統模擬上的優缺點，特別針對機電系統設計。<br/>8. 學生如何利用 Wokwi Arduino 模擬環境有效測試多感測器控制系統的穩定性與反應速度？<br/>9. 請提供一個完整的機電系統設計專案案例，從 CAD 建模到控制系統模擬，再到 Webots 虛擬測試。<br/>10. 針對學生免費使用的軟體資源，如何設計一套循序漸進的學習計畫，有效結合機械設計與控制系統？<br/>11. 如何使用 Fusion 360 與 Simscale 整合進行結構強度與熱傳模擬，以驗證機械設計的可靠性？<br/>12. 請詳細說明 Arduino IDE 與 PlatformIO 開發環境在控制系統軟體撰寫上的差異與選擇建議。<br/>13. Webots 中如何設定真實物理參數（如摩擦力、慣性矩）來提升機器人運動模擬的準確度？<br/>14. 學生若無法取得實體機器人硬體，如何利用虛擬模擬工具達成機電系統整合的實作學習？<br/>15. 請介紹目前最適合機械設計系學生免費取得的線上課程或教學平台，針對 CAD 與機電整合控制系統教學。</p>
+<h2>Homework</h2>
 <p>HW1:</p>
 <p style="padding-left: 30px;">利用 NX2312、<a href="https://www.onshape.com/en/">Onshape</a>、Solvespace 或自選 CAD 套件繪製五連桿機構零組件。</p>
 <p style="padding-left: 60px;">參考資料: <a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
@@ -125,7 +67,7 @@ New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Prot
 <p></p>
 <p style="padding-left: 30px;"></p>
 <p></p>
-<h2>HW2</h2>
+<h3>HW2</h3>
 <p>一個五連桿平面機構，固定點 A 與 E 的座標分別為 (0, 0), (-50, 0), link1 從 A 點連接向 B 點長度, 為一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45, link2 從 B 點連接向 C 點, 長度為 110, link3 從 C 點連接向 D 點長度也是 110, 而最後 link4 從 D 點連接向 E 點 長度也是一個直角三角形的斜邊, 此三角形的長邊尺寸為 50, 短邊尺寸為 45。請問 link1 及 llink4 的長度分別為多少?<br/><br/>假設 A 點與 E 點分別裝設步進馬達, 其 A 點的旋轉角度是由其點右邊延伸水平線作為旋轉 0 度點，B 點起始點位於 X 軸上, 且旋轉方向為順時針方向, 而 E 點的旋轉角度則是由其點左邊延伸水平線作為旋轉 0 度點, D 點起始點也是位於 X 軸上, 且旋轉方向為逆時針方向旋轉, link1 的旋轉角度設為 theta1, 角度單位為 degree, 而 link4 的旋轉角度設為 theta2, 角度單位也是 degree, 請先利用此平面機構的兩個輸入角度作為函式的輸入變數, 用 link1 、link2、link3、link4 代表這四個連桿長度的符號名稱，且將此函數命名為 forward(theta1, theta2), 請利用正向運動學 (Forward Kinematics) 的方式，採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 forward 函式的輸出為點 C 的 X 與 Y 座標。 請推導。 另外也請利用逆向運動學 (Inverse Kinematics) 的方式, 採符號運算法 (Symbolic Formulation)，利用 Python 的 sympy 模組, 讓 Inverse(C 點的 X 座標, C 點的 Y 座標) 函式的輸出為對應的 theta1 與 theta2 的轉角表示式。 請推導, 且各推導過程均列出機構各點的 floating point 座標點的位置.</p>
 <p><a href="/downloads/fivebar_robot_2d.slvs">fivebar_robot_2d.slvs</a></p>
 <p><img alt="" height="303" src="/images/fivebar_linkage_2d.png" width="300"/></p>
@@ -355,12 +297,69 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 </ol>
 <h4 dir="auto">Implementation</h4>
 <p dir="auto" style="white-space: pre-wrap;">Below is the modified code to compute the workspace boundaries, draw the green contours, and control the plotter to trace both contours. This code extends the original by adding workspace computation and contour tracing.</p>
+<h1>Topics</h1>
+<p>電腦輔助設計室電腦硬體與網路使用介紹</p>
+<p style="padding-left: 30px;">C 槽硬碟為 SSD，網路協定可以自行決定使用 IPv4 或 IPv6 (若使用純 IPv6 則必須設定 Proxy 才能連結到 github.com 以及僅支援 IPv4 協定的網站) </p>
+<p>Teams 線上教學:</p>
+<p style="padding-left: 30px;">以 "學號@nfu.edu.tw" 登入<span> </span><a href="https://login.microsoftonline.com/">https://login.microsoftonline.com/</a><span> </span>Office 365</p>
+<p style="padding-left: 30px;">Teams 團隊代碼: wpv2s7j</p>
+<p>下載可攜程式套件:</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
+<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
+<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
+<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
+<p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
+<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
+<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
+<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
+<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
+<p>1. 複習如何開啟可攜套件、關閉可攜套件</p>
+<p style="padding-left: 30px;">尚未有 Github 帳號者，必須自行<a href="https://docs.github.com/zh/get-started/start-your-journey/creating-an-account-on-github">建立 Github 帳號</a></p>
+<p style="padding-left: 30px;">利用 Python 執行設計運算、組立件分割、控制機電系統並維護倉儲與網站內容</p>
+<p style="padding-left: 60px;"><a href="/downloads/youbot_cart.7z">youbot_cart.7z</a></p>
+<p style="padding-left: 90px;">命令列中執行 webotsw 啟動 Webots</p>
+<p style="padding-left: 90px;">開啟 worlds 目錄中的 youbot_cart.wbt (執行控制程式後，以方向鍵控制 cart 移動)</p>
+<p style="padding-left: 90px;">開啟 worlds 目錄中的 youbot_cart_w_shooter.wbt (按 a 送球，按 m 擊球，按 k 退回)</p>
+<p style="padding-left: 30px;">說明如何建立分組倉儲 Template</p>
+<p>2. 如何開啟 Solvespace、NX2312、Webots 與 Blender</p>
+<p style="padding-left: 30px;">利用 Solvespace、NX2312 或 Onshape 進行零組件繪圖</p>
+<p style="padding-left: 60px;"><a href="https://solvespace.com/tutorial.pl">Solvespace Tutorial</a></p>
+<p style="padding-left: 90px;"><a href="https://youtu.be/vBNAIMiomls">Learn Solvespace</a></p>
+<p style="padding-left: 60px;"><a href="https://www.youtube.com/playlist?list=PLA2s9EGiTDWBuUE55TRoueZdhaFWxWSl4">NX2312 Tutorial</a></p>
+<p style="padding-left: 60px;"><a href="https://www.onshape.com/en/education/">Onshape for Education</a></p>
+<p style="padding-left: 30px;">利用 Webots 建立機電模擬系統 (<a href="https://cyberbotics.com/doc/guide/index">User Guide</a>)</p>
+<p style="padding-left: 60px;"><a href="https://cyberbotics.com/doc/guide/tutorials">Webots Tutorial</a></p>
+<p style="padding-left: 30px;">利用 Blender 檢視組立件分割結果</p>
+<p style="padding-left: 60px;"><a href="https://youtu.be/4haAdmHqGOw">Blender Tutorial</a></p>
+<p>3. Github Classroom 上的分組網站: <a href="https://github.com/mdecad2025">https://github.com/mdecad2025</a> </p>
+<p style="padding-left: 30px;">各組組長建立 Github Classroom 分組團隊，取得分組倉儲 </p>
+<p>4. 利用 Git 與 Github 進行協同設計</p>
+<p style="padding-left: 30px;">各組員維護分組倉儲中的分支，進行協同設計</p>
+<p style="padding-left: 30px;">熟悉 Pull Requests 或各組員開發分支與主分支的合併</p>
+<p>5. 平面五連桿機構零組件繪圖</p>
+<p style="padding-left: 30px;">Solvespace、NX2312 與 Onshape 的操作應用</p>
+<p>6. Webots 五連桿機構系統模擬</p>
+<p style="padding-left: 30px;">零組件的 STL 與 OBJ 格式轉檔</p>
+<p style="padding-left: 30px;">Blender 的零組件檢視應用</p>
+<p style="padding-left: 30px;">Robot、Solid、Shape、CadShape、HingeJoint 與 device 節點的應用</p>
+<p style="padding-left: 30px;">Python Controller 程式的應用</p>
+<p>參考: </p>
+<p style="padding-left: 30px;"><a href="http://wcm.cycu.org:88/github/cad2024/content/CAD.html">http://wcm.cycu.org:88/github/cad2024/content/CAD.html</a> </p>
+<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/pymadcad">https://github.com/mdecycu/pymadcad</a> </p>
 <h1>Network</h1>
 <p>這裡所指的 Network 是 Computer Network，電腦網路可說是目前電腦輔助設計流程的基礎設施，許多輔助設計的軟體透過電腦網路執行認證、協同設計或及時擷取資源。因此進行電腦輔助設計流程之前，必須對所依附使用的電腦網路系統與架構有所了解。</p>
 <p><a href="https://en.wikipedia.org/wiki/Computer_network">Computer Network</a>:</p>
 <p>A<span> </span><b>computer network</b><span> </span>is a collection of communicating<span> </span><a href="https://en.wikipedia.org/wiki/Computer" title="Computer">computers</a><span> </span>and other devices, such as printers and smart phones. In order to communicate, the computers and devices must be connected by wired media like copper cables,<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Optical_fibers" title="Optical fibers">optical fibers</a>, or by<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Wireless_communication" title="Wireless communication">wireless communication</a>. The devices may be connected in a variety of<span> </span><a class="mw-redirect" href="https://en.wikipedia.org/wiki/Network_topologies" title="Network topologies">network topologies</a>. In order to communicate over the network, computers use agreed-on rules, called<span> </span><a href="https://en.wikipedia.org/wiki/Communication_protocol" title="Communication protocol">communication protocols</a>, over whatever medium is used.</p>
 <p>The computer network can include<span> </span><a href="https://en.wikipedia.org/wiki/Personal_computer" title="Personal computer">personal computers</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Server_(computing)" title="Server (computing)">servers</a>,<span> </span><a href="https://en.wikipedia.org/wiki/Networking_hardware" title="Networking hardware">networking hardware</a>, or other specialized or general-purpose<span> </span><a href="https://en.wikipedia.org/wiki/Host_(network)" title="Host (network)">hosts</a>. They are identified by<span> </span><a href="https://en.wikipedia.org/wiki/Network_address" title="">network addresses</a><span> </span>and may have<span> </span><a href="https://en.wikipedia.org/wiki/Hostname" title="Hostname">hostnames</a>. Hostnames serve as memorable labels for the nodes and are rarely changed after initial assignment. Network addresses serve for locating and identifying the nodes by communication protocols such as the<span> </span><a href="https://en.wikipedia.org/wiki/Internet_Protocol" title="Internet Protocol">Internet Protocol</a>.</p>
-<p></p>
+<h2>ICMP</h2>
+<p>Allow ping ICMPv4 powershell:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv4 Echo Request (ping)
+New-NetFirewallRule -Name "Allow ICMPv4-In" -DisplayName "Allow ICMPv4-In" -Protocol ICMPv4 -IcmpType 8 -Direction Inbound -Action Allow</pre>
+<p>ICMPv6:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false"># Allow inbound ICMPv6 Echo Request (ping)
+New-NetFirewallRule -Name "Allow ICMPv6-In" -DisplayName "Allow ICMPv6-In" -Protocol ICMPv6 -IcmpType 128 -Direction Inbound -Action Allow</pre>
+<p>允許 ICMP/ICMPv6 的安全性考量<br/><br/>ICMP（包括 ICMPv6）不只是用於 ping，它對許多網路功能來說都是必要的，尤其是在 IPv6 環境下。不過，開放 ICMP/ICMPv6 仍然會帶來一些安全性疑慮：<br/><br/>對於 IPv4（ICMP）：<br/><br/>- 攻擊者可以利用 ICMP 進行：<br/>    - 偵查：發現存活主機（ping 掃描）。<br/>    - 淹水攻擊：ICMP flood（阻斷服務攻擊）。<br/>    - 網路映射：例如透過 traceroute 等工具。<br/>- 緩解方式：通常會限制 ICMP 類型（如僅允許 Echo Request/Reply），或限制來源 IP，或進行流量速率限制。<br/><br/>對於 IPv6（ICMPv6）：<br/><br/>- ICMPv6 對於 IPv6 的運作至關重要！<br/>    - 它支援鄰居探索、路徑 MTU 探查，以及位址自動設定。<br/>    - 若封鎖 ICMPv6，可能會導致 IPv6 無法正常運作，因為路由器與主機都仰賴 ICMPv6 完成這些基本功能。<br/>- 安全性疑慮：<br/>    - 偵查：攻擊者仍可發現 IPv6 主機與網段。<br/>    - 潛在濫用：例如 ICMPv6 flood，或偽造鄰居請求（Neighbor Solicitation spoofing）。<br/>- 緩解方式：<br/>    - 不要完全封鎖 ICMPv6，而是只允許必要的訊息類型（如 128/129 為 Echo、133-136 為鄰居探索等）。<br/>    - 考慮使用流量速率限制與監控。<br/>    - 檢查防火牆的預設規則——Windows 及現代防火牆通常對 ICMPv6 已有安全的預設值。</p>
 <h2>IPv6</h2>
 <p>IPv6 網路協定是用來解決 IPv4 網路不敷使用的問題而產生。但是目前許多伺服器尚未全面支援 IPv6 網路協定，其原因很多，其中包括使用者欠缺對於 IPv6 網路協定的認識，或者因為伺服器上的用戶程式並未做好支援 IPv6 的準備。無論如何當決定在電腦輔助設計流程使用 IPv6 網路協定後，必須設法因應各種問題，讓採純 IPv6 網路協定設計的環境能夠連線至各個伺服器。</p>
 <p><a href="https://en.wikipedia.org/wiki/IPv6">IPv6</a>: </p>
@@ -483,7 +482,13 @@ print(f"Python version: {sys.version}")</pre>
 <p style="padding-left: 30px;">conda clean --all</p>
 <p style="padding-left: 30px;">並將 Webots 下拉式功能表中的 Tools - Preferences - Python command 欄位指向 webots env 所對應的 python，或者將控制器設為 extern，然後由 SciTE 選擇使用 Webots 合用的 Python 版本與模組套件。</p>
 <p>Webots 啟動:</p>
-<p style="padding-left: 30px;">webotsw --mode=pause (啟動時不會自動執行 controller)</p><h3>TimeStep</h3>
+<p style="padding-left: 30px;">webotsw --mode=pause (啟動時不會自動執行 controller)</p>
+<h3>Fourbar</h3>
+<p><a href="/downloads/fourbar_box.7z">fourbar_box.7z</a></p>
+<p><a href="/downloads/fourbar_slvs.7z">fourbar_slvs.7z</a></p>
+<p><object data="/images/fourbar.svg" height="2126" type="image/svg+xml" width="3168"></object></p>
+<p><a href="https://mde.tw/mind-map/#/?fileURL=https://mde.tw/cad2025/downloads/fourbar.smm">Edit fourbar.smm</a></p>
+<h3>TimeStep</h3>
 <p><span node="[object Object]">在 Webots 模擬器中，</span><strong><span node="[object Object]">模擬器的時間步長</span></strong><span node="[object Object]">與</span><strong><span node="[object Object]">世界的時間步長</span></strong><span node="[object Object]">是模擬運行的兩個重要概念，分別表示模擬器和模擬世界在離散物理計算中的時間間隔。以下是詳細說明：</span></p>
 <div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true"><hr/><br/><span node="[object Object]">1. </span><strong><span node="[object Object]">模擬器的時間步長（Simulator </span><span node="[object Object]">Time </span><span node="[object Object]">Step）</span></strong>
 <ul>
@@ -1232,7 +1237,8 @@ while robot.step(timestep) != -1:
 <p style="padding-left: 30px;">匹配：將簡化後的凸包賦予原始物件的物理屬性，包括位置、旋轉和質量。</p>
 <p style="padding-left: 30px;">匯出：最後，刪除原始物件，只匯出簡化後的凸包。</p>
 <p>利用 Blender scripting 簡化 OBJ 組立檔中的個別零件: <a href="/downloads/blender_simplify_obj_parts.7z">blender_simplify_obj_parts.7z</a></p>
-<p><a href="/downloads/simplify_parts_v2.py">simplify_parts_v2.py</a></p><h1>Brython</h1>
+<p><a href="/downloads/simplify_parts_v2.py">simplify_parts_v2.py</a></p>
+<h1>Brython</h1>
 <p><button id="add1to100">1 add to 100</button></p>
 <p><span node="[object Object]"><!-- 導入 brython 程式庫 --></span></p>
 <p>
