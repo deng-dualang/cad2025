@@ -143,7 +143,104 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">DNS << <a href='DNS.html'>Previous</a> <a href='Web.html'>Next</a> >> Web<br /><h1>Proxy</h1>
-<br />DNS << <a href='DNS.html'>Previous</a> <a href='Web.html'>Next</a> >> Web</div>
+<p><a href="https://www.squid-cache.org/">https://www.squid-cache.org/</a> </p>
+<p>/etc/squid/squid.con 檔案設定:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">acl cad_lab src 140.130.XX.0/24
+acl cad_lab src 2001:288:6004:XX::/64
+ 
+acl SSL_ports port 5443
+acl SSL_ports port 8843
+
+acl SSL_ports port 443
+acl Safe_ports port 80 # http
+acl Safe_ports port 88
+acl Safe_ports port 23020
+acl Safe_ports port 1234
+acl Safe_ports port 1235
+ 
+#acl Safe_ports port 21 # ftp
+acl SSL_ports port 8443
+acl Safe_ports port 8443
+ 
+acl SSL_ports port 9443
+acl Safe_ports port 9443
+ 
+acl SSL_ports port 22
+acl Safe_ports port 22
+acl todomainorg dstdomain .domain.org
+
+# add password to access
+auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/password
+auth_param basic realm proxy
+ 
+acl Safe_ports port 443 # https
+acl Safe_ports port 1025-65535 # unregistered ports
+acl Safe_ports port 280 # http-mgmt
+acl Safe_ports port 488 # gss-http
+acl Safe_ports port 591 # filemaker
+acl Safe_ports port 777 # multiling http
+acl CONNECT method CONNECT
+
+http_access allow cad_lab
+# setup acl for authentication
+acl squid_user proxy_auth REQUIRED
+ 
+http_access allow todomainorg
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+ 
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+ 
+# all connection need authentication
+http_access allow squid_user
+#http_access deny all
+
+#http_access allow cad_lab
+#http_access deny all
+
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+ 
+#http_access allow localnet
+http_access allow localhost
+ 
+# And finally deny all other access to this proxy
+http_access deny all
+ 
+# Squid normally listens to port 3128
+http_port 3128
+ 
+#cache_dir ufs /var/spool/squid 100 16 256
+icp_port 3130
+icp_access allow all
+ 
+cache_dir ufs /var/spool/squid 2000 16 256
+#cache_peer 140.130.XX.7 sibling 3128 3130
+cache_peer 2001:288:6004:XX::4 parent 3128 3130 default
+cache_peer 2001:288:6004:XX::42 sibling 3128 3130
+cache_peer 2001:288:6004:XX::69 sibling 3128 3130
+cache_peer 2001:288:6004:XX::53 sibling 3128 3130
+cache_peer 2001:288:6004:XX::3  sibling 3128 3130
+
+ 
+#
+# Add any of your own refresh_pattern entries above these.
+#
+refresh_pattern ^ftp: 1440 20% 10080
+refresh_pattern ^gopher: 1440 0% 1440
+refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
+refresh_pattern (Release|Packages(.gz)*)$ 0 20% 2880
+refresh_pattern . 0 20% 4320
+</pre>
+<p>Ubuntu 系統更新指令:</p>
+<p>ssh <a href="mailto:account@server">account@server</a></p>
+<p>sudo apt update</p>
+<p>sudo atp upgrade</p>
+<p>sudo apt autoremove</p>
+<p></p><br />DNS << <a href='DNS.html'>Previous</a> <a href='Web.html'>Next</a> >> Web</div>
         
     <!-- footer -->
       <div class="container">
