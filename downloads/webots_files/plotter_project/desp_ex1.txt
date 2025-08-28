@@ -1,0 +1,67 @@
+以下為 Webots 場景五連桿繪圖機的 inverse kinematic 方程式的推導程式, 可以輸入 C 點的 x 座標與 y 座標, 以及四個連桿的長度後, 計算出所需轉動的 theta1 以及 theta2 的角度, 單位為 degree.
+而此五連桿繪圖機的 C 點就是放置畫筆的位置, 請將此方程式放入 Webots controller 控制程式, 並且列出希望讓 C 點通過的輪廓為以 (25/4, -125.47/4) 作為圓心, 半徑為25 的圓周, 進行 12 等分, 然後以該圓周與通過圓心的水平線右側交點作為繞行輪廓的起點, 最後 C 點必須回到此輪廓起點. 請根據此需求, 並配合以下 equation 推導入 Webots 有關 theta1 與 theta2 joint 轉角的控制程式, 讓此 controller 可以透過兩個主動軸的配合轉動, 讓 C 點逐一通過所要求的繞行點後停止, 以下為所提供的方程式: # 逆向運動學：輸入 C 點位置與桿長，反推所有可能的角度組合
+import sympy as sp
+
+def inverse(cx_val, cy_val, l1_val, l2_val, l3_val, l4_val):
+    # 定義符號變數
+    Cx, Cy, L1, L2, L3, L4 = sp.symbols('Cx Cy L1 L2 L3 L4', real=True)
+
+    # 固定點 A 與 E (模型尺寸縮小 1/4)
+    Ax, Ay = 50/4, 0
+    Ex, Ey = 0, 0
+
+    # ========== θ₁（順時針，從 +X 起算） ==========
+    vec_A = sp.Matrix([Cx - Ax, Cy - Ay])
+    r1 = vec_A.norm()
+    angle_A = sp.atan2(vec_A[1], vec_A[0])
+    cos_alpha1 = (L1**2 + r1**2 - L2**2) / (2 * L1 * r1)
+    cos_alpha1 = sp.Max(-1, sp.Min(1, cos_alpha1))  # 保護 acos 領域
+    alpha1 = sp.acos(cos_alpha1)
+    theta1_a = -sp.deg(angle_A - alpha1)
+    theta1_b = -sp.deg(angle_A + alpha1)
+
+    # ========== θ₂（逆時針，從 –X 起算） ==========
+    vec_E = sp.Matrix([Cx - Ex, Cy - Ey])
+    r2 = vec_E.norm()
+    angle_E = sp.atan2(vec_E[1], vec_E[0])
+    cos_alpha2 = (L4**2 + r2**2 - L3**2) / (2 * L4 * r2)
+    cos_alpha2 = sp.Max(-1, sp.Min(1, cos_alpha2))  # 保護 acos 領域
+    alpha2 = sp.acos(cos_alpha2)
+    # 補回 forward 中的 +180°
+    theta2_a = sp.deg(angle_E - alpha2) - 180
+    theta2_b = sp.deg(angle_E + alpha2) - 180
+
+    # 數值代入
+    subs = {
+        Cx: cx_val,
+        Cy: cy_val,
+        L1: l1_val,
+        L2: l2_val,
+        L3: l3_val,
+        L4: l4_val
+    }
+
+    try:
+        θ1a = float(theta1_a.evalf(subs=subs))
+        θ1b = float(theta1_b.evalf(subs=subs))
+        θ2a = float(theta2_a.evalf(subs=subs))
+        θ2b = float(theta2_b.evalf(subs=subs))
+    except Exception as e:
+        return [f"發生錯誤：{e}"]
+        
+    def normalize(a):
+        return round(a % 360, 4)
+
+
+    # 組合所有可能構型角度
+    results = [
+        #(normalize(θ1a), normalize(θ2a)),
+        #(normalize(θ1a), normalize(θ2b)),
+        (normalize(θ1b), normalize(θ2a)),
+        #(normalize(θ1b), normalize(θ2b)),
+    ]
+
+    return results
+    
+#(模型尺寸縮小 1/4)
+print(inverse(25/4, -125.47/4, 67.27/4, 110/4, 110/4, 67.27/4))

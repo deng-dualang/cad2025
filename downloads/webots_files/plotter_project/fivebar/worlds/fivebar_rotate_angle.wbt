@@ -1,0 +1,202 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.4456905320764475 0.43735724815968835 0.7810752762055639 1.819494326529692
+  position -0.0007755680930864561 -0.835654682521063 1.573363149841844
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation -0.0625 0.15 0.14
+  children [
+    Solid {
+      children [
+        DEF base Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../cad/split_parts/part_1.obj"
+            ]
+          }
+        }
+        DEF left_motor_base Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../cad/split_parts/part_3.obj"
+            ]
+          }
+        }
+        DEF right_motor_base Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../cad/split_parts/part_2.obj"
+            ]
+          }
+        }
+        DEF theta2_joint HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+          }
+          device [
+            RotationalMotor {
+              name "theta2"
+              maxVelocity 100
+              maxTorque 100
+            }
+            DEF sensor2 PositionSensor {
+              name "sensor2"
+            }
+          ]
+          endPoint DEF link4 Solid {
+            children [
+              DEF link4_shape Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Mesh {
+                  url [
+                    "../cad/split_parts/part_4.obj"
+                  ]
+                }
+              }
+            ]
+            name "link4_solid"
+            boundingObject USE link4_shape
+            physics Physics {
+            }
+          }
+        }
+        DEF theta1_joint HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 0 1
+            anchor 0.125 0 0
+          }
+          device [
+            RotationalMotor {
+              name "theta1"
+              maxVelocity 100
+              maxTorque 100
+            }
+            DEF sensor1 PositionSensor {
+              name "sensor1"
+            }
+          ]
+          endPoint DEF link1_solid Solid {
+            children [
+              DEF link1_shape Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Mesh {
+                  url [
+                    "../cad/split_parts/part_5.obj"
+                  ]
+                }
+              }
+              DEF joint_b HingeJoint {
+                jointParameters HingeJointParameters {
+                  axis 0 0 1
+                  anchor 0.25 -0.1125 0
+                }
+                endPoint DEF link2_solid Solid {
+                  children [
+                    DEF link2_shape Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../cad/split_parts/part_7.obj"
+                        ]
+                      }
+                    }
+                    DEF joint_c HingeJoint {
+                      jointParameters HingeJointParameters {
+                        axis 0 0 1
+                        anchor 0.0625 -0.313675 0
+                      }
+                      endPoint DEF link3_solid Solid {
+                        children [
+                          DEF link3_shape Shape {
+                            appearance Appearance {
+                              material Material {
+                              }
+                            }
+                            geometry Mesh {
+                              url [
+                                "../cad/split_parts/part_6.obj"
+                              ]
+                            }
+                          }
+                          HingeJoint {
+                            jointParameters HingeJointParameters {
+                              axis 0 0 1
+                              anchor -0.125 -0.1125 0
+                            }
+                            endPoint SolidReference {
+                              solidName "link4_solid"
+                            }
+                          }
+                        ]
+                        name "link3_solid"
+                        boundingObject USE link3_shape
+                        physics Physics {
+                        }
+                      }
+                    }
+                    DEF pen_shape Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                      }
+                      geometry Mesh {
+                        url [
+                          "../cad/split_parts/part_10.obj"
+                        ]
+                      }
+                    }
+                  ]
+                  name "link2_solid"
+                  boundingObject USE link2_shape
+                  physics Physics {
+                  }
+                }
+              }
+            ]
+            name "link1_solid"
+            boundingObject USE link1_shape
+            physics Physics {
+            }
+          }
+        }
+      ]
+      name "whole"
+    }
+  ]
+  controller "rotate_angle"
+  supervisor TRUE
+}

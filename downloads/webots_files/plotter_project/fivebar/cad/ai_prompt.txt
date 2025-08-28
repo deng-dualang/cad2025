@@ -1,0 +1,9 @@
+a planar linkage link1 starts at (0,0) and ends at (50, -45)
+link2 starts at (50, -45) and ends at (-25, -125.47)
+link3 starts at (-25, -125.47) and ends at (-100, -45)
+link4 starts at (-100, -45) and ends at (-50, 0)
+the link1 start point and link4 end point are fixed
+so, how many degree of freedom of this linkage? how to calculate the DOF?
+if we set the rotational angle of the link1 to theta1 respect to the horizonal line clockwise, and set the rotational angle of the link4 to theta2 respect to the horizonal line counterclockwise
+if link1 can be represent as from point A to B, and link2 as point B to point C, and link3 as point C to point D, and link4 as point D to point E, as we know that length of the link1 is 67.27, link2 is 110, link3 is also 110, link4 is 67.27, how to how to develop the forward kinematic equations by given theta1 and theta2 to get the coordinate of the point C
+and also show me the inverse kinematic equations by given point C coordinate as input and calculate the associate theta1 and theta2
