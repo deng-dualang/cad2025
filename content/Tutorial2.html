@@ -1,0 +1,227 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li><a href='AI.html'>AI</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Network.html'>Network</a><li><a href='ICMP.html'>ICMP</a><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Tutorial.html'>Tutorial</a><ul class='dropdown'><li class='has-children'><a href='Stage1.html'>Stage1</a><ul class='dropdown'><li><a href='Tutorial1.html'>Tutorial1</a><li><a href='Tutorial2.html'>Tutorial2</a></li></ul><li class='has-children'><a href='Stage2.html'>Stage2</a><ul class='dropdown'><li><a href='Tutorial3.html'>Tutorial3</a><li><a href='Distancesensor.html'>Distancesensor</a><li><a href='Tutorial4.html'>Tutorial4</a><li><a href='Tutorial5.html'>Tutorial5</a></li></ul><li class='has-children'><a href='Stage3.html'>Stage3</a><ul class='dropdown'><li><a href='Tutorial6.html'>Tutorial6</a><li><a href='Tutorial7.html'>Tutorial7</a><li><a href='Stream.html'>Stream</a><li><a href='Webots Server.html'>Webots Server</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja-1.html'>Otto_ninja-1</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></ul><li><a href='Pupper.html'>Pupper</a><li><a href='JetAcker.html'>JetAcker</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Ref.html'>Ref</a><ul class='dropdown'><li class='has-children'><a href='Reeborg.html'>Reeborg</a><ul class='dropdown'><li><a href='ex1.html'>ex1</a><li><a href='Otto_ninja-2.html'>Otto_ninja-2</a></li></ul><li><a href='Pyodide.html'>Pyodide</a><li><a href='Pyodide_ex.html'>Pyodide_ex</a><li class='has-children'><a href='Pyodide2.html'>Pyodide2</a><ul class='dropdown'><li><a href='robot.py.html'>robot.py</a><li><a href='Example2.html'>Example2</a></li></ul><li class='has-children'><a href='Pyodide3.html'>Pyodide3</a><ul class='dropdown'><li><a href='png_files.html'>png_files</a><li><a href='Harvest.html'>Harvest</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Tutorial1 << <a href='Tutorial1.html'>Previous</a> <a href='Stage2.html'>Next</a> >> Stage2<br /><h1>Tutorial2</h1>
+<p>導引課程 2：修改環境<br/><br/>在本導引課程中，我們將教您如何在環境中創建簡單的物件。第一步將是創建一個與環境互動的球。我們將處理與節點相關的幾個概念：它們的含義是什麼，如何創建它們，它們如何必須隸屬等等。此外，我們還將看到如何設置物理效果。<br/><br/>將介紹幾種節點類型。它們的詳細定義可以在<a href="https://cyberbotics.com/doc/reference/nodes-and-api-functions">參考手冊</a>中找到。將<a href="https://cyberbotics.com/doc/reference/node-chart">節點圖表</a>放在您面前，將有助於理解節點的繼承關係。</p>
+<p>一個新的模擬<br/><br/>首先，我們基於教程 1 中創建的模擬來創建一個新的模擬。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：確保 my_first_simulation.wbt 世界文件已打開，並且模擬已暫停且虛擬時間為 0。使用 File / Save World As... 菜單將模擬保存為 obstacles.wbt。</span></p>
+<p>修改地板<br/><br/>內定的 RectangleArena PROTO 定義了一個簡單的地板，固定在靜態環境中，沒有物理節點，四周則被牆壁包圍。Webots 物件庫中還有其他預製的地板。我們現在將刪除 RectangleArena 節點，並添加一個簡單的地板，稍後在本教程中我們將手動用牆壁圍繞它。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #2：要刪除 RectangleArena，請在 3D 視圖或場景樹視圖中選中它，然後按鍵盤上的 del 鍵。或者，您可以在 3D 視圖中右鍵單擊它，然後在上下文菜單中選擇 Delete（您也可以直接在場景樹視圖中使用上下文表單）。選擇 TexturedBackgroundLight 節點並點擊添加按鈕。在打開的對話框中，選擇 PROTO nodes (Webots Projects) / objects / floors / Floor (Solid)。</span></p>
+<p>新添加的 Floor PROTO 默認大小為 10 米 x 10 米，但可以通過更改相應的欄位 (field) 來調整其大小、位置和紋理。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #3：在場景樹視圖中選擇並展開 Floor。修改 size 欄位並將其設置為 {1, 1} 以將其調整為 1 米 x 1 米。</span></p>
+<p><a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點<br/><br/>本小節介紹了 Webots 中最重要的基礎節點：<a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點，許多其他節點都從它衍生而來。<br/><br/><span style="background-color: #ffff99;"><a href="https://cyberbotics.com/doc/reference/solid" style="background-color: #ffff99;">Solid</a> 節點代表剛體</span>，即可以忽略變形的物體。剛體中任意兩點之間的距離無論外力如何作用，都保持恆定。例如桌子、機器人手指骨節或輪子都是剛體。軟體和關節物體不是剛體。例如繩子、輪胎、海綿或關節機器人手臂都不是剛體。然而，一個關節實體可以被分解成若干剛體。<br/><br/>Webots 的物理引擎設計用於模擬剛體。設計模擬時，一個重要的步驟是將各種實體分解為單獨的剛體。<br/><br/>要定義剛體，您需要創建一個 <a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點。在此節點內，您將設置對應於剛體特性的不同子節點。下圖描述了一個剛體及其子節點。<a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點的圖形表示由填充其子級列表的形狀節點定義。碰撞範圍在其 boundingObject 欄位中定義。圖形表示和碰撞形狀通常但不必然相同。最後，<span style="background-color: #ffff99;">physics 欄位定義物體屬於動態環境還是靜態環境</span>。所有這些子節點都是可選的，但 physics 欄位設定時，需要同時定義 boundingObject。</p>
+<p><img caption="false" height="248" src="./../images/simplest_rigit_body_object.png" width="300"/></p>
+<p>在 Webots 中，最簡單的剛體模型具有<span style="background-color: #ffff99;">幾何外形圖示</span> (以 Shape 中的 Geometry 標示其<span style="background-color: #ccffcc;">視覺外形</span>)、<span style="background-color: #ffff99;">物理邊界形體</span> (以 boundingObject 中的 Geometry 標示其<span style="background-color: #ccffcc;">碰撞檢測外形</span>) 並處於<span style="background-color: #ffff99;">動態環境</span> (以 physics 中的 Physics 標示其<span style="background-color: #ccffcc;">物理特性參數</span>) 中。<br/><br/>圖中的幾何框代表任何類型的幾何原始體。事實上，它可以被替換為球體、盒子、圓柱體等。</p>
+<p>創建一個球<br/><br/>我們現在將在模擬中添加一個球。該球將被建模為剛體，如下圖所示。我們將使用 <a href="https://cyberbotics.com/doc/reference/sphere">Sphere</a> 節點來定義我們球的幾何形狀。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #4：在場景樹視圖中，選擇最後一個節點並按「Add」按鈕。在對話框中，打開「Bases nodes」部分並選擇「<a href="https://cyberbotics.com/doc/reference/solid">Solid</a>」節點。在場景樹視圖中，展開「<a href="https://cyberbotics.com/doc/reference/solid">Solid</a>」節點並選擇其「children」欄位。使用「Add」按鈕向其添加一個「<a href="https://cyberbotics.com/doc/reference/shape">Shape</a>」節點。選擇「<a href="https://cyberbotics.com/doc/reference/shape">Shape</a>」節點的「appearance」欄位，並使用「Add」按鈕添加一個「PBRAppearance」節點。</span><br/><br/><span style="background-color: #ccffcc;">    添加一個「Sphere」節點作為新創建的「<a href="https://cyberbotics.com/doc/reference/shape">Shape</a>」節點的幾何欄位。</span><br/><span style="background-color: #ccffcc;">    展開「PBRAppearance」節點，將其「metalness」欄位更改為 0，並將其「roughness」欄位更改為 1。</span><br/><span style="background-color: #ccffcc;">    向「<a href="https://cyberbotics.com/doc/reference/solid">Solid</a>」的「boundingObject」欄位添加另一個「<a href="https://cyberbotics.com/doc/reference/sphere">Sphere</a>」節點。</span><br/><span style="background-color: #ccffcc;">    最後，向「<a href="https://cyberbotics.com/doc/reference/solid">Solid</a>」的「physics」欄位添加一個「Physics」節點。</span><br/><span style="background-color: #ccffcc;">    通過修改「<a href="https://cyberbotics.com/doc/reference/solid">Solid</a>」節點的「translation」欄位，將球放置在機器人前面（例如在 {0.2, 0, 0.2}）。</span><br/><span style="background-color: #ccffcc;">    保存模擬。</span><br/><span style="background-color: #ccffcc;">    結果如下圖所示。</span></p>
+<p><img alt="" height="157" src="./../images/tutorial_ball.thumbnail.jpg" width="300"/></p>
+<p>你的第一個 Webots 剛體<br/><br/>當模擬開始時，球會撞擊地板。您可以通過對球施加力來移動它（ctrl + alt + 左鍵單擊並拖動）。通過啟用 View / Optional Rendering / Show Contact Points 表單項，可以顯示球與地板之間的接觸點作為青色線條。</p>
+<p>幾何體<br/><br/>為了定義球，我們在兩個不同的上下文中使用了 Sphere 節點：圖形表示 (graphical representation)（children）和定義物理邊界 (physical bounds)（boundingObject）。所有幾何節點（例如 Sphere 節點）都可以在圖形標示中使用。但是，只有其中的一部分可以在物理標示中使用。<a href="https://cyberbotics.com/doc/reference/node-chart">節點圖表</a>中則明確指出哪些節點可以用在何種標示。(這裡需要進一步說明各節點的適用情境)<br/><br/>我們現在將縮小球體的尺寸，並通過增加用於表示它的三角形數量來提高其圖形質量。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #5：對於定義球的每個 Sphere 節點，將其 radius 欄位設置為 0.05，將其 subdivision 欄位設置為 2。請參考 <a href="https://cyberbotics.com/doc/reference/sphere">sphere 手冊</a>了解 subdivision 欄位的含義。</span></p>
+<p>DEF-USE 機制<br/><br/>DEF-USE 機制允許在一個地方定義一個節點，並在場景樹的其他地方重用該定義。這對於避免在世界文件中重複相同的節點非常有用。此外，它還允許用戶同時修改多個對象。其工作原理如下：首先使用 DEF 字符串標記一個節點。然後可以使用 USE 關鍵字在其他地方重用該節點的副本。只有 DEF 節點的欄位可以編輯，USE 節點的欄位繼承自 DEF 節點，無法更改。此機制依賴於世界文件中節點的順序。DEF 節點應在任何相應的 USE 節點之前定義。<br/><br/>我們之前用來定義球的兩個 Sphere 定義是冗餘的。我們現在將使用 DEF-USE 機制將這兩個 Sphere 合併為一個。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #6：在場景樹視圖中選擇第一個 Sphere 節點（Shape 的子節點）。場景樹視圖的欄位編輯器允許您輸入 DEF 字符串。</span><br/><br/><span style="background-color: #ccffcc;">    在此欄位中輸入 BALL_GEOMETRY。</span><br/><span style="background-color: #ccffcc;">    選擇 boundingObject 欄位（包含第二個 Sphere 節點），通過右鍵單擊該欄位並選擇彈出上下文菜單中的「Delete」條目來清空它。</span><br/><span style="background-color: #ccffcc;">    然後，選擇 boundingObject 欄位並單擊「Add」按鈕，在對話框中選擇 USE / BALL_GEOMETRY。</span><br/><span style="background-color: #ccffcc;">    結果如圖所示。</span></p>
+<p>現在，更改第一個 Sphere 節點的 radius 欄位也會修改其 boundingObject。<br/><br/>為了方便起見，boundingObject 欄位也接受 <a href="https://cyberbotics.com/doc/reference/shape">Shape</a> 節點（而不是直接接受 Sphere 節點）。同樣可以在 <a href="https://cyberbotics.com/doc/reference/shape">Shape</a> 層級使用相同的 DEF-USE 機制，如下圖所示。目前最大的好處是能夠直接將此 <a href="https://cyberbotics.com/doc/reference/shape">Shape</a> 用於圖形目的。稍後此機制對於某些傳感器將非常有用。</p>
+<p><img alt="" height="157" src="./../images/tutorial_def_use.thumbnail.jpg" width="300"/></p>
+<p>在名為 BALL_GEOMETRY 的 Sphere 節點上使用 DEF-USE 機制。</p>
+<p><img alt="" height="200" src="./../images/tutorial2_DEF_USE.png" width="300"/></p>
+<p>在 Solid 的<span style="background-color: #ffff00;">幾何體的 Sphere 節點上應用 DEF-USE 機制</span>。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #7：創建第二個球，使用相同的參數，但使用 <a href="https://cyberbotics.com/doc/reference/shape">Shape</a> 節點（而不是直接使用 Sphere 節點）來實現 DEF-USE 機制。</span></p>
+<p>添加牆壁<br/><br/>為了驗證您的進展，請自行實現四面牆來圍繞環境。這些牆必須靜態地定義到環境中。為了理解靜態和動態之間的區別，讓我們取一個地面上的定義物體（球）。如果 Physics 節點為 NULL，它將在模擬期間保持靜止在空中（靜態情況）。如果 physics 欄位包含 Physics 節點，它將在重力作用下掉落（動態情況）。<br/><br/>儘量在<a href="https://cyberbotics.com/doc/reference/shape">Shape</a> 層級使用 DEF-USE 機制，而不是在 Geometry 層級。確實，將中間 Shape 節點添加到 Solid 節點的 boundingObject 欄位中更方便。實現牆壁的最佳幾何原語是 <a href="https://cyberbotics.com/doc/reference/box">Box</a> 節點。所有牆壁只需定義一個 <a href="https://cyberbotics.com/doc/reference/shape">Shape</a>。預期結果如圖所示。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #8：添加四面牆，無需物理效果，並且只使用一個 Shape 節點的定義。</span></p>
+<p>解決方案：世界文件<br/><br/>要將您的世界與解決方案進行比較，請進入您的文件並找到在<a href="https://mde.tw/cd2025/content/Tutorial1.html">導引課程1</a>中創建的名為 "my_first_simulation" 的文件夾，然後進入 "worlds" 文件夾並用文本編輯器打開相應的世界文件。此解決方案與其他解決方案位於 solution 目錄中。</p>
+<p><img alt="" height="157" src="./../images/tutorial_walls.thumbnail.jpg" width="300"/></p>
+<p>在本教程結束時的模擬狀態。</p>
+<p>效率<br/><br/>剛體的模擬計算代價高昂。通過最小化邊界對象的數量、最小化它們之間的約束（有關約束的更多信息在後續教程中），以及最大化 WorldInfo.basicTimeStep 欄位，可以提高模擬速度。在每次模擬中，必須在模擬速度和現實感之間找到權衡。</p>
+<p>結論<br/><br/>在本教程結束時，您將能夠基於剛體創建簡單的環境。您能夠從場景樹視圖中添加節點並修改其欄位。您已經熟悉了 <a href="https://cyberbotics.com/doc/reference/solid">Solid</a>、Physics、<a href="https://cyberbotics.com/doc/reference/shape">Shape</a>、Sphere 和 <a href="https://cyberbotics.com/doc/reference/box">Box</a> 節點。您還看到了 DEF-USE 機制，該機制允許減少場景樹的節點冗餘。</p>
+<br />Tutorial1 << <a href='Tutorial1.html'>Previous</a> <a href='Stage2.html'>Next</a> >> Stage2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

@@ -1,0 +1,227 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li><a href='AI.html'>AI</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Network.html'>Network</a><li><a href='ICMP.html'>ICMP</a><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Tutorial.html'>Tutorial</a><ul class='dropdown'><li class='has-children'><a href='Stage1.html'>Stage1</a><ul class='dropdown'><li><a href='Tutorial1.html'>Tutorial1</a><li><a href='Tutorial2.html'>Tutorial2</a></li></ul><li class='has-children'><a href='Stage2.html'>Stage2</a><ul class='dropdown'><li><a href='Tutorial3.html'>Tutorial3</a><li><a href='Distancesensor.html'>Distancesensor</a><li><a href='Tutorial4.html'>Tutorial4</a><li><a href='Tutorial5.html'>Tutorial5</a></li></ul><li class='has-children'><a href='Stage3.html'>Stage3</a><ul class='dropdown'><li><a href='Tutorial6.html'>Tutorial6</a><li><a href='Tutorial7.html'>Tutorial7</a><li><a href='Stream.html'>Stream</a><li><a href='Webots Server.html'>Webots Server</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja-1.html'>Otto_ninja-1</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></ul><li><a href='Pupper.html'>Pupper</a><li><a href='JetAcker.html'>JetAcker</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Ref.html'>Ref</a><ul class='dropdown'><li class='has-children'><a href='Reeborg.html'>Reeborg</a><ul class='dropdown'><li><a href='ex1.html'>ex1</a><li><a href='Otto_ninja-2.html'>Otto_ninja-2</a></li></ul><li><a href='Pyodide.html'>Pyodide</a><li><a href='Pyodide_ex.html'>Pyodide_ex</a><li class='has-children'><a href='Pyodide2.html'>Pyodide2</a><ul class='dropdown'><li><a href='robot.py.html'>robot.py</a><li><a href='Example2.html'>Example2</a></li></ul><li class='has-children'><a href='Pyodide3.html'>Pyodide3</a><ul class='dropdown'><li><a href='png_files.html'>png_files</a><li><a href='Harvest.html'>Harvest</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Stage1 << <a href='Stage1.html'>Previous</a> <a href='Tutorial2.html'>Next</a> >> Tutorial2<br /><h1>Tutorial1</h1>
+<p>導引課程<br/><br/>本章的目的是解說 Webots 的基本概念，這些概念是自行創建模擬場景 (.wbt) 時必須用到的。學習重點在於熟悉機器人及其環境的模型建構流程，以及機器人控制器 (controllers) 的程式設計。進而學習如何尋找額外的教學資料。<br/><br/>本章適合 Webots 的初學者。不過，仍然需要有程式設計 (Programming) 的背景。範例是用 Python 語言編寫的。如果您不熟悉 Python 語言，透過基本說明應該還是能夠理解本章的控制器寫法，因為下面的 Python 程式非常簡單。除了程式設計，您不需要任何特定的知識即可完成本章中的教程。然而，基本的機器人學 (Robotcs)、數學 (Mathematics)、模型建構 (Modeling) 和樹狀表示法 (Tree representation) 的背景知識可能會有所幫助。有經驗的 Webots 使用者可以跳過最初的教程。不過，我們建議至少能花點時間閱讀這些教程的介紹和結論。<br/><br/>本章的每個部分（除了第一和最後一部分）都是一個導引課程。每個導引課程都有一個明確的教育目標，並在第一段中進行解釋。獲得的概念隨後會在結論子部分中總結。每一個導引課程都被設計成一系列互動操作步驟。要繼續進行下一個教程，通常需要掌握前一個教學中獲得的知識。因此，我們強烈建議按照導引所安排的順序進行。此外，我們建議在繼續進一步之前，確保已經理解了導引課程中的所有概念。<br/><br/>最後一部分將提供一些解決本章未涉及問題的提示。<br/><br/>導引課程的解決方案位於 Webots 安裝目錄的 "WEBOTS_HOME/projects/samples/tutorials" 子目錄中。</p>
+<p>導引課程 1：在 Webots 中進行首次模擬<br/><br/>目標<br/><br/>本導引課程的目標是讓您熟悉用戶界面和 Webots 的基本概念。您將創建一個包含簡單環境的首次模擬：一個帶有地板和牆壁的競技場、幾個箱子、一個 e-puck 機器人和一個使機器人移動的控制程式。<br/><br/>步驟<br/><br/>1. 啟動 Webots：在您的電腦上打開 Webots (假如使用協同產品設計課程的可攜套件，啟動後在命令列中輸入 webotsw 即可開啟 Webots, 若要同時啟動串流伺服器，則可輸入 webotsw --stream，之後可利用瀏覽器在伺服器的 IP 位址上以串流內建埠號 1234 連接觀看場警)。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：通過雙點擊 Webots 圖標（或在終端中從命令行調用）來啟動 Webots。如果您是第一次在此電腦上運行 Webots，可能會提示您選擇圖形主題。您也可能被邀請參加 Webots 指導遊覽，請關閉指導遊覽。</span></p>
+<p>2. 創建新世界：<br/>    - 轉到 File -&gt; New World。<br/>    - 使用適當的名稱保存新世界文件，例如 my_first_simulation.wbt。</p>
+<p>3. 添加競技場：<br/>    - 在場景樹中，右鍵點擊 root 並選擇 Add New -&gt; Solid。<br/>    - 將新固體重命名為 arena 並為其添加 Shape。<br/>    - 將其幾何形狀設置為 Box，並設置適當的尺寸（例如，1m x 1m x 0.01m）來表示地板。<br/>    - 為形狀添加 Material 並設置其顏色。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #2：通過點擊 3D 視圖的暫停按鈕來暫停當前模擬（請參閱用戶界面描述以找到按鈕）。如果主工具欄上的虛擬時間計數器停止，則模擬被暫停。從 File / New / New Project Directory... 菜單項創建一個新項目並按照說明進行：</span><br/><br/><span style="background-color: #ccffcc;">1. 將項目目錄命名為 my_first_simulation，而不是建議的 my_project。</span><br/><span style="background-color: #ccffcc;">2. 將世界文件命名為 my_first_simulation.wbt，而不是建議的 empty.wbt。</span><br/><span style="background-color: #ccffcc;">3. 點擊所有選框，包括默認未選中的 "Add a rectangle arena"。</span></p>
+<p>4. 添加牆壁：<br/>    - 重複該過程以在競技場周圍添加四面牆壁。<br/>    - 調整它們的位置和尺寸以適合地板周圍。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #3：在場景樹中雙擊 RectangleArena 節點。這應該會打開該節點並顯示其字段。</span><br/><br/><span style="background-color: #ccffcc;">1. 選擇 floorTileSize 字段並將其值設置為 0.25 0.25 而不是 0.5 0.5。您應該立即在 3D 視圖中看到效果。</span><br/><span style="background-color: #ccffcc;">2. 選擇 wallHeight 字段並將其值更改為 0.05 而不是 0.1。競技場的牆壁現在應該變得更低。</span></p>
+<p>5. 添加箱子：<br/>    - 在競技場內添加幾個箱子作為障礙物。<br/>    - 根據您的喜好設置它們的位置和尺寸。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #4：在場景樹中雙擊 RectangleArena 以將其關閉並選中它。點擊場景樹頂部的添加按鈕。在打開的對話框中，選擇 PROTO nodes (Webots Projects) / objects / factory / containers / WoodenBox (Solid)。一個大箱子應該會出現在競技場的中央。在場景樹中雙擊它以打開其字段。</span><br/><br/><span style="background-color: #ccffcc;">1. 將其尺寸更改為 0.1 0.1 0.1 而不是 0.6 0.6 0.6。</span><br/><span style="background-color: #ccffcc;">2. 將其平移更改為 0 0 0.05 而不是 0 0 0.3。或者，您可以使用 3D 視圖中出現的藍色箭頭來調整其 translation.z 字段。</span><br/><span style="background-color: #ccffcc;">3. 現在按住 Shift 鍵並在 3D 視圖中拖動箱子，將其移動到競技場的某個角落。</span><br/><span style="background-color: #ccffcc;">4. 選擇箱子並按 ctrl-C，ctrl-V（Windows，Linux）或 ⌘ command-C，⌘ command-V（macOS）來複製和粘貼它。按住 Shift 鍵並拖動新箱子將其移動到某個不同的位置。以這種方式創建第三個箱子。</span><br/><span style="background-color: #ccffcc;">5. 移動箱子，使競技場中央沒有箱子。您也可以使用藍色旋轉箭頭沿垂直軸旋轉箱子。這也可以通過按住 Shift 鍵並用右鍵拖動來完成。或者，您可以更改場景樹中 WoodenBox 節點的旋轉字段的角度。</span><br/><span style="background-color: #ccffcc;">6. 一旦您對結果滿意，請使用保存按鈕保存世界。</span></p>
+<p>6. 添加 e-puck 機器人：<br/>    - 在場景樹中，右鍵點擊 root 並選擇 Add New -&gt; Robot。<br/>    - 從可用機器人列表中選擇 e-puck 機器人。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #5：選擇場景樹視圖中的最後一個節點 WoodenBox。點擊場景樹視圖頂部的添加按鈕。在對話框中，選擇 PROTO nodes (Webots Projects) / robots / gctronic / e-puck / E-puck (Robot)。一個 e-puck 機器人應該會出現在競技場的中央。像移動和旋轉箱子一樣移動和旋轉這個機器人。保存模擬並按下實時運行按鈕。</span></p>
+<p>7. 創建控制程式：<br/>    - 在場景樹中右鍵點擊 e-puck 並選擇 Add New -&gt; Controller。<br/>    - 選擇以 Python 程式語法創建一個新的控制器文件（例如，epuck_controller.py）並編寫一個簡單的程式來使機器人移動。例如：</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot, Motor  # 從 controller 模組導入 Robot 和 Motor 類別
+
+TIME_STEP = 64  # 設置時間步長為 64 毫秒
+
+# 創建 Robot 實例
+robot = Robot()
+
+# 擷取電機設備
+leftMotor = robot.getDevice('left wheel motor')  # 獲取左側輪子電機設備
+rightMotor = robot.getDevice('right wheel motor')  # 獲取右側輪子電機設備
+
+# 設置電機的目標位置
+leftMotor.setPosition(10.0)  # 設置左側輪子電機的目標位置為 10.0
+rightMotor.setPosition(10.0)  # 設置右側輪子電機的目標位置為 10.0
+
+while robot.step(TIME_STEP) != -1:  # 當機器人步進時間步長不等於 -1 時（模擬仍在運行）
+    pass  # 什麼也不做，保持循環運行</pre>
+<p>8. 保存並運行模擬：<br/>    - 保存您的世界文件。<br/>    - 點擊 Play 按鈕運行模擬並觀察機器人移動。<br/><br/>結論<br/><br/>在本導引課程中，您已經學習了如何在 Webots 中創建一個簡單的模擬，包括添加競技場、牆壁、障礙物和 e-puck 機器人。您還創建了一個基本的控制程式來使機器人移動。本導引課程已經為您探索 Webots 更進階功能提供了充實的基礎。</p>
+<br />Stage1 << <a href='Stage1.html'>Previous</a> <a href='Tutorial2.html'>Next</a> >> Tutorial2</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

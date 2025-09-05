@@ -1,0 +1,353 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li><a href='AI.html'>AI</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Network.html'>Network</a><li><a href='ICMP.html'>ICMP</a><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Tutorial.html'>Tutorial</a><ul class='dropdown'><li class='has-children'><a href='Stage1.html'>Stage1</a><ul class='dropdown'><li><a href='Tutorial1.html'>Tutorial1</a><li><a href='Tutorial2.html'>Tutorial2</a></li></ul><li class='has-children'><a href='Stage2.html'>Stage2</a><ul class='dropdown'><li><a href='Tutorial3.html'>Tutorial3</a><li><a href='Distancesensor.html'>Distancesensor</a><li><a href='Tutorial4.html'>Tutorial4</a><li><a href='Tutorial5.html'>Tutorial5</a></li></ul><li class='has-children'><a href='Stage3.html'>Stage3</a><ul class='dropdown'><li><a href='Tutorial6.html'>Tutorial6</a><li><a href='Tutorial7.html'>Tutorial7</a><li><a href='Stream.html'>Stream</a><li><a href='Webots Server.html'>Webots Server</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja-1.html'>Otto_ninja-1</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></ul><li><a href='Pupper.html'>Pupper</a><li><a href='JetAcker.html'>JetAcker</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Ref.html'>Ref</a><ul class='dropdown'><li class='has-children'><a href='Reeborg.html'>Reeborg</a><ul class='dropdown'><li><a href='ex1.html'>ex1</a><li><a href='Otto_ninja-2.html'>Otto_ninja-2</a></li></ul><li><a href='Pyodide.html'>Pyodide</a><li><a href='Pyodide_ex.html'>Pyodide_ex</a><li class='has-children'><a href='Pyodide2.html'>Pyodide2</a><ul class='dropdown'><li><a href='robot.py.html'>robot.py</a><li><a href='Example2.html'>Example2</a></li></ul><li class='has-children'><a href='Pyodide3.html'>Pyodide3</a><ul class='dropdown'><li><a href='png_files.html'>png_files</a><li><a href='Harvest.html'>Harvest</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Stage3 << <a href='Stage3.html'>Previous</a> <a href='Tutorial7.html'>Next</a> >> Tutorial7<br /><h1>Tutorial6</h1>
+<h4 class="anchor-header" id="tutorial64wheeledrobot60minutes" name="tutorial-6-4-wheeled-robot-60-minutes">Tutorial 6: 4-Wheeled Robot</h4>
+<p>This tutorial aims at creating your first robot from scratch. The robot will consist of a body, four wheels, and two distance sensors. The result is depicted on <a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#3d-view-of-the-4-wheels-robot-note-that-the-coordinate-system-representations-of-the-robot-body-and-of-its-wheels-are-oriented-the-same-way-their-px-vector-in-red-defines-the-left-of-the-robot-their-py-vector-in-green-defines-the-top-of-the-robot-and-their-pz-vector-in-blue-defines-the-front-of-the-robot-the-distance-sensors-are-oriented-in-a-different-way-their-px-vector-indicates-the-direction-of-the-sensor">this figure</a>. The <a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#top-view-of-the-4-wheeled-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-device">next figure</a> shows the robot from a top view.</p>
+<p><img alt="" height="209" src="./../images/tutorial_4_wheels_robot.thumbnail.jpg" width="300"/></p>
+<p>3D view of the 4 wheels robot. Note that the coordinate system representations of the robot body and of its wheels are oriented the same way. Their +x-vector (in red) defines the left of the robot, their +y-vector (in green) defines the top of the robot, and their +z-vector (in blue) defines the front of the robot. The distance sensors are oriented in a different way, their +x-vector indicates the direction of the sensor.</p>
+<p><img alt="" height="193" src="./../images/tutorial_4_wheels_top_schema.thumbnail.jpg" width="300"/></p>
+<p>Top view of the 4 wheeled robot. The grid behind the robot has a dimension of 0.2 x 0.3 meters. The text labels correspond to the name of the device.</p>
+<h4 class="anchor-header" id="newsimulation" name="new-simulation">New Simulation</h4>
+<blockquote>
+<p><strong>Hands on #1</strong>: Save the world of the previous tutorial as<span> </span><code>4_wheeled_robot.wbt</code>. Remove the nodes defining the e-puck, the ball, the dumbbell and the contact properties. The ground, the walls and the lighting are kept.</p>
+</blockquote>
+<h4 class="anchor-header" id="separatingtherobotinsolidnodes" name="separating-the-robot-in-solid-nodes"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#separating-the-robot-in-solid-nodes"><span class="anchor-link-image"></span></a>Separating the Robot in Solid Nodes</h4>
+<p>Some definitions and rules to create the robot model:</p>
+<ul>
+<li>
+<p>The set containing the<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node and all its derived nodes are called the<span> </span><em>solid nodes</em>.</p>
+</li>
+<li>
+<p>A similar definition is applied for the<span> </span><a href="https://cyberbotics.com/doc/reference/device">Device</a>,<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a>,<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>and<span> </span><a href="https://cyberbotics.com/doc/reference/motor">Motor</a><span> </span>nodes. You can get more information about the node hierarchy in the<span> </span><a href="https://cyberbotics.com/doc/reference/node-chart">nodes chart diagram</a>.</p>
+</li>
+<li>
+<p>Most sensors and actuators are both<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>and<span> </span><a href="https://cyberbotics.com/doc/reference/device">Device</a><span> </span>nodes at the same time.</p>
+</li>
+<li>
+<p>The main structure of a<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>model is a tree of<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>nodes linked together. The root node of this tree should be a<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node.</p>
+</li>
+<li>
+<p>The solids are linked together by<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>nodes. A<span> </span><a href="https://cyberbotics.com/doc/reference/device">Device</a><span> </span>node should be the direct child of either a<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node, a<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node or a<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>node.</p>
+</li>
+<li>
+<p>A<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>node is used to add one (or two) degree(s) of freedom (DOF), between its parent and its child. The direct parent and child of a<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>node are both<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>nodes.</p>
+</li>
+<li>
+<p>The nodes derived from<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>allow creating different kinds of constraints between the linked<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>nodes. The most used one in robotics, is the<span> </span><a href="https://cyberbotics.com/doc/reference/hingejoint">HingeJoint</a><span> </span>allowing to model amongst others rotational motors including wheels.</p>
+</li>
+<li>
+<p>A<span> </span><a href="https://cyberbotics.com/doc/reference/joint">Joint</a><span> </span>node can be monitored or actuated by adding a<span> </span><a href="https://cyberbotics.com/doc/reference/positionsensor">PositionSensor</a><span> </span>node, or a motor node to its<span> </span><code>device</code><span> </span>field respectively.</p>
+</li>
+</ul>
+<p>Having these rules in mind, we can start designing the node hierarchy used to model the robot. The first step is to determine which part of the robot should be modeled as a<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node.</p>
+<p>In our example, this operation is quite obvious. The robot has 4 DOF corresponding to the wheel motors. It can be divided in five solid nodes: the body and the four wheels.</p>
+<p>Depending on the expected application of the robot model, reducing the DOF while modelling might be necessary to get an efficient simulation. For example, when modeling a caster wheel, a realistic approach implies to model 2 DOF. But if this degree of precision is useless for the simulation, a more efficient approach can be found. For example, to model the caster wheel as a<span> </span><a href="https://cyberbotics.com/doc/reference/sphere">Sphere</a><span> </span>having a null friction coefficient with the ground.</p>
+<p>The second step is to determine which<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node is the<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node (the root node). This choice is arbitrary, but a solution is often much easier to implement. For example, in the case of a humanoid robot, the robot node would be typically the robot chest, because the robot symmetry facilitates the computation of the joint parameters.</p>
+<p>In our case, the body box is obviously the better choice. The<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#high-level-representation-of-the-4-wheeled-robot">figure</a><span> </span>depicts the solid nodes hierarchy of the robot.</p>
+<blockquote>
+<p><strong>Hands on #2</strong>: At the end of the scene tree, add a<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node having four<span> </span><a href="https://cyberbotics.com/doc/reference/hingejoint">HingeJoint</a><span> </span>nodes having a<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node as<span> </span><code>endPoint</code>. Please refer to<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#high-level-representation-of-the-4-wheeled-robot">this figure</a>. Add a<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>node containing a Box geometry to the<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node. Set the color of the<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>to red. Use the<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>to define the<span> </span><code>boundingObject</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node. The dimension of the box is<span> </span><code>(0.2, 0.1, 0.05)</code>. Add a<span> </span><a href="https://cyberbotics.com/doc/reference/physics">Physics</a><span> </span>node to the<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a>. The<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#high-level-representation-of-the-4-wheeled-robot">figure</a><span> </span>represents all the nodes defining the robot. So far, only the direct children nodes of the root<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node has been implemented.</p>
+</blockquote>
+<p><img alt="" height="283" src="./../images/tutorial6_high_level_representation_wheeled_robot.png" width="300"/></p>
+<p>High level representation of the 4 wheeled robot</p>
+<h4 class="anchor-header" id="hingejoint" name="hingejoint"><code>HingeJoint</code></h4>
+<p>The initial position of the wheel is defined by the translation and the rotation fields of the<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node.</p>
+<p>The rotation origin (anchor) and the rotation axis (axis) are defined by the optional<span> </span><a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a><span> </span>child of the<span> </span><a href="https://cyberbotics.com/doc/reference/hingejoint">HingeJoint</a><span> </span>node.</p>
+<p><img alt="" height="155" src="./../images/hinge_joint.png" width="300"/></p>
+<p>Representation of a hinge joint</p>
+<p>The radius of the wheel is 0.04 and its thickness (height of the cylinder) is 0.02. For the first wheel, the<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>translation should be defined to<span> </span><code>(0.05, 0.06, 0)</code><span> </span>in order to define the relative gap between the body and the wheel, and the rotation to<span> </span><code>(1 0 0 1.5708)</code><span> </span>for the wheel cylinder to be correctly oriented. The<span> </span><a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a><span> </span>anchor should also be defined to<span> </span><code>(0.05, 0.06, 0)</code><span> </span>to define the rotation origin (relatively to the body). Finally, the<span> </span><a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a><span> </span>axis should define the rotation axis. In our case it's along the y-axis (so<span> </span><code>(0, 1, 0)</code>).</p>
+<blockquote>
+<p><strong>Hands on #3</strong>: Add a<span> </span><a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a><span> </span>node, and enter the field values as described above. Some signs obviously have to be updated for other wheels.</p>
+</blockquote>
+<p>Now, let's implement the cylinder shape of the wheels.</p>
+<p>For each<span> </span><a href="https://cyberbotics.com/doc/reference/hingejoint">HingeJoint</a>, there are three fields in which nodes need to be added.</p>
+<ul>
+<li><strong>jointParameters</strong>: Add a<span> </span><a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a><span> </span>and configure the anchor (0.05 -0.06 0) and axis (0 1 0) fields. These values have to be modified according to the location of the wheel.</li>
+<li><strong>device</strong>: Add a<span> </span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span> </span>in order to be able to actuate the wheels. Change their<span> </span><code>name</code><span> </span>fields from<span> </span><code>wheel1</code><span> </span>to<span> </span><code>wheel4</code><span> </span>according to<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#top-view-of-the-4-wheeled-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-device">this figure</a>. These labels will be used to reference the wheels from the controller.</li>
+<li><strong>endPoint</strong>: Add a<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a><span> </span>node, then a<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>node in the<span> </span><code>children</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/solid">Solid</a>, and finally, add a<span> </span><a href="https://cyberbotics.com/doc/reference/cylinder">Cylinder</a><span> </span>in the<span> </span><code>geometry</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/shape">Shape</a><span> </span>node. The<span> </span><a href="https://cyberbotics.com/doc/reference/cylinder">Cylinder</a><span> </span>should have a<span> </span><code>radius</code><span> </span>of<span> </span><code>0.04</code><span> </span>and a<span> </span><code>height</code><span> </span>of<span> </span><code>0.02</code>. Set the color of the wheels to green.</li>
+</ul>
+<blockquote>
+<p><strong>Hands on #4</strong>: Complete the missing nodes to get the same structure as the</p>
+<p>one depicted in<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#low-level-representation-of-the-4-wheeled-robot">this figure</a>. Don't forget the<span> </span><a href="https://cyberbotics.com/doc/reference/physics">Physics</a><span> </span>nodes.</p>
+</blockquote>
+<p><img alt="" height="355" src="./../images/tutorial6_low_level_rep_wheeled_robot.png" width="800"/></p>
+<p>Low level representation of the 4 wheeled robot</p>
+<h4 class="anchor-header" id="sensors" name="sensors">Sensors</h4>
+<p>The sensors used on the e-puck of<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/tutorial-4-more-about-controllers">Tutorial 4</a><span> </span>are not the same as the ones used in this section. Pay attention to their measuring interval which is between<span> </span><code>0 cm = 0</code><span> </span>and<span> </span><code>10 cm = 1000</code>. Find more information about the<span> </span><code>lookupTable</code><span> </span>field<span> </span><a href="https://cyberbotics.com/doc/reference/distancesensor#lookup-table">here</a>.</p>
+<p>The last part of the robot modeling is to add the two distance sensors to the robot. This can be done by adding two<span> </span><a href="https://cyberbotics.com/doc/reference/distancesensor">DistanceSensor</a><span> </span>nodes as direct children of the<span> </span><a href="https://cyberbotics.com/doc/reference/robot">Robot</a><span> </span>node. Note that the distance sensor acquires its data along the positive x-axis. So, it is necessary to rotate the distance sensor to point their x-axis outside the robot (see the<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#top-view-of-the-4-wheeled-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-device">figure</a>).</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<details open=""><summary><strong>Reminder</strong>: How to know the orientation of the distance sensor?</summary>As already says in<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/tutorial-3-appearance">Tutorial 3</a>, the distance sensor rays can be viewed using the shortcut<span> </span><kbd>ctrl</kbd>-<kbd>F10</kbd><span> </span>or<span> </span><code>View / Optional Rendering / Show DistanceSensor Rays</code>.
+<blockquote>
+<p><strong>Hands on #5</strong>: Add the two distance sensors as explained above. The distance sensors are at an angle to 0.3 [rad] with the front vector of the robot. Set the graphical and physical shape to a cube (not transformed) having a edge of<span> </span><code>0.01</code><span> </span>[m]. Set the color to blue. Set the<span> </span><code>name</code><span> </span>field according to the labels of<span> </span><a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#top-view-of-the-4-wheeled-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-device">this figure</a>.</p>
+</blockquote>
+<details open=""><summary><strong>Tips</strong>: How to precisely orient distance sensors?</summary>In the<span> </span><a href="https://cyberbotics.com/doc/reference/distancesensor">DistanceSensor</a><span> </span>node, the rotation field has 4 parameters. If you set the angle parameter to 0, then you can use the mouse wheel to increment/decrement by steps of 0.1309 rad (= 7.5 degree).
+<h4 class="anchor-header" id="controller" name="controller"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#controller"><span class="anchor-link-image"></span></a>Controller</h4>
+<p>In the previous tutorials, you have learnt how to setup a feedback loop and how to read the distance sensor values. However, actuating a<span> </span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span> </span>node is something new. To program the rotational motors, the first step is to include the API module corresponding to the<span> </span><a href="https://cyberbotics.com/doc/reference/rotationalmotor">RotationalMotor</a><span> </span>node:</p>
+<div class="tab-content" name="python" tabid="3">
+<pre><code class="python language-python hljs"><span class="hljs-keyword">from</span> controller <span class="hljs-keyword">import</span> Motor
+</code></pre>
+</div>
+<p>Then to get the references of the<span> </span><a href="https://cyberbotics.com/doc/reference/rotationalmotor?tab-language=python">RotationalMotor</a><span> </span>nodes:</p>
+<div class="tab-content" name="python" tabid="4">
+<pre><code class="python language-python hljs"><span class="hljs-comment"># initialize motors</span>
+wheels = []
+wheelsNames = [<span class="hljs-string">'wheel1'</span>, <span class="hljs-string">'wheel2'</span>, <span class="hljs-string">'wheel3'</span>, <span class="hljs-string">'wheel4'</span>]
+<span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> wheelsNames:
+    wheels.append(robot.getDevice(name))
+</code></pre>
+</div>
+<p>A<span> </span><a href="https://cyberbotics.com/doc/reference/motor?tab-language=python">Motor</a><span> </span>can be actuated by setting its position, its velocity, its acceleration or its force. Here we are interested in setting its velocity. This can be achieved by setting its position to infinity, and by bounding its velocity:</p>
+<div class="tab-content" name="python" tabid="5">
+<pre><code class="python language-python hljs">speed = <span class="hljs-number">-1.5</span>  <span class="hljs-comment"># [rad/s]</span>
+wheels[<span class="hljs-number">0</span>].setPosition(float(<span class="hljs-string">'inf'</span>))
+wheels[<span class="hljs-number">0</span>].setVelocity(speed)
+</code></pre>
+</div>
+<blockquote>
+<p><strong>Hands on #6</strong>: Implement a controller called<span> </span><code>four_wheeled_collision_avoidance</code><span> </span>moving the robot and avoiding obstacles by detecting them by the distance sensors.</p>
+</blockquote>
+<p>Note that the<span> </span><code>lookupTable</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/distancesensor?tab-language=python">DistanceSensor</a><span> </span>nodes indicates the values returned by the sensor. To help in the debugging with the sensors, it is possible to see the value of the sensors in the real-time in the<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/controller-plugin#robot-window?tab-language=python">robot-window</a>. To open the<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/controller-plugin#robot-window?tab-language=python">robot-window</a>, double-click on the robot body and it will bring up a menu on the left with the<span> </span><a href="https://cyberbotics.com/doc/reference/distancesensor?tab-language=python">DistanceSensor</a><span> </span>and<span> </span><a href="https://cyberbotics.com/doc/reference/rotationalmotor?tab-language=python">RotationalMotor</a><span> </span>graph. Run the simulation to see the evolution.</p>
+<p>Don't forget to set the<span> </span><code>controller</code><span> </span>field of the<span> </span><a href="https://cyberbotics.com/doc/reference/robot?tab-language=python">Robot</a><span> </span>node to indicate your new controller.</p>
+<p>As usual a possible solution of this exercise is located in the tutorials directory.</p>
+<h4 class="anchor-header" id="thecontrollercode" name="the-controller-code"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot?tab-language=python#the-controller-code"><span class="anchor-link-image"></span></a>The Controller Code</h4>
+<p>Here is the complete code of the controller developed in the previous subsection.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot
+
+TIME_STEP = 64
+robot = Robot()
+ds = []
+dsNames = ['ds_right', 'ds_left']
+for i in range(2):
+    ds.append(robot.getDevice(dsNames[i]))
+    ds[i].enable(TIME_STEP)
+wheels = []
+wheelsNames = ['wheel1', 'wheel2', 'wheel3', 'wheel4']
+for i in range(4):
+    wheels.append(robot.getDevice(wheelsNames[i]))
+    wheels[i].setPosition(float('inf'))
+    wheels[i].setVelocity(0.0)
+avoidObstacleCounter = 0
+while robot.step(TIME_STEP) != -1:
+    leftSpeed = 1.0
+    rightSpeed = 1.0
+    if avoidObstacleCounter &gt; 0:
+        avoidObstacleCounter -= 1
+        leftSpeed = 1.0
+        rightSpeed = -1.0
+    else:  # read sensors
+        for i in range(2):
+            if ds[i].getValue() &lt; 950.0:
+                avoidObstacleCounter = 100
+    wheels[0].setVelocity(leftSpeed)
+    wheels[1].setVelocity(rightSpeed)
+    wheels[2].setVelocity(leftSpeed)
+    wheels[3].setVelocity(rightSpeed)</pre>
+<h4 class="anchor-header" id="solutionworldfile" name="solution-world-file">Solution: World File</h4>
+<p>To compare your world with the solution, go to your files and find the folder named "my_first_simulation" created in<span> </span><a class="dynamicLoad" href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots?tab-language=python">Tutorial 1</a>, then go to the "worlds" folder and open with a text editor the right world.<span> </span><a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/4_wheels_robot.wbt?tab-language=python" target="_blank">This solution</a><span> </span>as the others is located in the<span> </span><a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/?tab-language=python" target="_blank">solution directory</a>.</p>
+<h4 class="anchor-header" id="conclusion" name="conclusion"><a class="anchor-link" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot?tab-language=python#conclusion"><span class="anchor-link-image"></span></a>Conclusion</h4>
+<p>You are now able to design simple robot models, to implement them and to create their controllers.</p>
+<p>More specifically, you learnt all the different nodes involved in the design of a robot model, methods to translate and rotate a solid relative to another and the way that a rotational motor is actuated by the controller.</p>
+<br />Stage3 << <a href='Stage3.html'>Previous</a> <a href='Tutorial7.html'>Next</a> >> Tutorial7</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

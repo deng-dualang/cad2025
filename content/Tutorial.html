@@ -1,0 +1,247 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li><a href='AI.html'>AI</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Network.html'>Network</a><li><a href='ICMP.html'>ICMP</a><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Tutorial.html'>Tutorial</a><ul class='dropdown'><li class='has-children'><a href='Stage1.html'>Stage1</a><ul class='dropdown'><li><a href='Tutorial1.html'>Tutorial1</a><li><a href='Tutorial2.html'>Tutorial2</a></li></ul><li class='has-children'><a href='Stage2.html'>Stage2</a><ul class='dropdown'><li><a href='Tutorial3.html'>Tutorial3</a><li><a href='Distancesensor.html'>Distancesensor</a><li><a href='Tutorial4.html'>Tutorial4</a><li><a href='Tutorial5.html'>Tutorial5</a></li></ul><li class='has-children'><a href='Stage3.html'>Stage3</a><ul class='dropdown'><li><a href='Tutorial6.html'>Tutorial6</a><li><a href='Tutorial7.html'>Tutorial7</a><li><a href='Stream.html'>Stream</a><li><a href='Webots Server.html'>Webots Server</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja-1.html'>Otto_ninja-1</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></ul><li><a href='Pupper.html'>Pupper</a><li><a href='JetAcker.html'>JetAcker</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Ref.html'>Ref</a><ul class='dropdown'><li class='has-children'><a href='Reeborg.html'>Reeborg</a><ul class='dropdown'><li><a href='ex1.html'>ex1</a><li><a href='Otto_ninja-2.html'>Otto_ninja-2</a></li></ul><li><a href='Pyodide.html'>Pyodide</a><li><a href='Pyodide_ex.html'>Pyodide_ex</a><li class='has-children'><a href='Pyodide2.html'>Pyodide2</a><ul class='dropdown'><li><a href='robot.py.html'>robot.py</a><li><a href='Example2.html'>Example2</a></li></ul><li class='has-children'><a href='Pyodide3.html'>Pyodide3</a><ul class='dropdown'><li><a href='png_files.html'>png_files</a><li><a href='Harvest.html'>Harvest</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Ardupilot << <a href='Ardupilot.html'>Previous</a> <a href='Stage1.html'>Next</a> >> Stage1<br /><h1>Tutorial</h1>
+<p>Webots 執行環境硬體需求:</p>
+<p style="padding-left: 30px;">2GHz 4 核心以上 CPU, NVIDIA 或 AMD 支援 OpenGL 3.3 版, 帶有 512 MB 記憶體以上獨立顯示卡</p>
+<p>操作系統:</p>
+<p style="padding-left: 30px;">Windows 10 或 11 64 位元操作系統</p>
+<p style="padding-left: 30px;">Ubuntu 24.04 以上版本</p>
+<p style="padding-left: 30px;">macOS 12 以上版本操作系統</p>
+<p>使用介面:</p>
+<p style="padding-left: 30px;">Webots 可以透過 Tools - Preferences - Language 中選擇使用 English 或簡體中文介面 (目前無繁體中文介面, 介面語系翻譯請參考 <a href="https://github.com/cyberbotics/webots/tree/released/resources/translations">translations 頁面</a>說明), 在此強烈建議使用 English 界面即可.</p>
+<hr/>
+<p>Webots 原始碼使用授權:<br/><br/>採 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license agreement</a>. Apache 2.0 是一種開放且對企業友善的授權條款, 允許任何人免費使用、修改和分享軟體的原始程式碼, 包括商業用途使用.</p>
+<p>自行編譯 Webots 請參考 <a href="https://cyberbotics.com/doc/guide/building-webots">building Webots 頁面</a>說明.</p>
+<p>Webots 套件中的大部分範例模擬檔案都使用 Apache 2.0 許可釋出, 但有部分機器人和物件模型（proto 檔案）則是根據 <a href="https://cyberbotics.com/webots_assets_license">Webots 資產的開放原始碼許可協議</a>發佈, 另外有些範例則是由用戶根據不同的開源許可證所提供, 這些檔案都會明確標示其許可證內容.</p>
+<hr/>
+<p>Webots 介紹: (查英英字典: <a href="https://www.merriam-webster.com/dictionary/">https://www.merriam-webster.com/dictionary/</a>)</p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-webots">What is Webots?</a></p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-can-i-do-with-webots">What can I do with Webots?</a></p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#webots-simulation">Webots simulation</a></p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-world">What is a world?</a></p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-controller">What is a controller?</a></p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-supervisor-controller">What is a supervisor controller?</a></p>
+<p><a href="https://www.youtube.com/playlist?list=PLt69C9MnPchkLuNNc4q9SeMFA96_v4THJ">Webots Crash Course</a> (速成班教學影片)</p>
+<hr/>
+<p>第一個 Webots 導引: <a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
+<p>登入 Github, 在 <a href="https://github.com/copilot">https://github.com/copilot</a> 的協助下執行此一教學練習.</p>
+<p>導引目的: You will create your first simulation containing a simple environment: an arena with floor and walls, a few boxes, an e-puck robot and a controller program that will make the robot move.</p>
+<p>建立一個簡單的模擬環境, 意即一個競技場中, 包括一個帶有地板、圍牆、幾個盒子、一個 e-puck 機器人, 以及能讓機器人移動的控制程式.</p>
+<p><img alt="" height="310" src="./../images/tutorial_e-puck.thumbnail.jpg" width="400"/></p>
+<p>開啟 Webots 前, 請下載 <a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB).</p>
+<p>有關 Webots 在 Windows 操作系統啟動, 請參考<a href="https://cyberbotics.com/doc/guide/starting-webots#windows">說明</a>. 有關 Web streaming 也請參考<a href="https://cyberbotics.com/doc/guide/web-streaming">說明</a>.</p>
+<p>Webots 的可執行檔案位於 Y:\Webots_2023b\msys64\mingw64\bin\Webotsw.exe, 配置時, 若希望在不上網的情況下執行官方範例, 則必須再預先下載 <a href="https://github.com/cyberbotics/webots/releases/tag/R2023b">https://github.com/cyberbotics/webots/releases/tag/R2023b</a> 中的 <a href="https://github.com/cyberbotics/webots/releases/download/R2023b/assets-R2023b.zip">assets-R2023b.zip</a>, 存入 Y:\home_ipv6\AppData\Local\Cyberbotics\Webots\cache\assets 目錄, 否則啟動官方範例時, 必須從官方網站下載各範例中所導入的原型節點資料.</p>
+<p>若 Webotsw.exe 並非是在可攜程式的環境中啟動, 則 Webots 啟動後所下載的原型節點資料, 將會存入操作系統中的 C:\Users\%USERNAME%\AppData\Local\Cyberbotics\Webots\cache\assets 目錄中.</p>
+<p>在可攜程式環境中啟動 Webots 的設定:</p>
+<p style="padding-left: 30px;">start_ipv6.bat 中納入:</p>
+<p style="padding-left: 30px;">REM for webots<br/>set  path_webots=%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\msys64\usr\bin</p>
+<p style="padding-left: 30px;">並將 %path_webots% 放入 PATH 環境變數設定中.</p>
+<p style="padding-left: 30px;">若希望在執行 start_ipv6.bat 時開啟 Webots, 可以在啟動可攜程式的批次檔案中加入 start webotsw.exe</p>
+<p>在可攜程式環境中 (USB 固態硬碟、一般隨身碟、筆電或個人電腦) 啟動 Webots 後, 開始建立模擬世界(即場景), 而在 Webots 中所謂場景:</p>
+<p>A <strong>World</strong> is a file containing information like where the objects are, what they look like, how they interact with each other, what is the color of the sky, and the definitions of gravity, friction, masses of the objects, etc. It defines the initial state of a simulation. The different objects are called <strong>Nodes</strong> and are organized hierarchically in a <strong>Scene Tree</strong>. Therefore, a node may contain sub-nodes. A world is stored in a file having the <code>.wbt</code> extension. The file format is derived from the <a href="./../downloads/vrml97specification.pdf">VRML97</a> language, and is human readable. The world files must be stored directly in a directory called <code>worlds</code>.</p>
+<p>Webots 場景中包含以下定義:</p>
+<ol>
+<li>物件所在位置</li>
+<li>物件的外形</li>
+<li>物件如何互動</li>
+<li>天空的顏色</li>
+<li>地心引力的定義</li>
+<li>摩擦力</li>
+<li>物件的質量</li>
+<li>模擬的起始條件</li>
+<li>其他有關模擬的設定等</li>
+</ol>
+<p>場景中的物件稱為節點, 各節點配置於場景樹中, 各節點可以再包含子節點, 場景的檔案格式源自 VRML97 程式語法 (<a href="./../downloads/vrmlman.pdf">VRML Primer and Tutorial</a>), 場景的檔案副檔名為 .wbt, 且一定要存入名稱為 worlds 的目錄中.</p>
+<p>Webots 模擬選單功能說明: <a href="https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu">https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu</a> 其中著色選單可以關閉場景中的畫面, 主要配合基因演算、視覺辨識或機器學習流程中的快速模擬流程.</p><br />Ardupilot << <a href='Ardupilot.html'>Previous</a> <a href='Stage1.html'>Next</a> >> Stage1</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

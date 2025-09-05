@@ -1,0 +1,220 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cad2025</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cad2025 電腦輔助設計與實習</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cad2025 電腦輔助設計與實習</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='Mind-Map.html'>Mind-Map</a><li><a href='AI.html'>AI</a><li class='has-children'><a href='Homework.html'>Homework</a><ul class='dropdown'><li><a href='HW2.html'>HW2</a><li><a href='Plotter.html'>Plotter</a></li></li></ul></ul><li class='has-children'><a href='Topics.html'>Topics</a><ul class='dropdown'><li><a href='Network.html'>Network</a><li><a href='ICMP.html'>ICMP</a><li><a href='IPv6.html'>IPv6</a><li><a href='DNS.html'>DNS</a><li><a href='Proxy.html'>Proxy</a><li class='has-children'><a href='Web.html'>Web</a><ul class='dropdown'><li><a href='Codespaces.html'>Codespaces</a></li></li></ul></ul><li class='has-children'><a href='Software.html'>Software</a><ul class='dropdown'><li><a href='Git.html'>Git</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li><a href='Flask.html'>Flask</a></li></ul><li class='has-children'><a href='Solvespace.html'>Solvespace</a><ul class='dropdown'><li><a href='Compile.html'>Compile</a></li></ul><li class='has-children'><a href='NX2312.html'>NX2312</a><ul class='dropdown'><li><a href='License.html'>License</a></li></ul><li><a href='Onshape.html'>Onshape</a><li class='has-children'><a href='Webots.html'>Webots</a><ul class='dropdown'><li><a href='Fourbar.html'>Fourbar</a><li><a href='TimeStep.html'>TimeStep</a><li><a href='Clouds.html'>Clouds</a><li><a href='Talks.html'>Talks</a><li><a href='Blender.html'>Blender</a><li><a href='Ardupilot.html'>Ardupilot</a></li></li></ul></ul><li class='has-children'><a href='Tutorial.html'>Tutorial</a><ul class='dropdown'><li class='has-children'><a href='Stage1.html'>Stage1</a><ul class='dropdown'><li><a href='Tutorial1.html'>Tutorial1</a><li><a href='Tutorial2.html'>Tutorial2</a></li></ul><li class='has-children'><a href='Stage2.html'>Stage2</a><ul class='dropdown'><li><a href='Tutorial3.html'>Tutorial3</a><li><a href='Distancesensor.html'>Distancesensor</a><li><a href='Tutorial4.html'>Tutorial4</a><li><a href='Tutorial5.html'>Tutorial5</a></li></ul><li class='has-children'><a href='Stage3.html'>Stage3</a><ul class='dropdown'><li><a href='Tutorial6.html'>Tutorial6</a><li><a href='Tutorial7.html'>Tutorial7</a><li><a href='Stream.html'>Stream</a><li><a href='Webots Server.html'>Webots Server</a></li></li></ul></ul><li class='has-children'><a href='Projects.html'>Projects</a><ul class='dropdown'><li><a href='Control.html'>Control</a><li><a href='Printer.html'>Printer</a><li class='has-children'><a href='Otto_ninja-1.html'>Otto_ninja-1</a><ul class='dropdown'><li><a href='Simplify.html'>Simplify</a></li></ul><li><a href='Pupper.html'>Pupper</a><li><a href='JetAcker.html'>JetAcker</a></li></ul><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='Ref.html'>Ref</a><ul class='dropdown'><li class='has-children'><a href='Reeborg.html'>Reeborg</a><ul class='dropdown'><li><a href='ex1.html'>ex1</a><li><a href='Otto_ninja-2.html'>Otto_ninja-2</a></li></ul><li><a href='Pyodide.html'>Pyodide</a><li><a href='Pyodide_ex.html'>Pyodide_ex</a><li class='has-children'><a href='Pyodide2.html'>Pyodide2</a><ul class='dropdown'><li><a href='robot.py.html'>robot.py</a><li><a href='Example2.html'>Example2</a></li></ul><li class='has-children'><a href='Pyodide3.html'>Pyodide3</a><ul class='dropdown'><li><a href='png_files.html'>png_files</a><li><a href='Harvest.html'>Harvest</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Stage2 << <a href='Stage2.html'>Previous</a> <a href='Distancesensor.html'>Next</a> >> Distancesensor<br /><h1>Tutorial3</h1>
+<p>導引課程 3：外觀<br/><br/>本導引課程的目的是讓你熟悉一些與圖形著色 (rendering) 相關的節點。當這些節點被適當使用時，可以很快創建出外觀良好的模擬。良好的圖形質量不僅能提升用戶體驗，對於機器人感知其環境的模擬（如攝像頭圖像處理、循線等）也是至關重要的。<br/><br/>本教學結束時的效果如下圖所示。</p>
+<p><img alt="" height="158" src="./../images/tutorial_appearance.thumbnail.jpg" width="300"/></p>
+<p>新模擬</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：創建新模擬</span><br/><br/><span style="background-color: #ccffcc;">從上一個教程的結果中，通過使用檔案 / 另存世界... 菜單創建一個名為 "appearance.wbt" 的新模擬。</span></p>
+<p>燈光<br/><br/>世界的燈光由燈光節點 (<a href="https://cyberbotics.com/doc/reference/light">Light</a>) 和背景 (<a href="https://cyberbotics.com/doc/reference/background">Background</a>) 決定。燈光節點有三種類型：方向燈 (<a href="https://cyberbotics.com/doc/reference/directionallight">DirectionalLight</a>)、單點燈 (<a href="https://cyberbotics.com/doc/reference/pointlight">PointLight</a>) 和聚光燈 (<a href="https://cyberbotics.com/doc/reference/spotlight">SpotLight</a>)。方向燈模擬無限遠的光源（例如：太陽），點燈模擬從單一點發出的光（例如：燈泡），而聚光燈模擬錐形光（例如：手電筒）。下面這張圖展示了它們之間的比較。每種類型的燈光節點都可以投射陰影。你可以在<a href="https://cyberbotics.com/doc/reference/nodes-and-api-functions">參考手冊</a>中找到它們的完整文檔。</p>
+<p><img alt="" height="68" src="./../images/tutorial_light_comparison.thumbnail.jpg" width="300"/></p>
+<p>三種在 Webots 中可能的燈光比較。左邊是方向燈 (DirectionalLight)，中間是聚光燈 (SpotLight)，右邊是點燈 (PointLight)。</p>
+<p>在模擬中設置燈光就性能上需要耗費運算資源，會降低模擬速度（尤其是在投射陰影時）。最小化燈光數量可以提高渲染速度。單點燈 (PointLight) 比聚光燈 (SpotLight) 更高效，但比方向燈 (DirectionalLight) 效率低。<br/><br/>在本次模擬中，燈光節點在場景樹中不可見，因為它包含在<a href="https://webots.cloud/run?url=https://github.com/cyberbotics/webots/blob/released/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"> TexturedBackgroundLight</a> PROTO 節點中。它由一個方向燈 (DirectionalLight) 組成，其強度和方向根據場景背景自動計算。<br/><br/>修改牆壁的外觀<br/><br/>本小節的目標是將牆壁顏色改為藍色。<br/><br/>形狀節點 (<a href="https://cyberbotics.com/doc/reference/shape">Shape</a>) 的外觀 (<a href="https://cyberbotics.com/doc/reference/appearance">Appearance</a>) 和 PBR 外觀 (<a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a>) 節點決定了物件的圖形外觀。在其他方面，這些節點負責物件的顏色和紋理。<br/><br/>如以下比較所示，建議使用 PBR 外觀以獲得更好的渲染效果。</p>
+<p><img alt="" height="92" src="./../images/tutorial_appearance_comparison.thumbnail.jpg" width="300"/></p>
+<p>外觀節點 (Appearance) 和 PBR 外觀節點 (PBRAppearance) 的比較。左邊是外觀節點 (Appearance)，右邊是 PBR 外觀節點 (PBRAppearance)。</p>
+<p>PBRAppearance 節點指定了一個節點的基於物理的視覺外觀。縮寫 "PBR" 指的是 "Physically-Based Rendering"（基於物理的渲染），這個術語用來表示一類基於物體物理特性的著色模型，而不是像在 Appearance 節點中使用的 Blinn-Phong BRDF 這樣的更古老的模型。</p>
+<p><a href="https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model">Blinn–Phong</a> 反射模型，也稱為修改的 Phong 反射模型，是由 <a href="https://en.wikipedia.org/wiki/Jim_Blinn">Jim Blinn</a> 開發的 <a href="https://en.wikipedia.org/wiki/Phong_reflection_model">Phong 反射模型</a>的修改版本。<br/><br/>Blinn–Phong 是一種在 OpenGL 和 Direct3D 的固定功能管線（在 Direct3D 10 和 OpenGL 3.1 之前）中使用的著色模型，並在每個頂點上進行處理，當它通過圖形管線時；頂點之間的像素值默認由 <a href="https://en.wikipedia.org/wiki/Gouraud_shading">Gouraud</a> 著色插值，而不是計算成本更高的 <a href="https://en.wikipedia.org/wiki/Phong_shading">Phong</a> 著色。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #2：在圖形表示第一面牆的形狀節點 (Shape) 中，將 PBRAppearance 節點添加到外觀 (Appearance) 欄位。</span><br/><br/><span style="background-color: #ccffcc;">- 使用顏色選擇器將其 baseColor 欄位設置為藍色。</span><br/><span style="background-color: #ccffcc;">- 使用欄位編輯器將其 metalness 欄位設置為 0。</span><br/><span style="background-color: #ccffcc;">- 最後，使用欄位編輯器將其 roughness 欄位設置為 0.5。</span><br/><span style="background-color: #ccffcc;">- 如果上一個教程中的 DEF-USE 機制正確實施，所有牆壁應該都會變成藍色。</span></p>
+<p>添加現有的外觀到球體<br/><br/>Webots 發行版中提供了許多預定義的 PBRAppearance。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #3：添加預定義的 PBRAppearance</span><br/><br/><span style="background-color: #ccffcc;">    選擇外觀 (appearance) 欄位並刪除之前添加的節點。要刪除此節點，可以按鍵盤上的 "delete" 鍵，或右鍵點擊該欄位並從菜單中選擇 "delete"。此欄位現在應顯示為 "appearance NULL" 而不是 "appearance PBRAppearance"。</span><br/><span style="background-color: #ccffcc;">    再次雙擊該欄位，然後導航到 PROTO 節點 (Webots Projects)，再導航到 appearances，並選擇 OldSteel (PBRAppearance)。</span></p>
+<p>添加硬碟中儲存的紋理<br/><br/>本小節的目標是將本地可用的紋理應用到球上。在滾動的物體加上紋理可更容易檢視其運動情況。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #4：將本地可用的紋理添加到球體。</span><br/><br/><span style="background-color: #ccffcc;">1. 下載<a href="https://raw.githubusercontent.com/cyberbotics/webots/released/projects/default/worlds/textures/red_brick_wall.jpg" style="background-color: #ccffcc;">這裡</a>所提供的紋理並將其儲存到硬碟中。</span><br/><span style="background-color: #ccffcc;">2. 從外觀 (appearance) 欄位中刪除先前添加的節點，並改為添加一個 PBRAppearance 節點。</span><br/><span style="background-color: #ccffcc;">3. 向 PBRAppearance 節點的 baseColorMap 欄位添加一個 ImageTexture 節點。</span><br/><span style="background-color: #ccffcc;">4. 使用 "Add" 按鈕向 ImageTexture 的 url 欄位添加一個項目。</span><br/><span style="background-color: #ccffcc;">5. 然後使用 "Select" 按鈕設置新添加的 url 項目的值。</span><br/><span style="background-color: #ccffcc;">6. 跟隨路徑到您保存紋理的位置並選擇它。</span></p>
+<p>紋理 URL 必須定義為相對於專案目錄的 worlds 目錄或相對於預設專案目錄 WEBOTS_HOME/projects/default/worlds。<br/><br/>在圖像查看器中打開 red_brick_wall.jpg 紋理，同時觀察它如何映射到 Webots 中的 Sphere 節點上。<br/><br/>紋理根據參考手冊中描述的預定義 UV 映射函數映射到幾何節點上。UV 映射函數將 2D 圖像表示映射到 3D 模型。</p>
+<p><img alt="" height="158" src="./../images/tutorial_appearance.thumbnail.jpg" width="300"/></p>
+<p>在設置好 Light 和 PBRAppearance 節點後的模擬。</p>
+<p>渲染選項<br/><br/>Webots 在視圖菜單中提供了幾種渲染模式。</p>
+<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #5：使用"視圖 / 線框渲染" (View / Wireframe Rendering) 表單項以線框模式查看模擬。然後還原為普通渲染模式："視圖 / 普通渲染" (View / Plain Rendering)。</span></p>
+<p>其他渲染功能也很有幫助：<br/><br/>    查看座標系統： View / Optional Rendering / Show Coordinates System 或使用 ctrl-F1<br/>    查看距離傳感器光線： View / Optional Rendering / Show DistanceSensor Rays 或使用 ctrl-F10</p>
+<p>解決方案：世界文件<br/><br/>要將您的世界與解決方案進行比較，請轉到您的文件並找到在 <a href="https://mde.tw/cd2025/content/Tutorial1.html">Tutorial1</a>中創建的名為 my_first_simulation 的文件夾，然後轉到 worlds 文件夾並使用文本編輯器打開正確的世界文件。<a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/appearance.wbt">此解決方案</a>和其他解決方案位於<a href="https://github.com/cyberbotics/webots/tree/released/projects/samples/tutorials/worlds/">解決方案目錄</a>中。<br/><br/>結論<br/><br/>在本導引課程中，您學習了如何使用 <a href="https://cyberbotics.com/doc/reference/pbrappearance">PBRAppearance</a> 節點和光源節點設置一個美觀的環境。<br/><br/>您可以通過閱讀參考手冊中這些節點的詳細描述來進一步了解此主題。此<a href="https://github.com/cyberbotics/webots/discussions/5411">常見問題</a>解答將為您提供有效設置這些節點的方法。</p>
+<br />Stage2 << <a href='Stage2.html'>Previous</a> <a href='Distancesensor.html'>Next</a> >> Distancesensor</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
