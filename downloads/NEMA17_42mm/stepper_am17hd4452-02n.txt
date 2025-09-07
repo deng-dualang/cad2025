@@ -1,0 +1,13 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"50-01092017-110265";"";
+"REFERENCE";"AM17HD4452-02N";"";
+"TraceParts.PartTitle";"NEMA17 (42mm) Two-phase DC Stepper Motor 1.8 Degree - 17HD Series";"";
+"TraceParts.InstanceId";"50-01092017-1102652PKT4TRLWFQJN6SB7Y7YXUVXF";"";
+"DESIGN";"NEMA17 (42mm) Two-phase DC Stepper Motor 1.8 Degree - 17HD Series AM17HD4452-02N";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartStatusId";"";"";
+"SUPPLIER";"MOONS'";"";
+"TraceParts.PartVersion";"1.0.5";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.ClassPath";"MOONS:50-01092017-110265";"";

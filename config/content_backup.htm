@@ -1,7 +1,10 @@
 <h1>About</h1>
-<p>課程名稱: Computer Aided Design and Practice (電腦輔助設計與實習)</p>
+<p>課程名稱: 電腦輔助設計與實習</p>
 <p>Repo: <a href="https://github.com/mdecycu/cad2025">https://github.com/mdecycu/cad2025</a></p>
-<p>Web: <a href="https://mde.tw/cad2025">https://mde.tw/cad2025</a></p>
+<p>Web: <a href="https://mde.tw/cad2025">https://mde.tw/cad2025</a> (cad for computer aided design)</p>
+<p>課程簡介:</p>
+<p style="padding-left: 30px;">cad2025 課程將以每組至多六人分組進行，從 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a> 零組件設計繪圖作為開端，各組成員可以自選 CAD 套件完成。其中 Plotter 驅動設計建議採用 NEMA 17 步進馬達 (<a href="/downloads/stepper_NEMA17.prt">stepper_NEMA17.prt</a>) 或自選伺服馬達進行設計繪圖，而 Openduck mini 驅動則建議採用 <a href="https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html">STS3215 磁編碼數位伺服機</a> (<a href="/downloads/STS3215_assembly.7z">STS3215_assembly.7z</a> 進行設計繪圖。</p>
+<p style="padding-left: 30px;"><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a> 零組件設計繪圖完成後，將設法利用 <a href="https://cyberbotics.com/">Webots</a> 進行控制系統設計與動態模擬 (Dynamic Simulation)，課程最後將針對此兩項機電系統的實作進行規劃與討論。</p>
 <p>可攜程式套件:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
 <p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
@@ -19,12 +22,12 @@
 <p>課程評分:</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">學習心得報告 (60%)</span> - MS Teams 線上參與，6人一組每三週發表學習心得。</p>
 <p style="padding-left: 60px;">w3、w7、w10、w14、w17、w18</p>
-<p style="padding-left: 60px;">學習心得報告主題:</p>
-<p style="padding-left: 60px;">w3: 用什麼方式完成 Plotter 機構零組件繪圖？ Solvespace, NX 或其他？各有什麼優缺點？ (<a href="https://mde.tw/cad2025/downloads/plotter.7z">plotter.7z</a>)</p>
-<p style="padding-left: 60px;">w7 (<span style="background-color: #ccffcc;">2a 採 Youtube 影片簡報</span>): Plotter 零件組件繪製完成之後，如何切割零件? 為何要切割零件？ 如何進行後續動態模擬？(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</p>
-<p style="padding-left: 60px;">w10: Webots 是什麼？有什麼特點？ 如何進行模擬？ 如何用 Python 進行控制？ (<a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a>)</p>
-<p style="padding-left: 60px;">w14: Webots 的模型有沒有辦法用程式方法建立?有沒有辦法直接從 CAD 套件中轉出 Webots的模型？</p>
-<p style="padding-left: 60px;">w17: 如何實作一套 plotter？</p>
+<p style="padding-left: 60px;"><span style="background-color: #ffcc99;">學習心得報告主題</span>:</p>
+<p style="padding-left: 60px;">w3: 用什麼套件完成 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a> 零組件設計繪圖？ <a href="https://solvespace.com">Solvespace</a>, <a href="https://plm.sw.siemens.com/en-US/nx/cad-online/">Siemens NX</a>, <a href="https://www.onshape.com/en/">Onshape</a> 或其他？各有什麼優缺點？ (<a href="https://mde.tw/cad2025/downloads/plotter.7z">plotter.7z</a>, <a href="/downloads/open_duck_mini.7z">open_duck_mini.7z</a>)</p>
+<p style="padding-left: 60px;">w7 (<span style="background-color: #ccffcc;">2a 採 Youtube 影片簡報</span>): <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a> 零組件設計繪製完成之後，如何切割零件? 為何要切割零件？ 如何利用 <a href="https://cyberbotics.com/">Webots</a> 進行後續的控制系統設計與動態模擬 (Dynamic Simulation)？(<a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a>)</p>
+<p style="padding-left: 60px;">w10: <a href="https://cyberbotics.com/">Webots</a> 是什麼？有什麼特點？ 如何進行場景模擬？ 如何用 Python 進行控制系統設計？ (<a href="https://cyberbotics.com/doc/guide/tutorials">Tutorial</a>)</p>
+<p style="padding-left: 60px;">w14: <a href="https://cyberbotics.com/">Webots</a> 的模型有沒有辦法用程式方法建立? 有沒有辦法直接從 CAD 套件中轉出 <a href="https://cyberbotics.com/">Webots</a> 的場景模型？</p>
+<p style="padding-left: 60px;">w17: 如何實作一套 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a>？(<a href="https://la.disneyresearch.com/publication/design-and-control-of-a-bipedal-robotic-character/">Disney Bipedal Robot</a>)</p>
 <p style="padding-left: 60px;">w18: 課程總結</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (40%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得。</p>
 <p style="padding-left: 60px;">w9 期中自評、w18 期末自評</p>
@@ -36,7 +39,7 @@
 <p style="padding-left: 60px;">電腦設定</p>
 <p style="padding-left: 60px;">網路連線</p>
 <p style="padding-left: 60px;">課餘時間預約 (由助教安排) </p>
-<p style="padding-left: 30px;">Five-bar Linkage: 五連桿平面繪圖機構系統的設計模擬與製作。</p>
+<p style="padding-left: 30px;"><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">Openduck min</a> 機電系統的設計模擬與製作規劃。</p>
 <p style="padding-left: 60px;"><a href="https://mde.tw/cad2025/downloads/fivebar_parallel_linkage.7z">fivebar_parallel_linkage.7z</a> (in Solidworks and NX2312)</p>
 <p style="padding-left: 60px;"><a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
 <p>行事曆:</p>
@@ -53,12 +56,24 @@
 <p><a href="https://github.com/copilot">https://github.com/copilot</a> </p>
 <p><a href="https://gemini.google.com/app">https://gemini.google.com/app</a> </p>
 <hr/>
+<p>繪圖範圍 25cmx25cm 的小型 5bar linkage plotter，你會建議 BOM 零組件規格如何? 請詳細說明原因。</p>
+<p>https://www.feetechrc.com/products 中的各 motor 若要用在 5bar linkage plotter 專案, 選哪一個, 請詳細說明原因。</p>
+<p>希望實作 Openduck mini 專案，你會建議 BOM 零組件規格如何? 請詳細說明原因。</p>
+<p>5bar linkage plotter 參考 BOM:</p>
+<p>採用步進馬達:</p>
+<p><img caption="false" height="296" src="/images/5bar_linkage_plotter_BOM.png" width="600"/></p>
+<p>採用 STS3215:</p>
+<p><img alt="" height="447" src="/images/5bar_linkage_plotter_sts3215.png" width="600"/></p>
+<p>Openduck mini 參考 BOM:</p>
+<p>ST3215: <a href="https://aifitlab.com/products/feetech-sts3215-servo-motor">https://aifitlab.com/products/feetech-sts3215-servo-motor</a> </p>
+<p><img alt="" height="544" src="/images/openduck_mini_BOM.png" width="600"/></p>
+<p></p>
+<hr/>
 <p>提問:</p>
 <p><span style="background-color: #ccffcc;">請以目前最具前瞻與權威的教育學者群觀點發言，說明機械設計相關科系的大二學生該如何學習「電腦輔助設計與實習」課程，並透過虛實整合，驗證機電資控制系統的可行性?</span></p>
 <p style="padding-left: 30px;">請就此一主題，建議學習步驟，並列出學生身分可以免費使用的工具。</p>
 <p style="padding-left: 30px;">請就此一主題提供 15 則可以深入取得具體答覆的 AI 系統詢問句</p>
-<p style="padding-left: 60px;">1. 請詳細說明大二學生在學習 Fusion 360 進行機械零件參數化建模時，應該掌握的核心技能有哪些？<br/>2. 如何利用 Onshape 教育版進行團隊協作設計，並確保版本控制與設計一致性？<br/>3. 請列出 FreeCAD 中適合初學者進行機械運動學模擬的模組及使用步驟。<br/>4. 在機械設計課程中，使用 Fusion 360 的 Motion Study 功能進行連桿機構運動模擬，該如何設定拘束條件？<br/>5. 請解釋 Webots 如何整合機械模型與控制程式，並用具體範例說明 PID 控制在其中的應用。<br/>6. 如何用 Tinkercad Circuits 模擬一個包含光電感測器與伺服馬達的簡易自動門控制系統？<br/>7. 請比較 Scilab Xcos 與 MATLAB Simulink 在控制系統模擬上的優缺點，特別針對機電系統設計。<br/>8. 學生如何利用 Wokwi Arduino 模擬環境有效測試多感測器控制系統的穩定性與反應速度？<br/>9. 請提供一個完整的機電系統設計專案案例，從 CAD 建模到控制系統模擬，再到 Webots 虛擬測試。<br/>10. 針對學生免費使用的軟體資源，如何設計一套循序漸進的學習計畫，有效結合機械設計與控制系統？<br/>11. 如何使用 Fusion 360 與 Simscale 整合進行結構強度與熱傳模擬，以驗證機械設計的可靠性？<br/>12. 請詳細說明 Arduino IDE 與 PlatformIO 開發環境在控制系統軟體撰寫上的差異與選擇建議。<br/>13. Webots 中如何設定真實物理參數（如摩擦力、慣性矩）來提升機器人運動模擬的準確度？<br/>14. 學生若無法取得實體機器人硬體，如何利用虛擬模擬工具達成機電系統整合的實作學習？<br/>15. 請介紹目前最適合機械設計系學生免費取得的線上課程或教學平台，針對 CAD 與機電整合控制系統教學。</p>
-<h2>Homework</h2>
+<p style="padding-left: 60px;">1. 請詳細說明大二學生在學習 Fusion 360 進行機械零件參數化建模時，應該掌握的核心技能有哪些？<br/>2. 如何利用 Onshape 教育版進行團隊協作設計，並確保版本控制與設計一致性？<br/>3. 請列出 FreeCAD 中適合初學者進行機械運動學模擬的模組及使用步驟。<br/>4. 在機械設計課程中，使用 Fusion 360 的 Motion Study 功能進行連桿機構運動模擬，該如何設定拘束條件？<br/>5. 請解釋 Webots 如何整合機械模型與控制程式，並用具體範例說明 PID 控制在其中的應用。<br/>6. 如何用 Tinkercad Circuits 模擬一個包含光電感測器與伺服馬達的簡易自動門控制系統？<br/>7. 請比較 Scilab Xcos 與 MATLAB Simulink 在控制系統模擬上的優缺點，特別針對機電系統設計。<br/>8. 學生如何利用 Wokwi Arduino 模擬環境有效測試多感測器控制系統的穩定性與反應速度？<br/>9. 請提供一個完整的機電系統設計專案案例，從 CAD 建模到控制系統模擬，再到 Webots 虛擬測試。<br/>10. 針對學生免費使用的軟體資源，如何設計一套循序漸進的學習計畫，有效結合機械設計與控制系統？<br/>11. 如何使用 Fusion 360 與 Simscale 整合進行結構強度與熱傳模擬，以驗證機械設計的可靠性？<br/>12. 請詳細說明 Arduino IDE 與 PlatformIO 開發環境在控制系統軟體撰寫上的差異與選擇建議。<br/>13. Webots 中如何設定真實物理參數（如摩擦力、慣性矩）來提升機器人運動模擬的準確度？<br/>14. 學生若無法取得實體機器人硬體，如何利用虛擬模擬工具達成機電系統整合的實作學習？<br/>15. 請介紹目前最適合機械設計系學生免費取得的線上課程或教學平台，針對 CAD 與機電整合控制系統教學。</p><h2>Homework</h2>
 <p>HW1:</p>
 <p style="padding-left: 30px;">利用 NX2312、<a href="https://www.onshape.com/en/">Onshape</a>、Solvespace 或自選 CAD 套件繪製五連桿機構零組件。</p>
 <p style="padding-left: 60px;">參考資料: <a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
@@ -1529,6 +1544,7 @@ Exit
 <p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-controller">What is a controller?</a></p>
 <p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-supervisor-controller">What is a supervisor controller?</a></p>
 <p><a href="https://www.youtube.com/playlist?list=PLt69C9MnPchkLuNNc4q9SeMFA96_v4THJ">Webots Crash Course</a> (速成班教學影片)</p>
+<p><a href="https://github.com/felipenmartins/Robotics-Simulation-Labs">https://github.com/felipenmartins/Robotics-Simulation-Labs</a> </p>
 <hr/>
 <p>第一個 Webots 導引: <a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
 <p>登入 Github, 在 <a href="https://github.com/copilot">https://github.com/copilot</a> 的協助下執行此一教學練習.</p>
@@ -1559,7 +1575,8 @@ Exit
 <li>其他有關模擬的設定等</li>
 </ol>
 <p>場景中的物件稱為節點, 各節點配置於場景樹中, 各節點可以再包含子節點, 場景的檔案格式源自 VRML97 程式語法 (<a href="/downloads/vrmlman.pdf">VRML Primer and Tutorial</a>), 場景的檔案副檔名為 .wbt, 且一定要存入名稱為 worlds 的目錄中.</p>
-<p>Webots 模擬選單功能說明: <a href="https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu">https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu</a> 其中著色選單可以關閉場景中的畫面, 主要配合基因演算、視覺辨識或機器學習流程中的快速模擬流程.</p><h2>Stage1</h2>
+<p>Webots 模擬選單功能說明: <a href="https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu">https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu</a> 其中著色選單可以關閉場景中的畫面, 主要配合基因演算、視覺辨識或機器學習流程中的快速模擬流程.</p>
+<h2>Stage1</h2>
 <p>學習利用 Webots 建立模擬場景的第一階段工作, 是認識其套件功能表與場景所需的目錄及檔案架構. 並且學習如何利用控制器程式操縱場景中的物件. 這也是 <a href="https://mde.tw/cad2025/content/Tutorial1.html">Tutorial1</a> 操作的主要目的.</p>
 <p style="padding-left: 30px;">worlds 儲存 .wbt 場景檔案</p>
 <p style="padding-left: 30px;">protos 儲存 .proto 原形節點檔案</p>
@@ -1567,7 +1584,8 @@ Exit
 <p style="padding-left: 30px;">plugins 儲存用來延伸 Webots 物理特性的 C 或 C++ 程式檔案, 例如: <a href="https://raw.githubusercontent.com/cyberbotics/webots/refs/heads/released/resources/projects/plugins/physics/physics.c">physics.c</a></p>
 <p style="padding-left: 30px;">libraries 儲存場景中與 controllers 或 plugins 目錄中相關程式的共用程式庫檔案</p>
 <p><a href="https://mde.tw/cad2025/content/Tutorial2.html">Tutorial2</a> 則說明如何使用 Webots 內建的基本幾何物件, 其中的物件幾何外形除了用於動力系統的運動方程式, 還可用於物體移動時的碰撞檢測. 建立物件時必須遵照 Solid - Shape - geometry 的樹狀結構規劃, 按照順序配置物件.</p>
-<p>其中 Solid - Shape - geometry Box 可以直接使用內建的幾何節點定義零件外形, 而 Solid - Shape - geometry Mesh 則可以導入自行繪製的 STL 或 OBJ 零件檔案, 而 Solid - CadShape 也可以導入 OBJ 零件檔案, 與 geometry Mesh 的差別為 Solid - Shape - geometry Mesh 可以直接在 Webots 中設定零件顏色, 而 Solid - CadShape 則由 OBJ 伴隨的 .mtl 決定其顏色與材質.</p><h3>Tutorial1</h3>
+<p>其中 Solid - Shape - geometry Box 可以直接使用內建的幾何節點定義零件外形, 而 Solid - Shape - geometry Mesh 則可以導入自行繪製的 STL 或 OBJ 零件檔案, 而 Solid - CadShape 也可以導入 OBJ 零件檔案, 與 geometry Mesh 的差別為 Solid - Shape - geometry Mesh 可以直接在 Webots 中設定零件顏色, 而 Solid - CadShape 則由 OBJ 伴隨的 .mtl 決定其顏色與材質.</p>
+<h3>Tutorial1</h3>
 <p>導引課程<br/><br/>本章的目的是解說 Webots 的基本概念，這些概念是自行創建模擬場景 (.wbt) 時必須用到的。學習重點在於熟悉機器人及其環境的模型建構流程，以及機器人控制器 (controllers) 的程式設計。進而學習如何尋找額外的教學資料。<br/><br/>本章適合 Webots 的初學者。不過，仍然需要有程式設計 (Programming) 的背景。範例是用 Python 語言編寫的。如果您不熟悉 Python 語言，透過基本說明應該還是能夠理解本章的控制器寫法，因為下面的 Python 程式非常簡單。除了程式設計，您不需要任何特定的知識即可完成本章中的教程。然而，基本的機器人學 (Robotcs)、數學 (Mathematics)、模型建構 (Modeling) 和樹狀表示法 (Tree representation) 的背景知識可能會有所幫助。有經驗的 Webots 使用者可以跳過最初的教程。不過，我們建議至少能花點時間閱讀這些教程的介紹和結論。<br/><br/>本章的每個部分（除了第一和最後一部分）都是一個導引課程。每個導引課程都有一個明確的教育目標，並在第一段中進行解釋。獲得的概念隨後會在結論子部分中總結。每一個導引課程都被設計成一系列互動操作步驟。要繼續進行下一個教程，通常需要掌握前一個教學中獲得的知識。因此，我們強烈建議按照導引所安排的順序進行。此外，我們建議在繼續進一步之前，確保已經理解了導引課程中的所有概念。<br/><br/>最後一部分將提供一些解決本章未涉及問題的提示。<br/><br/>導引課程的解決方案位於 Webots 安裝目錄的 "WEBOTS_HOME/projects/samples/tutorials" 子目錄中。</p>
 <p>導引課程 1：在 Webots 中進行首次模擬<br/><br/>目標<br/><br/>本導引課程的目標是讓您熟悉用戶界面和 Webots 的基本概念。您將創建一個包含簡單環境的首次模擬：一個帶有地板和牆壁的競技場、幾個箱子、一個 e-puck 機器人和一個使機器人移動的控制程式。<br/><br/>步驟<br/><br/>1. 啟動 Webots：在您的電腦上打開 Webots (假如使用協同產品設計課程的可攜套件，啟動後在命令列中輸入 webotsw 即可開啟 Webots, 若要同時啟動串流伺服器，則可輸入 webotsw --stream，之後可利用瀏覽器在伺服器的 IP 位址上以串流內建埠號 1234 連接觀看場警)。</p>
 <p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：通過雙點擊 Webots 圖標（或在終端中從命令行調用）來啟動 Webots。如果您是第一次在此電腦上運行 Webots，可能會提示您選擇圖形主題。您也可能被邀請參加 Webots 指導遊覽，請關閉指導遊覽。</span></p>
@@ -1636,7 +1654,8 @@ while robot.step(TIME_STEP) != -1:  # 當機器人步進時間步長不等於 -1
 <p>利用 <a href="https://mde.tw/cd2025/content/Tutorial5.html">Tutorial5</a> 中的 Group 節點，可配合 CAD 套件轉出的零組件，整合出更複雜外形的模擬場景。</p>
 <p>使用 CAD 套件繪製機構所需零件，因為在組立時各零件已經完成定位，因此使用上，只要透過 Solid - <a href="https://cyberbotics.com/doc/reference/cadshape">CadShape</a> 導入 obj 格式的零件檔案，或使用 Solid - Shape - Mesh (導向 obj 或 stl 格式檔案) 即可在模擬場景中套用，至於各連桿 <a href="https://cyberbotics.com/doc/reference/solid">Solid</a> 節點中的 boundingObject 欄位, 只要利用 <a href="https://cyberbotics.com/doc/reference/mesh?version=R2025a">Mesh</a> 節點中的 url 指向物件 obj 或 stl 檔案即可.</p>
 <p>另外 <a href="https://cyberbotics.com/doc/reference/hingejoint">hingeJoint</a> 中的 <a href="https://cyberbotics.com/doc/reference/hingejointparameters">HingeJointParameters</a> 則宣告該轉軸所在位置 (anchor) 以及旋轉軸向量 (axis) 即可.</p>
-<p>Plotter 中驅動馬達的模擬，則必須使用 <a href="https://mde.tw/cad2025/content/Tutorial4.html">Tutorial4</a> 中的控制與感測技術.</p><h3>Tutorial3</h3>
+<p>Plotter 中驅動馬達的模擬，則必須使用 <a href="https://mde.tw/cad2025/content/Tutorial4.html">Tutorial4</a> 中的控制與感測技術.</p>
+<h3>Tutorial3</h3>
 <p>導引課程 3：外觀<br/><br/>本導引課程的目的是讓你熟悉一些與圖形著色 (rendering) 相關的節點。當這些節點被適當使用時，可以很快創建出外觀良好的模擬。良好的圖形質量不僅能提升用戶體驗，對於機器人感知其環境的模擬（如攝像頭圖像處理、循線等）也是至關重要的。<br/><br/>本教學結束時的效果如下圖所示。</p>
 <p><img alt="" height="158" src="/images/tutorial_appearance.thumbnail.jpg" width="300"/></p>
 <p>新模擬</p>
@@ -1858,7 +1877,8 @@ while robot.step(TIME_STEP) != -1:
 <h2>Stage3</h2>
 <p><a href="https://mde.tw/cad2025/content/Tutorial6.html">Tutorial6</a> 是學習如何建立及控制行動機器人.</p>
 <p><a href="https://mde.tw/cad2025/content/Tutorial7.html">Tutorial7</a> 說明如何自行建立原型物件 (PROTO).</p>
-<p><a href="https://mde.tw/cad2025/content/Tutorial8.html">Tutorial8</a> 就自行開發投籃機模擬場景而言, 可在虛擬的模擬場景中, 利用 supervisor 模式配置非可實際達成的程式控制加速虛實產品的開發流程.</p><h3>Tutorial6</h3>
+<p><a href="https://mde.tw/cad2025/content/Tutorial8.html">Tutorial8</a> 就自行開發投籃機模擬場景而言, 可在虛擬的模擬場景中, 利用 supervisor 模式配置非可實際達成的程式控制加速虛實產品的開發流程.</p>
+<h3>Tutorial6</h3>
 <h4 class="anchor-header" id="tutorial64wheeledrobot60minutes" name="tutorial-6-4-wheeled-robot-60-minutes">Tutorial 6: 4-Wheeled Robot</h4>
 <p>This tutorial aims at creating your first robot from scratch. The robot will consist of a body, four wheels, and two distance sensors. The result is depicted on <a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#3d-view-of-the-4-wheels-robot-note-that-the-coordinate-system-representations-of-the-robot-body-and-of-its-wheels-are-oriented-the-same-way-their-px-vector-in-red-defines-the-left-of-the-robot-their-py-vector-in-green-defines-the-top-of-the-robot-and-their-pz-vector-in-blue-defines-the-front-of-the-robot-the-distance-sensors-are-oriented-in-a-different-way-their-px-vector-indicates-the-direction-of-the-sensor">this figure</a>. The <a class="dynamicAnchor" href="https://cyberbotics.com/doc/guide/tutorial-6-4-wheels-robot#top-view-of-the-4-wheeled-robot-the-grid-behind-the-robot-has-a-dimension-of-0-2-x-0-3-meters-the-text-labels-correspond-to-the-name-of-the-device">next figure</a> shows the robot from a top view.</p>
 <p><img alt="" height="209" src="/images/tutorial_4_wheels_robot.thumbnail.jpg" width="300"/></p>
@@ -2263,8 +2283,16 @@ if __name__ == "__main__":
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/webots-server">https://github.com/mdecycu/webots-server</a></p>
 <p>Webots Cloud:</p>
 <p style="padding-left: 30px;"><a href="https://github.com/cyberbotics/webots-cloud">https://github.com/cyberbotics/webots-cloud</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/web-server">https://cyberbotics.com/doc/guide/web-server</a></p><h1>Projects</h1>
-<p>利用 Solvespae、NX 與 Onshape 建立下列的五軸機械臂零組件</p>
+<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/web-server">https://cyberbotics.com/doc/guide/web-server</a></p>
+<h1>Projects</h1>
+<p>利用 Solvespae、NX、Onshape 或其他 CAD 套件建立下列的五軸機械臂零組件。</p>
+<p>驅動設計請採用 NEMA (National Electrical Manufacturers Association) 17 步進馬達:</p>
+<p style="padding-left: 30px;">法蘭 (Flange) 尺寸 1.7 英吋: 約 43.2 mm x 43.2 mm</p>
+<p style="padding-left: 30px;">軸心直徑: 5 mm</p>
+<p style="padding-left: 30px;">螺絲孔間距: 約 31 mm</p>
+<p style="padding-left: 30px;">長度 (厚度): 通常為 34~60 mm</p>
+<p style="padding-left: 30px;">步進角: 一般為 1.8°（每轉 200 步）</p>
+<p style="padding-left: 30px;">驅動電壓與電流: 視型號而定，常見如 12V, 1~2A</p>
 <h4>Linkages</h4>
 <p style="padding-left: 30px;"><a href="https://blog.rectorsquid.com/linkage-mechanism-designer-and-simulator/">https://blog.rectorsquid.com/linkage-mechanism-designer-and-simulator/</a> </p>
 <p style="padding-left: 30px;">5-bar</p>
@@ -2290,8 +2318,7 @@ if __name__ == "__main__":
 <p><a href="https://link.springer.com/chapter/10.1007/978-3-319-98020-1_28">Kinematic Design of Five-Bar Parallel Robot by Kinematically Defined Performance Index for Energy Consumption</a></p>
 <p><a href="https://github.com/Phylliade/ikpy">https://github.com/Phylliade/ikpy</a> </p>
 <p><a href="https://hackaday.io/project/173325-educational-five-bar-parallel-robot">https://hackaday.io/project/173325-educational-five-bar-parallel-robot</a></p>
-<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div>
-<h2>Control</h2>
+<div class="markdown-body MarkdownRenderer-module__container--wIGWk" data-copilot-markdown="true" style="--markdownrenderer_streaming-fade-duration: 750ms;"></div><h2>Control</h2>
 <p><a href="https://link.springer.com/book/10.1007/978-1-4842-9600-4">Essentials of Arduino Boards Programming</a> (電子書)  </p>
 <p><a href="/downloads/PythonForControl.pdf">PythonForControl.pdf</a></p>
 <p><a href="https://openmodelica.org/">OpenModelica</a> + <a href="https://github.com/modelon-community/PyFMI">Pyfmi</a> + Webots</p>
@@ -2361,7 +2388,8 @@ while robot.step(timestep) != -1:
 <p><a href="/downloads/otto_robot.7z">otto_robot.7z</a></p>
 <h2>Otto_ninja</h2>
 <p><a href="https://www.printables.com/model/231580-otto-ninja-starter-robot/files">https://www.printables.com/model/231580-otto-ninja-starter-robot/files</a> </p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NDIwhuxQPN8?si=ED_FAObUkAVFT5L-" title="YouTube video player" width="560"></iframe></p><h3>Simplify</h3>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NDIwhuxQPN8?si=ED_FAObUkAVFT5L-" title="YouTube video player" width="560"></iframe></p>
+<h3>Simplify</h3>
 <p>以下程式碼是一個專為 Blender 設計的 Python 程式，其目的是將複雜的 3D 模型零件簡化為凸包（Convex Hull），並在簡化後保留原始物件的物理屬性，最後將簡化後的模型匯出。<br/><br/>由於利用 CAD 繪出的零件，轉入 Webots 進行剛體動力學模擬運算時，若能將幾何外形轉換為網格資料較為簡單的凸包，可大幅減少物理引擎的運算負擔，進而提升模擬的流暢度和穩定性。<br/><br/>以下是程式碼的設計原理與主要流程：<br/><br/>設計原理:</p>
 <p>分離設定與核心邏輯：程式碼將使用者可修改的參數（如檔案路徑、格式、簡化比率）放在程式開頭的「使用者設定」區塊，而將實際執行的功能封裝在獨立的函式中。這種設計使程式易於修改和維護，使用者不需要理解複雜的內部邏輯就能快速調整參數。<br/><br/>模組化函式：每個函式負責一個單一且明確的任務，例如 clear_scene() 清空場景、import_all_parts() 匯入模型、get_physics_properties() 獲取物理屬性等等。這種模組化設計使程式碼結構清晰，易於除錯和理解。<br/><br/>穩健的錯誤處理：在 import_all_parts()、get_physics_properties() 等函式中，程式碼都包含了對異常情況（如檔案夾不存在、物件無效）的檢查和錯誤訊息輸出。這確保了腳本在遇到問題時不會無故崩潰，而是能給出有用的提示。</p>
 <p>複製-簡化-匹配三階段工作流程：</p>
@@ -2382,11 +2410,13 @@ while robot.step(timestep) != -1:
 <p><img alt="" height="295" src="/images/openduck_mini_nx.png" width="300"/></p>
 <p></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uZwMqvsVOQE?si=u9mo293eQLQ2wje-" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7_LW7u-nk6Q?si=vq_W0B4e1OgUCo-7" title="YouTube video player" width="560"></iframe></p><h2>Pupper</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7_LW7u-nk6Q?si=vq_W0B4e1OgUCo-7" title="YouTube video player" width="560"></iframe></p>
+<h2>Pupper</h2>
 <p><a href="https://github.com/mangdangroboticsclub/mini_pupper_ros">https://github.com/mangdangroboticsclub/mini_pupper_ros</a> </p>
 <p><a href="https://www.kickstarter.com/projects/mdrobotkits/mini-pupper-2-open-source-ros2-robot-kit-for-dreamers">https://www.kickstarter.com/projects/mdrobotkits/mini-pupper-2-open-source-ros2-robot-kit-for-dreamers</a> </p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/08J82rEK5bw?si=F-G8CgtcBF4m908f" title="YouTube video player" width="560"></iframe></p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7KDan41gfN0?si=49v0ftkRirzJrHfY" title="YouTube video player" width="560"></iframe></p><h2>JetAcker</h2>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7KDan41gfN0?si=49v0ftkRirzJrHfY" title="YouTube video player" width="560"></iframe></p>
+<h2>JetAcker</h2>
 <p><a href="https://github.com/NVIDIA-AI-IOT/jetracer">https://github.com/NVIDIA-AI-IOT/jetracer</a> </p>
 <p><a href="https://www.hiwonder.com/collections/robotics-1/products/jetacker">https://www.hiwonder.com/collections/robotics-1/products/jetacker</a> </p>
 <p>SMARTmBOT:</p>
