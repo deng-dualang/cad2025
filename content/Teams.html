@@ -2,7 +2,7 @@
         <head>
         <title>cad2025</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,44 +142,29 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Compile << <a href='Compile.html'>Previous</a> <a href='License.html'>Next</a> >> License<br /><h1>NX2312</h1>
-<p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
-<p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/documents/209349590/PL20230425446868577">NX2312 Documentation</a></p>
-<p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.nxopen_prog_guide/xid2250951">Setup NXOpen Python Intellisense</a></p>
-<p>在自己的電腦上，以可攜方式執行 NX2312:</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
-<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
-<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
-<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
-<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
-<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
-<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
-<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
-<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
-<p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
-<p style="padding-left: 30px;">修改 start_miniconda3.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
-<p>NX2312 NXOpen Python 動態連結程式庫版本: Python 3.10.9</p>
-<p style="padding-left: 30px;">在可攜程式環境中利用 miniconda3 建立 nxopen 虛擬環境 (注意: 必須使用反斜線分隔目錄名稱):</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda create -p y:\envs\nxopen python=3.10</span> 指定建立 nxopen Python 環境，並使用 3.10 版。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda activate y:\envs\nxopen</span> 將 Python 環境切換到 nxopen env。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">where python</span> 查詢目前 env 所使用的 Python 所在目錄位置。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda clean --all</span> 刪除安裝 env 時所下載的安裝套件以及暫存檔案。</p>
-<p style="padding-left: 60px;">進入 nxopen 虛擬環境後，在命令列執行下列 PYTHONPATH 設定，可以使用 Python </p>
-<p style="padding-left: 60px;"><a href="./../downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
-<p style="padding-left: 60px;">若要在 SciTE 編輯器中指令使用 nxopen env 中的 Python，可以先在命令列中以 conda activate nxopen 後，接著以 where python 查詢所使用 python.exe 所在目錄後，利用處於同樣目錄的 pythonw.exe 設定 python.properties:</p>
-<p style="padding-left: 90px;">if PLAT_WIN<br/>    python.command=y:\envs\nxopen\python.exe</p>
-<p style="padding-left: 60px;">完成 python.properties 設定修改後，在命令列中利用 start /MIN y:\wscite\SciTE.exe  開啟編輯器後，以下列程式查詢所使用的 conda env，以及所使用的 Python 版本:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
-import os
-
-conda_env = os.environ.get("CONDA_DEFAULT_ENV")
-print(f"Conda env：{conda_env}")
-print(f"Python version: {sys.version}")</pre>
-<p style="padding-left: 60px;"></p>
-<br />Compile << <a href='Compile.html'>Previous</a> <a href='License.html'>Next</a> >> License</div>
+    <div id="tipue_search_content">AI << <a href='AI.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework<br /><h1>Teams</h1>
+<p><a href="./../downloads/cmsimde_ai_1.txt">cmsimde_ai_1.txt</a></p>
+<p><img alt="" height="290" src="./../images/copilot_answer_cmsimde_teams.png" width="300"/></p>
+<p>本課程利用 Github Classroom 由各組組長建立 Team (團隊) 後，再由組員逐一加入團隊，每組最多 6 名組員。</p>
+<p>由於各組的網站是由 6 位組員協同編輯，因此其過程的專案描述如下:</p>
+<p><span style="background-color: #ccffcc;">目前有一個專案，透過解析 config/content.htm 檔案中 HTML 的 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 標籤來進行內容分頁，並以這些標題作為靜態網站中各頁面的標題。系統根據 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 的層級順序，動態建立多層次的網站導覽選單 (menu)。</span><br/><br/><span style="background-color: #ccffcc;">content.htm 的內容編輯採用 Python Flask 搭配 JavaScript 編輯器，讓使用者能在瀏覽器中即時編輯各層級頁面的內容。編輯完成後，透過 Python 程式將內容分頁並產生含多層次選單的靜態頁面，並存放於 content 目錄中。</span><br/><br/><span style="background-color: #ccffcc;">針對此一網站，若由六名組員同步協同維護，組員可選擇在本地端啟動動態編輯環境完成內容修改及靜態頁面生成，或直接利用 GitHub Codespaces 進行雲端開發。請詳述並說明在此協同編輯流程中會使用的 Git 指令與使用情境，同時指導各組員應如何有效同步作業以確保版本一致與作業流暢。</span></p>
+<p><span style="background-color: #ccffcc;"></span>專案概述與協同維護流程建議</p>
+<p>一、專案概述<br/><br/>本專案透過解析 config/content.htm 檔案中的 HTML 標籤 &lt;h1&gt;、&lt;h2&gt; 及 &lt;h3&gt;，實現內容分頁功能。系統將這些標題作為靜態網站中各頁面的標題，並依據標題的層級順序，動態生成多層次的網站導覽選單（Menu），以提升使用者瀏覽體驗。<br/><br/>內容編輯採用 Python Flask 框架結合 JavaScript 編輯器，讓使用者能直接在瀏覽器中編輯各層級頁面內容。完成內容編輯後，系統透過 Python 程式將分頁資料轉換為帶有多層次選單的靜態網頁，並將生成的靜態頁面存放於 content 目錄中。</p>
+<p>二、協同維護環境</p>
+<p>為提升協作效率，六名組員可選擇：<br/><br/>在本地端啟動動態編輯環境，進行內容修改及靜態頁面生成。<br/><br/>直接利用 GitHub Codespaces 進行遠端雲端開發與協作。</p>
+<p>三、協同編輯與版本同步建議</p>
+<p>針對六人團隊的同步維護，建議採用以下工作流程：</p>
+<p>版本控管</p>
+<p style="padding-left: 30px;">使用 Git 進行版本管理，並採用分支（Branch）策略，每位組員於獨立分支上進行內容編輯，避免直接衝突。</p>
+<p>本地或雲端編輯</p>
+<p style="padding-left: 30px;">組員可在本地端或 Codespaces 環境中，透過 Flask + JavaScript 編輯器進行內容更新，並執行 Python 程式生成靜態頁面以供預覽與測試。</p>
+<p>提交與合併流程</p>
+<p style="padding-left: 30px;">編輯完成後，組員將修改提交至個人分支並推送至遠端倉庫，透過 Pull Request (PR) 進行代碼審核與合併，確保內容品質及版本一致。</p>
+<p>衝突管理與溝通協調</p>
+<p style="padding-left: 30px;">由於多組員共同編輯相同檔案，需定期拉取主分支最新版本，及時解決合併衝突。團隊成員間應保持密切溝通，避免重複編輯同一內容區塊。</p>
+<p>自動化測試與部署</p>
+<p style="padding-left: 30px;">可結合 CI/CD 工具，於 PR 流程中自動執行靜態網站生成及測試，確保產出結果符合預期，並自動部署至測試或正式環境。</p>
+<p>此工作流程能有效保障多名組員在分散開發環境下，協同完成內容維護與靜態頁面產出，提升團隊合作效率與網站品質。</p><br />AI << <a href='AI.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework</div>
         
     <!-- footer -->
       <div class="container">
