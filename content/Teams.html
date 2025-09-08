@@ -143,11 +143,18 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">AI << <a href='AI.html'>Previous</a> <a href='Homework.html'>Next</a> >> Homework<br /><h1>Teams</h1>
+<p>建議各組先細分為兩小組，每一小組三人，由小組長利用 <a href="https://github.com/mdecycu/cad2025_hw">https://github.com/mdecycu/cad2025_hw</a> 作為 template，建立一個協同設計練習用的倉儲，名稱定為 "team" 之後，將小組中其他兩位組員設為 collaborators，然後利用 Github Pages 中的頁面內容整合，以及 Onshape 上的 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 及 <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件協同設計，作為練習標的。待所有組員都充分了解如何利用 Github 與 Onshape 進行協同設計後，再由組長在 Github Classroom 中建立小組團隊。</p>
 <p><a href="./../downloads/cmsimde_ai_1.txt">cmsimde_ai_1.txt</a></p>
+<p><a href="./../downloads/協同設計流程.txt">協同設計流程.txt</a></p>
 <p><img alt="" height="290" src="./../images/copilot_answer_cmsimde_teams.png" width="300"/></p>
 <p>本課程利用 Github Classroom 由各組組長建立 Team (團隊) 後，再由組員逐一加入團隊，每組最多 6 名組員。</p>
 <p>由於各組的網站是由 6 位組員協同編輯，因此其過程的專案描述如下:</p>
+<p><span style="background-color: #ffff99;">Prompt 1:</span></p>
 <p><span style="background-color: #ccffcc;">目前有一個專案，透過解析 config/content.htm 檔案中 HTML 的 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 標籤來進行內容分頁，並以這些標題作為靜態網站中各頁面的標題。系統根據 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 的層級順序，動態建立多層次的網站導覽選單 (menu)。</span><br/><br/><span style="background-color: #ccffcc;">content.htm 的內容編輯採用 Python Flask 搭配 JavaScript 編輯器，讓使用者能在瀏覽器中即時編輯各層級頁面的內容。編輯完成後，透過 Python 程式將內容分頁並產生含多層次選單的靜態頁面，並存放於 content 目錄中。</span><br/><br/><span style="background-color: #ccffcc;">針對此一網站，若由六名組員同步協同維護，組員可選擇在本地端啟動動態編輯環境完成內容修改及靜態頁面生成，或直接利用 GitHub Codespaces 進行雲端開發。請詳述並說明在此協同編輯流程中會使用的 Git 指令與使用情境，同時指導各組員應如何有效同步作業以確保版本一致與作業流暢。</span></p>
+<p><span style="background-color: #ffff99;">Prompt 2:</span></p>
+<p><span style="background-color: #ccffcc;">請設定組員 A 負責開發零件 A 及其相關網頁內容，組員 B 負責執行任務 B，組員 C 則負責任務 C。三位組員將同步進行各自的零組件開發工作，並分別在開發過程透過多次 git 提交維護對應的頁面 A、B 與 C。請列出每位組員在開發過程中所需使用的 Git 指令及其使用情境，並詳細說明在三項任務各自完成後，由組員 A 負責將所有成果整合至 main 分支所需的完整 Git 操作流程。同時，也請詳細說明組員 B 與 C 在整個協作過程中所需執行的 Git 指令與步驟。</span></p>
+<p><span style="background-color: #ffff99;">Prompt 3:</span></p>
+<p><span style="background-color: #ccffcc;"><!--StartFragment -->A, B, C 三名組員若使用 Onshape 執行同步零組件繪圖, 該如何協同整合?<!--EndFragment --></span></p>
 <p><span style="background-color: #ccffcc;"></span>專案概述與協同維護流程建議</p>
 <p>一、專案概述<br/><br/>本專案透過解析 config/content.htm 檔案中的 HTML 標籤 &lt;h1&gt;、&lt;h2&gt; 及 &lt;h3&gt;，實現內容分頁功能。系統將這些標題作為靜態網站中各頁面的標題，並依據標題的層級順序，動態生成多層次的網站導覽選單（Menu），以提升使用者瀏覽體驗。<br/><br/>內容編輯採用 Python Flask 框架結合 JavaScript 編輯器，讓使用者能直接在瀏覽器中編輯各層級頁面內容。完成內容編輯後，系統透過 Python 程式將分頁資料轉換為帶有多層次選單的靜態網頁，並將生成的靜態頁面存放於 content 目錄中。</p>
 <p>二、協同維護環境</p>
