@@ -42,21 +42,21 @@ def inverse_kinematics_check(L0, L1, L2, L3, L4):
         try:
             M1 = np.array([0, 0])
             M2 = np.array([L0, 0])
-            
+
             r_M1_pen = np.linalg.norm(np.array([x,y]) - M1)
             r_M2_pen = np.linalg.norm(np.array([x,y]) - M2)
-            
+
             # 檢查是否可達
             if (r_M1_pen > L1 + L3) or (r_M2_pen > L2 + L4) or (r_M1_pen < abs(L1 - L3)) or (r_M2_pen < abs(L2 - L4)):
                 return False
-                
+
             # 這裡的餘弦定理計算可能會因為浮點數誤差導致無解，因此使用 try-except
             alpha1 = np.arccos((L1**2 + r_M1_pen**2 - L3**2) / (2 * L1 * r_M1_pen))
             beta2 = np.arccos((L2**2 + r_M2_pen**2 - L4**2) / (2 * L2 * r_M2_pen))
-            
+
         except (ValueError, ZeroDivisionError):
             return False
-            
+
     return True
 
 def find_minimum_link_lengths():
@@ -64,19 +64,19 @@ def find_minimum_link_lengths():
     逐步縮小連桿長度，直到無法完成繪圖任務為止
     """
     current_L0, current_L1, current_L2, current_L3, current_L4 = L0_base, L1_base, L2_base, L3_base, L4_base
-    
+
     step = 0.1  # 每次縮小的步長 (cm)
-    
+
     print("開始逐步縮小連桿長度並測試...")
-    
+
     while True:
         # 測試當前配置
         if inverse_kinematics_check(current_L0, current_L1, current_L2, current_L3, current_L4):
             print(f"✅ 成功: L0={current_L0:.2f}, L1={current_L1:.2f}, L2={current_L2:.2f}, L3={current_L3:.2f}, L4={current_L4:.2f}")
-            
+
             # 儲存上一次成功的配置
             last_successful_config = (current_L0, current_L1, current_L2, current_L3, current_L4)
-            
+
             # 繼續縮小連桿
             current_L0 -= step
             current_L1 -= step
@@ -101,10 +101,10 @@ for p in path_points:
         M1 = np.array([0, 0])
         M2 = np.array([final_L0, 0])
         x, y = p[0], p[1]
-        
+
         r_M1_pen = np.linalg.norm(np.array([x, y]) - M1)
         r_M2_pen = np.linalg.norm(np.array([x, y]) - M2)
-        
+
         alpha1 = np.arccos((final_L1**2 + r_M1_pen**2 - final_L3**2) / (2 * final_L1 * r_M1_pen))
         theta_pen_M1 = np.arctan2(y - M1[1], x - M1[0])
         theta1 = theta_pen_M1 + alpha1
@@ -112,7 +112,7 @@ for p in path_points:
         beta2 = np.arccos((final_L2**2 + r_M2_pen**2 - final_L4**2) / (2 * final_L2 * r_M2_pen))
         theta_pen_M2 = np.arctan2(y - M2[1], x - M2[0])
         theta2 = theta_pen_M2 - beta2
-        
+
         motor_angles.append((np.degrees(theta1), np.degrees(theta2)))
     except (ValueError, ZeroDivisionError):
         # 應不發生，因為我們已事先檢查
@@ -125,7 +125,7 @@ ax.set_xlim(-5, final_L0 + 5)
 ax.set_ylim(-5, 30)
 ax.set_aspect('equal')
 ax.grid(True)
-ax.set_title(f'5-bar Linkage Plotter — min link length calculation L0={final_L0:.2f}cm')
+ax.set_title(f'5-bar Linkage Plotter — min link length design L0={final_L0:.2f}cm')
 
 # 繪圖區域
 draw_area = plt.Rectangle((4, 4), 20, 20, linewidth=2, edgecolor='red', facecolor='none', linestyle='--', label='20cm x 20cm plot area')
@@ -170,3 +170,10 @@ ani = FuncAnimation(fig, update, frames=len(motor_angles), interval=50, blit=Tru
 
 plt.legend()
 plt.show()
+
+# --- 新增的 GIF 產生功能 ---
+# 將動畫儲存為 GIF 檔案
+# dpi (每英吋點數) 決定了 GIF 的解析度
+# figsize 10，要寬度 600 像素，則 dpi = 60
+ani.save('5_bar_linkage_600px.gif', writer='pillow', dpi=60)
+print("\nGIF檔案已儲存為 5_bar_linkage_600px.gif")
