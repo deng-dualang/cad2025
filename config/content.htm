@@ -3,7 +3,7 @@
 <p>Repo: <a href="https://github.com/mdecycu/cad2025">https://github.com/mdecycu/cad2025</a></p>
 <p>Web: <a href="https://mde.tw/cad2025">https://mde.tw/cad2025</a> (cad for computer aided design)</p>
 <p>課程簡介:</p>
-<p style="padding-left: 30px;">cad2025 課程將以每組至多六人分組進行，從繪圖範圍 20cm x 20cm 的 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件設計繪圖作為開端，各組成員可以自選 CAD 套件完成。其中 Plotter 驅動設計建議採用 NEMA 17 步進馬達 (<a href="https://cad.onshape.com/documents/5357a44dafa83155102461c8/w/dd949e9201268e32e36df4d2/e/c5d9632732f2c0ffa8979372?renderMode=0&amp;uiState=68bd8fad25c03531bed3fef9">NEMA 17 Onshape</a>) 或自選伺服馬達進行設計繪圖，而 Openduck mini 驅動則建議採用 <a href="https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html">STS3215 磁編碼數位伺服機</a> (<a href="https://cad.onshape.com/documents/59be6ef44ff9ea793708399b/w/03ff9d6a2e9b8a7faa389b8d/e/6187f5074585cebed7cda939?renderMode=0&amp;uiState=68bd91cbb7b7b693b837f515">STS3215 Onshape</a>) 進行設計繪圖。</p>
+<p style="padding-left: 30px;">cad2025 課程將以每組至多六人分組進行，從繪圖範圍 20cm x 20cm 的 <a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件設計繪圖作為開端，各組成員可以自選 CAD 套件完成。其中 Plotter 驅動設計建議採用 NEMA 17 步進馬達 (<a href="https://cad.onshape.com/documents/5357a44dafa83155102461c8/w/dd949e9201268e32e36df4d2/e/c5d9632732f2c0ffa8979372">NEMA 17 Onshape</a>) 或自選伺服馬達進行設計繪圖，而 Openduck mini 驅動則建議採用 <a href="https://www.feetechrc.com/74v-19-kgcm-plastic-case-metal-tooth-magnetic-code-double-axis-ttl-series-steering-gear.html">STS3215 磁編碼數位伺服機</a> (<a href="https://cad.onshape.com/documents/59be6ef44ff9ea793708399b/w/03ff9d6a2e9b8a7faa389b8d/e/6187f5074585cebed7cda939">STS3215 Onshape</a>) 進行設計繪圖。</p>
 <p style="padding-left: 30px;"><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a> 與 <a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a> 零組件設計繪圖完成後，將設法利用 <a href="https://cyberbotics.com/">Webots</a> 進行控制系統設計與動態模擬 (Dynamic Simulation)，課程最後將針對此兩項機電系統的實作進行規劃與討論。</p>
 <p>可攜程式套件:</p>
 <p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
@@ -84,8 +84,10 @@
 <p><span style="background-color: #ffff99;">Prompt 1:</span></p>
 <p><span style="background-color: #ccffcc;">目前有一個專案，透過解析 config/content.htm 檔案中 HTML 的 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 標籤來進行內容分頁，並以這些標題作為靜態網站中各頁面的標題。系統根據 &lt;h1&gt;、&lt;h2&gt;、&lt;h3&gt; 的層級順序，動態建立多層次的網站導覽選單 (menu)。</span><br/><br/><span style="background-color: #ccffcc;">content.htm 的內容編輯採用 Python Flask 搭配 JavaScript 編輯器，讓使用者能在瀏覽器中即時編輯各層級頁面的內容。編輯完成後，透過 Python 程式將內容分頁並產生含多層次選單的靜態頁面，並存放於 content 目錄中。</span><br/><br/><span style="background-color: #ccffcc;">針對此一網站，若由六名組員同步協同維護，組員可選擇在本地端啟動動態編輯環境完成內容修改及靜態頁面生成，或直接利用 GitHub Codespaces 進行雲端開發。請詳述並說明在此協同編輯流程中會使用的 Git 指令與使用情境，同時指導各組員應如何有效同步作業以確保版本一致與作業流暢。</span></p>
 <p><span style="background-color: #ffff99;">Prompt 2:</span></p>
-<p><span style="background-color: #ccffcc;">請設定組員 A 負責開發零件 A 及其相關網頁內容，組員 B 負責執行任務 B，組員 C 則負責任務 C。三位組員將同步進行各自的零組件開發工作，並分別在開發過程透過多次 git 提交維護對應的頁面 A、B 與 C。請列出每位組員在開發過程中所需使用的 Git 指令及其使用情境，並詳細說明在三項任務各自完成後，由組員 A 負責將所有成果整合至 main 分支所需的完整 Git 操作流程。同時，也請詳細說明組員 B 與 C 在整個協作過程中所需執行的 Git 指令與步驟。</span></p>
+<p><span style="background-color: #ccffcc;">此外，六名組員中有三人必須負責以 CAD 協同完成 「5-bar Linkage Plotter」 的設計，另三人則協同進行 「Openduck mini」 零組件的設計繪圖。六人在設計過程中需同步記錄系統開發歷程並共同維護網站內容，請提出詳細網站頁面架構的規劃建議，以及可用於協同設計的 CAD 系統，以利整合設計成果與技術文件。請用繁體中文詳細說明各組員在此電腦輔助設計工程中會分別使用的 git 指令與使用情境，並建議該如何兼顧零組件設計繪圖與網站內容整理。</span></p>
 <p><span style="background-color: #ffff99;">Prompt 3:</span></p>
+<p><span style="background-color: #ccffcc;">請設定組員 A 負責開發零件 A 及其相關網頁內容，組員 B 負責執行任務 B，組員 C 則負責任務 C。三位組員將同步進行各自的零組件開發工作，並分別在開發過程透過多次 git 提交維護對應的頁面 A、B 與 C。請列出每位組員在開發過程中所需使用的 Git 指令及其使用情境，並詳細說明在三項任務各自完成後，由組員 A 負責將所有成果整合至 main 分支所需的完整 Git 操作流程。同時，也請詳細說明組員 B 與 C 在整個協作過程中所需執行的 Git 指令與步驟。</span></p>
+<p><span style="background-color: #ffff99;">Prompt 4:</span></p>
 <p><span style="background-color: #ccffcc;"><!--StartFragment -->A, B, C 三名組員若使用 Onshape 執行同步零組件繪圖, 該如何協同整合?<!--EndFragment --></span></p>
 <p><span style="background-color: #ccffcc;"></span>專案概述與協同維護流程建議</p>
 <p>一、專案概述<br/><br/>本專案透過解析 config/content.htm 檔案中的 HTML 標籤 &lt;h1&gt;、&lt;h2&gt; 及 &lt;h3&gt;，實現內容分頁功能。系統將這些標題作為靜態網站中各頁面的標題，並依據標題的層級順序，動態生成多層次的網站導覽選單（Menu），以提升使用者瀏覽體驗。<br/><br/>內容編輯採用 Python Flask 框架結合 JavaScript 編輯器，讓使用者能直接在瀏覽器中編輯各層級頁面內容。完成內容編輯後，系統透過 Python 程式將分頁資料轉換為帶有多層次選單的靜態網頁，並將生成的靜態頁面存放於 content 目錄中。</p>
@@ -103,7 +105,12 @@
 <p style="padding-left: 30px;">由於多組員共同編輯相同檔案，需定期拉取主分支最新版本，及時解決合併衝突。團隊成員間應保持密切溝通，避免重複編輯同一內容區塊。</p>
 <p>自動化測試與部署</p>
 <p style="padding-left: 30px;">可結合 CI/CD 工具，於 PR 流程中自動執行靜態網站生成及測試，確保產出結果符合預期，並自動部署至測試或正式環境。</p>
-<p>此工作流程能有效保障多名組員在分散開發環境下，協同完成內容維護與靜態頁面產出，提升團隊合作效率與網站品質。</p><h2>Homework</h2>
+<p>此工作流程能有效保障多名組員在分散開發環境下，協同完成內容維護與靜態頁面產出，提升團隊合作效率與網站品質。</p><h3>Prompts</h3>
+<p>繪圖範圍 20cm x 20cm 的 5-bar Linkage Plotter, 各連桿的尺寸該如何規劃配置，請詳細說明。</p>
+<p style="padding-left: 30px;"><a href="/downloads/plotter_ai_1.txt">plotter_ai_1.txt</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/plotter_ai_1_1.py">plotter_ai_1_1.py</a></p>
+<p style="padding-left: 30px;"><a href="/downloads/plotter_ai_1_2.py">plotter_ai_1_2.py</a></p>
+<p>如何進行設計運算?包括正向運動分析與逆向運動分析。</p><h2>Homework</h2>
 <p>HW1:</p>
 <p style="padding-left: 30px;">利用 NX2312、<a href="https://www.onshape.com/en/">Onshape</a>、Solvespace 或自選 CAD 套件繪製五連桿機構零組件。</p>
 <p style="padding-left: 60px;">參考資料: <a href="/downloads/plotter.7z">plotter.7z</a> (in Solvespace)</p>
