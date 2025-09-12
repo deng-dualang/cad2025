@@ -369,6 +369,17 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/Robot-Sketcher-5-bar-parallel-manipulator-">https://github.com/mdecycu/Robot-Sketcher-5-bar-parallel-manipulator-</a> </p>
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/Inverse-Kinematics-Five-Bar">https://github.com/mdecycu/Inverse-Kinematics-Five-Bar</a> </p>
 <p style="padding-left: 30px;"><a href="/downloads/5-Bar Linkage Kinematic Solver and Simulator.pdf">5-Bar Linkage Kinematic Solver and Simulator.pdf</a></p>
+<p style="padding-left: 30px;">提筆設計:</p>
+<p style="padding-left: 60px;">整體機構以 Watts linkage 提升及下降</p>
+<p style="padding-left: 60px;">整體機構以 凸輪機構提升，以彈簧拉回下降</p>
+<p style="padding-left: 60px;">筆座採電磁鐵上升，以彈簧拉回下降</p>
+<p style="padding-left: 60px;">採用其他設計，討論各種設計的優缺點</p>
+<p>開啟 Webots 時出現以下錯誤:</p>
+<p><img alt="" height="112" src="/images/Webots_openssl_error.png" width="300"/></p>
+<p>Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p>目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
+<p>因此在命令列執行: <span>conda install openssl=3.0.16 就可以避開上列錯誤。</span></p>
+<hr/>
 <p>電腦輔助設計室電腦硬體與網路使用介紹</p>
 <p style="padding-left: 30px;">C 槽硬碟為 SSD，網路協定可以自行決定使用 IPv4 或 IPv6 (若使用純 IPv6 則必須設定 Proxy 才能連結到 github.com 以及僅支援 IPv4 協定的網站) </p>
 <p>Teams 線上教學:</p>
@@ -1579,7 +1590,7 @@ Exit
 <p style="padding-left: 30px;">macOS 12 以上版本操作系統</p>
 <p>使用介面:</p>
 <p style="padding-left: 30px;">Webots 可以透過 Tools - Preferences - Language 中選擇使用 English 或簡體中文介面 (目前無繁體中文介面, 介面語系翻譯請參考 <a href="https://github.com/cyberbotics/webots/tree/released/resources/translations">translations 頁面</a>說明), 在此強烈建議使用 English 界面即可.</p>
-<hr/>
+<hr>
 <p>Webots 原始碼使用授權:<br/><br/>採 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license agreement</a>. Apache 2.0 是一種開放且對企業友善的授權條款, 允許任何人免費使用、修改和分享軟體的原始程式碼, 包括商業用途使用.</p>
 <p>自行編譯 Webots 請參考 <a href="https://cyberbotics.com/doc/guide/building-webots">building Webots 頁面</a>說明.</p>
 <p>Webots 套件中的大部分範例模擬檔案都使用 Apache 2.0 許可釋出, 但有部分機器人和物件模型（proto 檔案）則是根據 <a href="https://cyberbotics.com/webots_assets_license">Webots 資產的開放原始碼許可協議</a>發佈, 另外有些範例則是由用戶根據不同的開源許可證所提供, 這些檔案都會明確標示其許可證內容.</p>
@@ -2714,7 +2725,7 @@ doc["aitetris"].bind("click", aitetris.do)
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div2"></div>
 <p><span node="[object Object]"><!-- editor2 結束 --></span></p>
-<hr/></details></details></div>
+<hr/></details></details></hr></div>
 <h1>Ref</h1>
 <h2>Reeborg</h2>
 <p><a href="https://mde.tw/cp2025/reeborg?lang=en&amp;mode=python&amp;menu=worlds/menus/select_collection_en.json&amp;name=Alone&amp;url=worlds/tutorial_en/harvest1.json&amp;editor=python/harvest1.py">https://mde.tw/cp2025/reeborg?lang=en&amp;mode=python&amp;menu=worlds/menus/select_collection_en.json&amp;name=Alone&amp;url=worlds/tutorial_en/harvest1.json&amp;editor=python/harvest1.py</a></p>
