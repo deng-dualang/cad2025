@@ -889,7 +889,15 @@ http {
 <p style="padding-left: 30px;">同時，Boolean 操作（Unite/Subtract/Intersect）和 Mirror Body 功能的增強針對高品質表面需求，例如支援排除薄片體、非交集處理，以及智能收集器自動偵測和刪除原體選項，確保表面連續性（G1/G2 連續）。這直接支援下游模擬（如有限元素分析）和 CAM 製造，特別在汽車（精密齒輪組裝）和航太（輕量結構）中，避免了重工並提升產品品質。這些改變源自產業反饋，Siemens 透過客戶調查和合作（如與製造夥伴）確認了這些痛點，目的是讓 NX 更好地服務高精度應用，維持競爭優勢。</p>
 <p>技術進展</p>
 <p style="padding-left: 30px;">Siemens 一直強調 NX 作為統一平台的定位，將 CAD、CAM 和 CAE 整合成一體化生態，這是 NX 2506 更新背後的核心邏輯。相較 NX 2312 的穩定基礎，NX 2506 引入了與 AI 工具的深度整合，雖然 AI 並非核心 CAD 功能，但它影響整體工作流程，例如透過 AI 驅動的自動特徵辨識、優化建議和數字孿生模擬，輔助零件繪圖和零組件建模。具體來說，NX 2506 與 Teamcenter 2506 聯動，提供 AI-powered 功能如生成式設計輔助和實時決策支援，這讓 CAD 流程更智能，例如在 Sketcher 中 AI 可建議 snapping 優化，或在 Axial Pattern 中自動調整參數以符合製造約束。</p>
-<p style="padding-left: 30px;">這些更新旨在提升 NX 的競爭力，面對如 SolidWorks 或其他 CAD 軟體的挑戰，Siemens 透過 AI 和雲端整合（如 API 連接和雲端製造服務）讓 NX 更具前瞻性，支援工業級 AI 應用如 CNC 優化和部件生產效率提升。官方釋出註記強調這些進展是為了增加效率和創新，基於技術趨勢如 AI 與數字孿生的融合，讓 NX 2506 不僅是工具升級，更是平台演進。</p><h3>NX2312</h3>
+<p style="padding-left: 30px;">這些更新旨在提升 NX 的競爭力，面對如 SolidWorks 或其他 CAD 軟體的挑戰，Siemens 透過 AI 和雲端整合（如 API 連接和雲端製造服務）讓 NX 更具前瞻性，支援工業級 AI 應用如 CNC 優化和部件生產效率提升。官方釋出註記強調這些進展是為了增加效率和創新，基於技術趨勢如 AI 與數字孿生的融合，讓 NX 2506 不僅是工具升級，更是平台演進。</p>
+<p>Siemens NX 與 NX X 的並存情況</p>
+<p style="padding-left: 30px;">根據 Siemens 官方訊息，NX 與 NX X 將一直並存，並非互斥或取代關係。NX 是傳統的 on-premise（本地安裝）版本，提供完整的 CAD/CAM/CAE 功能，適合需要高度自訂化與本地控制的企業；NX X 則是基於雲端的 SaaS（Software as a Service）版本，強調雲端授權、即時更新與協作，針對現代混合工作環境設計。兩者建構於相同的 NX 架構與資料模型之上，確保完全互通性（interoperability），可無縫共享資料與功能，支援從設計到製造的全流程整合。這一並存策略是 Siemens Xcelerator 平台的核心部分，讓用戶根據需求選擇部署方式，而非強制遷移。</p>
+<p>關鍵官方依據與細節</p>
+<p style="padding-left: 30px;">並存與互通性確認：Siemens 明確表示「All Siemens Xcelerator software, including all NX products, are interoperable and can share data seamlessly」（所有 Siemens Xcelerator 軟體，包括所有 NX 產品，皆可互通並無縫共享資料）。這涵蓋 NX（on-premise）與 NX X（雲端），允許用戶在兩者間自由切換，而無需資料轉換或相容性問題。 例如，NX X 的桌面安裝版使用雲端授權，但可與傳統 NX 整合，支援混合環境。</p>
+<p style="padding-left: 30px;">部署選擇的靈活性：官方文件指出，「Whether you want to manage your own IT environment or leverage software as a service, Siemens' NX CAD has licensing options for how you work. You'll have the same core features and release/update cadence no matter how you choose to run NX CAD.」這意味無論選擇 NX 或 NX X，都享有相同核心功能與更新節奏（每 6 個月新增模組），確保並存不會導致功能落差。 NX X 提供四個階層（Essentials、Standard、Advanced、Premium），但不取代 NX，而是作為補充，讓小型團隊或遠距協作更便捷。</p>
+<p style="padding-left: 30px;">未來更新與持續支援：在 2025 年夏季更新中，Siemens 同時發布 NX 與 NX X 的新功能，如 AI Copilot（設計輔助）、沉浸式工程（mixed reality 協作）與流體模擬，證明兩者將同步演進。 官方強調 NX X 的雲端管理（自動更新）與 NX 的本地穩定性將長期並行，無終止傳統版本的計畫。這回應產業趨勢，讓企業逐步過渡至雲端，而非強迫。</p>
+<p>為何會並存？</p>
+<p style="padding-left: 30px;">Siemens 的策略是提供「選擇權」（it's your choice），回應不同用戶需求：大型企業偏好 NX 的自訂化與安全性；新創或分散團隊則青睞 NX X 的低門檻與協作。 這種並存不僅維持市場領導地位（NX 在 CAD 評比中高分），還加速創新，如透過雲端整合 AI 與數字孿生。 若需遷移，Siemens 提供工具與支援，確保平滑轉換。</p><h3>NX2312</h3>
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
 <p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/documents/209349590/PL20230425446868577">NX2312 Documentation</a></p>
@@ -941,9 +949,6 @@ print(f"Python version: {sys.version}")</pre>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ Redistributable</a> (2015 - 2022)</p>
 <p>NX2506 Python 採用 3.12.9 (NX2412 則採用 Python 3.11.9)</p>
 <p>NX2506 完整安裝容量約 38GB (NX2412 完整安裝容量則約 37GB)</p>
-<p>有關 NX Designcenter:</p>
-<p>截至 2025.06，from <a href="https://www.engineering.com/what-is-siemens-designcenter/">https://www.engineering.com/what-is-siemens-designcenter/</a> :</p>
-<p><img caption="false" height="346" src="/images/NX designcenter_2025_06_pricing.png" width="600"/></p>
 <p>NX2506 可攜啟動與 NXOpen 設定:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
 set PYTHONIOENCODING="utf-8"
