@@ -950,29 +950,73 @@ print(f"Python version: {sys.version}")</pre>
 <p>NX2506 Python 採用 3.12.9 (NX2412 則採用 Python 3.11.9)</p>
 <p>NX2506 完整安裝容量約 38GB (NX2412 完整安裝容量則約 37GB)</p>
 <p>NX2506 可攜啟動與 NXOpen 設定:</p>
-<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_ipv6
+set HomeDrive=%Disk%:\home_ipv6
+set Home=%Disk%:\home_ipv6
+set USERPROFILE=%Disk%:\home_ipv6
+
+REM 將系統 Python 程式的 io 設為 utf-8
 set PYTHONIOENCODING="utf-8"
 
-REM for NXOpen and Webots Python
-set PYTHONPATH=%Disk%:\miniconda3\DLLs;%Disk%:\miniconda3\Lib;%Disk%:\miniconda3\Lib\site-packages;%Disk%:\NX2506\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;
-
+set PYTHONPATH=%Disk%:\envs\nx2506\DLLs;%Disk%:\envs\nx2506\Lib;%Disk%:\envs\nx2506\Lib\site-packages;%Disk%:\NX2506\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;
+set PYTHONHOME=%Disk%:\envs\nx2506
 REM for Webots
-set PYTHON_PATH=%Disk%:\miniconda3
+set PYTHON_PATH=%Disk%:\envs\nx2506
 set WEBOTS_HOME=%Disk%:\Webots_2023b
 
-REM 設定跟 Python 有關的命令搜尋路徑
-set path_python=%Disk%:\miniconda3;%Disk%:\miniconda3\Scripts;
+REM for putty
+set GIT_SSH=%Disk%:\PuTTY\plink.exe
 
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Disk%:\envs\nx2506;%Disk%:\envs\nx2506\Scripts;
+REM 設定跟Git 有關的命令搜尋路徑
+set path_git=%Disk%:\portablegit\bin;
+
+REM for execute scite directly
+set path_scite=%Disk%:\wscite\;
+
+REM for webots
+set  path_webots=%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\msys64\usr\bin
+
+REM for blender
+set path_blender=%Disk%:\Blender_4.2;
+
+path=%Disk%:;%path_python%;%path_git%%path_scite%;%path_webots%;%path_blender%;%path%;
+
+REM for NX2312, must after path setup 
 set UGII_ENV_FILE=%Disk%:\NX2506\UGII\ugii_env_ug.dat
-set SPLM_LICENSE_SERVER=29000@your_NX2506_license_server
+set SPLM_LICENSE_SERVER=29000@your_License_Server
 set UGII_LANG=english
 set UGS_LICENSE_BUNDLE=ACD11,ACD10
-set UGII_BASE_DIR=%Disk%:\NX2506
-set UGII_TMP_DIR=%Disk%:\tmp\NX2506
-set UGII_LIB_PATH=%Disk%:NX2506\NXBIN\python
-set ugii=%Disk%:\NX2506\nxbin;
-path = %ugii%;%path%</pre>
-<p></p><h2>Onshape</h2>
+set UGII_BASE_DIR=%Disk%:\NX2506\
+set UGII_TMP_DIR=%Disk%:\tmp\nx2506
+set UGII_LIB_PATH=%Disk%:\NX2506\NXBIN\python
+set ugii=%Disk%:\NX2506\ugii;%Disk%:\NX2506\nxbin;
+path = %ugii%;%path%
+REM Xcopy %Disk%:\home_ipv6\AppData\Local\Siemens\NX2312 C:\users\%USERNAME%\AppData\Local\Siemens\NX2312 /E /H /C /I /Y
+
+REM start ugraf -nx
+
+REM 切換到 nx2506
+call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\nx2506
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wscite\SciTE.exe
+start /MIN %Disk%:\wscite\SciTE.exe
+
+REM start webotsw.exe
+
+Exit</pre><h2>Onshape</h2>
 <p>OnShape: <a href="https://www.onshape.com/en/">https://www.onshape.com/en/</a></p>
 <p>教師 Onshape 帳號: course At mde dot tw</p><h2>Webots</h2>
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>

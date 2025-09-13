@@ -949,9 +949,6 @@ print(f"Python version: {sys.version}")</pre>
 <p style="padding-left: 30px;"><a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ Redistributable</a> (2015 - 2022)</p>
 <p>NX2506 Python 採用 3.12.9 (NX2412 則採用 Python 3.11.9)</p>
 <p>NX2506 完整安裝容量約 38GB (NX2412 完整安裝容量則約 37GB)</p>
-<p>有關 NX Designcenter:</p>
-<p>截至 2025.06，from <a href="https://www.engineering.com/what-is-siemens-designcenter/">https://www.engineering.com/what-is-siemens-designcenter/</a> :</p>
-<p><img caption="false" height="346" src="/images/NX designcenter_2025_06_pricing.png" width="600"/></p>
 <p>NX2506 可攜啟動與 NXOpen 設定:</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
 set PYTHONIOENCODING="utf-8"
@@ -975,7 +972,12 @@ set UGII_TMP_DIR=%Disk%:\tmp\NX2506
 set UGII_LIB_PATH=%Disk%:NX2506\NXBIN\python
 set ugii=%Disk%:\NX2506\nxbin;
 path = %ugii%;%path%</pre>
-<p></p><h2>Onshape</h2>
+<p>NX 安裝後所使用的 NXOpen Python 環境變數設定:</p>
+<p>#Python installation</p>
+<p>UGII_PYTHON_HOME=${UGII_BASE_DIR}\nxbin\python<br/><br/># This is the name of the Python shared library</p>
+<p>UGII_PYTHON_DLL=python312.dll<br/><br/># This is the location of the Python interpreter that will be loaded as needed by NX<br/># UGII_PYTHON_LIBRARY_DIR is set to the directory specified in UGII_PYTHON_HOME.<br/># NOTE: changing this value only changes the Python interpreter used by NX Open applications.</p>
+<p>UGII_PYTHON_LIBRARY_DIR=${UGII_PYTHON_HOME}</p>
+<p>UGII_PYTHONPATH=${UGII_PYTHON_HOME};${UGII_PYTHON_HOME}\Python312.zip;${UGCHECKMATE_DIR}\python;$UGII_BASE_DIR\automated_testing\python<br/><br/></p><h2>Onshape</h2>
 <p>OnShape: <a href="https://www.onshape.com/en/">https://www.onshape.com/en/</a></p>
 <p>教師 Onshape 帳號: course At mde dot tw</p><h2>Webots</h2>
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
