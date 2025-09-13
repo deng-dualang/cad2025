@@ -854,7 +854,42 @@ http {
 <p><a href="/downloads/Jansen_whitworth_mechanism.7z">Jansen_whitworth_mechanism.7z</a></p>
 <p><a href="https://github.com/mdecycu/WalkerBot-MakerKit">https://github.com/mdecycu/WalkerBot-MakerKit</a> </p>
 <h3>Compile</h3>
-<h2>NX2312</h2>
+<h2>NX</h2>
+<p><span style="background-color: #ccffcc;">目前全球業界對 Siemens NX X(不是 NX，而是 NX 雲端版)接受度如何? 總數大約多少? 優勢與弱點何在? 競爭對手產品有哪些?</span></p>
+<p><span style="background-color: #ccffcc;">目前台灣業界對 Siemens NX X(不是 NX，而是 NX 雲端版)接受度如何? 總數大約多少? 優勢與弱點何在? 競爭對手產品有哪些?</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/FmacyIh5JB0?si=DWb-YxduPi35RINO" title="YouTube video player" width="560"></iframe></p>
+<p data-pm-slice="0 0 []"><span style="background-color: #ccffcc;">Siemens NX2312 與 NX2506 在 CAD 零組件繪圖部分的功能，最大的差異為何? 為何會有這些改變?</span></p>
+<p data-pm-slice="0 0 []"><span style="background-color: #ccffcc;"></span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/PZ96M_k4Sg8?si=NgbiAHrClEbr03R_" title="YouTube video player" width="560"></iframe></p>
+<p>Siemens NX2506 的變更內容:</p>
+<p>零件繪圖:</p>
+<p style="padding-left: 30px;">現代化 UI：鉛筆游標、動態手柄、顏色編碼 snapping（紅：無 snapping；黃：點對曲線；綠：重合）。</p>
+<p style="padding-left: 30px;">支持多輸入（滑鼠、觸控筆、觸控螢幕），MB1 按壓拖曳創建線/弧。</p>
+<p style="padding-left: 30px;">手勢控制：搖晃斷開切線、MB2 方向鎖定、塗鴉手勢修剪/延伸。</p>
+<p style="padding-left: 30px;">新工具：鎖定長度/角度/半徑參數、鏈接曲線創建輪廓、從中點創建線、正方形從中心、Tangent Sliding（切線滑動）。</p>
+<p style="padding-left: 30px;">生成參考幾何與無限線/線段選項。</p>
+<p>建模與組立:</p>
+<p style="padding-left: 30px;">Axial Pattern 新增：結合圓柱/線性圖案，支持錐面與軸向交錯（Stagger），整合至 Pattern Feature/Geometry/Face/Reference Pattern。</p>
+<p style="padding-left: 30px;">Interpart Navigator with Diagram：視覺化組裝關係（黑線：結構；綠曲線：關係），Pack Nodes 隱藏無連結節點。</p>
+<p style="padding-left: 30px;">增強 Boolean（Unite/Subtract/Intersect）：支持空特徵組、非交集處理，排除薄片體。</p>
+<p style="padding-left: 30px;">Mirror Body：刪除原體選項、智能收集器自動偵測。</p>
+<p style="padding-left: 30px;">Offset Surface：自動偵測自交點並警示，Split Output along Boundary Curves 維持表面連續性。</p>
+<p>UI:</p>
+<p style="padding-left: 30px;">直觀 UI 與 API 支援，保留舊互動但新增現代方式。</p>
+<p style="padding-left: 30px;">更好錯誤處理（如自交點警示）。</p>
+<p>這些 NX2506 改變主要源自 Siemens 對客戶反饋的回應，以及產業趨勢需求：</p>
+<p>提升生產力與靈活性</p>
+<p style="padding-left: 30px;">在 NX 2312 版本之後，Siemens 收集了大量用戶反饋，指出傳統 Sketcher 工具在處理複雜零件繪圖時存在明顯的效率瓶頸，例如需要頻繁切換命令、多次點擊調整 snapping（吸附）點，以及手動處理曲線連續性，導致設計流程緩慢且容易中斷創意流程。</p>
+<p style="padding-left: 30px;">這些問題在高密度零件建模中尤為突出，例如涉及多層輪廓或精確尺寸約束的零組件設計。為了應對這些痛點，NX 2506 對 Sketcher 進行了全面重構，引入了更先進的手勢控制、拖曳式互動以及智能 snapping 機制。具體來說，廢除了舊版的獨立 Profile 工具，取而代之以整合的線條和弧線創建模式，使用者可以透過按壓拖曳直接生成輪廓，同時支援動態手柄調整和顏色編碼 snapping（例如紅色表示無吸附、黃色為點對曲線、綠色為完全重合），這大大減少了對話框彈出和步驟切換。Siemens 官方將這些改進形容為「遊戲規則改變者」（game-changer），因為它們能將繪圖時間縮短 20-30%，讓設計師更專注於創意迭代而非繁瑣操作。</p>
+<p>適應現代硬體與工作環境</p>
+<p style="padding-left: 30px;">NX 2506 的更新特別強調對現代硬體的適應性，主要是為了回應遠距工作、行動設計和混合辦公環境的興起。在 NX 2312 中，互動主要依賴傳統滑鼠和鍵盤，缺乏對觸控設備的優化，這在平板電腦或遠端協作時成為限制。NX 2506 引入了多輸入支援，包括觸控筆、觸控螢幕和手勢操作，讓使用者能在平板或混合裝置上流暢進行零件繪圖，例如透過觸控拖曳直接創建弧線或調整 snapping 點。這不僅滿足了遠距設計需求（如在家或現場使用平板建模），還降低了對專用工作站的依賴，提升了工作靈活性。</p>
+<p style="padding-left: 30px;">此外，顏色編碼 snapping 和動態 UI（例如實時手柄和視覺反饋）進一步改善了使用者體驗，這些元素提供即時視覺指引，減少了試錯時間並降低學習曲線。新手設計師能更快上手，而資深用戶則受益於更直觀的互動，例如在複雜零組件繪圖中，動態 UI 能自動突出潛在錯誤（如自交點）。這些改進源自 Siemens 對使用者工作環境的調查，旨在讓 NX 成為更包容的工具，支援從桌面到行動的無縫轉換，從而適應現代工程師的多樣化工作模式。</p>
+<p>產業需求驅動</p>
+<p style="padding-left: 30px;">汽車和航太產業對高精度組件建模的需求是 NX 2506 更新的一大驅動力，這些領域常涉及複雜的零組件組裝，如引擎部件或飛機結構，需要精確的關係管理和表面連續性。在 NX 2312 中，組裝分析工具較為基礎，容易在下游模擬階段暴露錯誤。NX 2506 引入了增強的 Interpart Navigator，配以圖表式視覺化（Diagram 模式），使用黑線表示結構關係、綠曲線顯示約束連結，並支援 Pack Nodes 隱藏無關節點，這大大提升了組裝效率，讓工程師能快速診斷和解決零組件間的潛在衝突，減少了下游錯誤如碰撞或不匹配。</p>
+<p style="padding-left: 30px;">同時，Boolean 操作（Unite/Subtract/Intersect）和 Mirror Body 功能的增強針對高品質表面需求，例如支援排除薄片體、非交集處理，以及智能收集器自動偵測和刪除原體選項，確保表面連續性（G1/G2 連續）。這直接支援下游模擬（如有限元素分析）和 CAM 製造，特別在汽車（精密齒輪組裝）和航太（輕量結構）中，避免了重工並提升產品品質。這些改變源自產業反饋，Siemens 透過客戶調查和合作（如與製造夥伴）確認了這些痛點，目的是讓 NX 更好地服務高精度應用，維持競爭優勢。</p>
+<p>技術進展</p>
+<p style="padding-left: 30px;">Siemens 一直強調 NX 作為統一平台的定位，將 CAD、CAM 和 CAE 整合成一體化生態，這是 NX 2506 更新背後的核心邏輯。相較 NX 2312 的穩定基礎，NX 2506 引入了與 AI 工具的深度整合，雖然 AI 並非核心 CAD 功能，但它影響整體工作流程，例如透過 AI 驅動的自動特徵辨識、優化建議和數字孿生模擬，輔助零件繪圖和零組件建模。具體來說，NX 2506 與 Teamcenter 2506 聯動，提供 AI-powered 功能如生成式設計輔助和實時決策支援，這讓 CAD 流程更智能，例如在 Sketcher 中 AI 可建議 snapping 優化，或在 Axial Pattern 中自動調整參數以符合製造約束。</p>
+<p style="padding-left: 30px;">這些更新旨在提升 NX 的競爭力，面對如 SolidWorks 或其他 CAD 軟體的挑戰，Siemens 透過 AI 和雲端整合（如 API 連接和雲端製造服務）讓 NX 更具前瞻性，支援工業級 AI 應用如 CNC 優化和部件生產效率提升。官方釋出註記強調這些進展是為了增加效率和創新，基於技術趨勢如 AI 與數字孿生的融合，讓 NX 2506 不僅是工具升級，更是平台演進。</p><h3>NX2312</h3>
 <p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
 <p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
 <p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/documents/209349590/PL20230425446868577">NX2312 Documentation</a></p>
@@ -890,8 +925,7 @@ import os
 conda_env = os.environ.get("CONDA_DEFAULT_ENV")
 print(f"Conda env：{conda_env}")
 print(f"Python version: {sys.version}")</pre>
-<p style="padding-left: 60px;"></p>
-<h3>License</h3>
+<p style="padding-left: 60px;"></p><h3>License</h3>
 <p>在電腦輔助設計過程使用電腦套件時，必須明確了解該套件的使用授權。本課程所使用的 <a href="https://github.com/mdecycu/cmsimde">CMSiME </a>為 <a href="https://github.com/mdecycu/cmsimde/blob/master/LICENSE">GNU Affero General Public License v3.0</a>，而 Siemens NX 除了一般教育單位購買的授權外，也提供<a href="https://plm.sw.siemens.com/en-US/nx/student-software/">學生使用授權</a>。</p>
 <p>Siemens NX 使用了很多開源軟體，其使用授權: <a href="https://download.industrysoftware.automation.siemens.com/open-source/">https://download.industrysoftware.automation.siemens.com/open-source/</a> </p>
 <p>教育單位使用 Siemens NX 的使用授權: <a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.xid1851843/topicSet_copyright">NX2312 版權宣告</a></p>
@@ -900,7 +934,7 @@ print(f"Python version: {sys.version}")</pre>
 <p>NX2212 之後的認證伺服器變更: <a href="https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html">https://support.sw.siemens.com/en-US/okba/PL8687318/NX-2212-licensing-changes-Mandatory-use-of-Siemens-License-Server/index.html</a> </p>
 <p>一旦全面 SaaS 化之後的 Siemens Nx，客戶端的使用認證將不再依賴近端的認證伺服器。</p>
 <p style="padding-left: 30px;">SaaS 之後的 Siemens NX X: <a href="https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/">https://resources.sw.siemens.com/en-US/video-introducing-nx-x-nx-as-a-saas-solution/</a> </p>
-<h2>NX2506</h2>
+<h3>NX2506</h3>
 <p><a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20241101461013487.xid1851843/xid1851946">NX2506 Online Help</a></p>
 <p>NX2506 需要:</p>
 <p style="padding-left: 30px;"><a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">https://dotnet.microsoft.com/en-us/download/dotnet/8.0</a> </p>
@@ -909,7 +943,31 @@ print(f"Python version: {sys.version}")</pre>
 <p>NX2506 完整安裝容量約 38GB (NX2412 完整安裝容量則約 37GB)</p>
 <p>有關 NX Designcenter:</p>
 <p>截至 2025.06，from <a href="https://www.engineering.com/what-is-siemens-designcenter/">https://www.engineering.com/what-is-siemens-designcenter/</a> :</p>
-<p><img caption="false" height="346" src="/images/NX designcenter_2025_06_pricing.png" width="600"/></p><h2>Onshape</h2>
+<p><img caption="false" height="346" src="/images/NX designcenter_2025_06_pricing.png" width="600"/></p>
+<p>NX2506 可攜啟動與 NXOpen 設定:</p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+REM for NXOpen and Webots Python
+set PYTHONPATH=%Disk%:\miniconda3\DLLs;%Disk%:\miniconda3\Lib;%Disk%:\miniconda3\Lib\site-packages;%Disk%:\NX2506\NXBIN\python;%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\lib\controller\python;
+
+REM for Webots
+set PYTHON_PATH=%Disk%:\miniconda3
+set WEBOTS_HOME=%Disk%:\Webots_2023b
+
+REM 設定跟 Python 有關的命令搜尋路徑
+set path_python=%Disk%:\miniconda3;%Disk%:\miniconda3\Scripts;
+
+set UGII_ENV_FILE=%Disk%:\NX2506\UGII\ugii_env_ug.dat
+set SPLM_LICENSE_SERVER=29000@your_NX2506_license_server
+set UGII_LANG=english
+set UGS_LICENSE_BUNDLE=ACD11,ACD10
+set UGII_BASE_DIR=%Disk%:\NX2506
+set UGII_TMP_DIR=%Disk%:\tmp\NX2506
+set UGII_LIB_PATH=%Disk%:NX2506\NXBIN\python
+set ugii=%Disk%:\NX2506\nxbin;
+path = %ugii%;%path%</pre>
+<p></p><h2>Onshape</h2>
 <p>OnShape: <a href="https://www.onshape.com/en/">https://www.onshape.com/en/</a></p>
 <p>教師 Onshape 帳號: course At mde dot tw</p><h2>Webots</h2>
 <p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p>
