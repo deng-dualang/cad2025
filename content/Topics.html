@@ -160,6 +160,12 @@ img.add_border {
 <p style="padding-left: 60px;">筆座採電磁鐵上升，以彈簧拉回下降</p>
 <p style="padding-left: 60px;">繪圖機構總成固定，繪圖區域升降</p>
 <p style="padding-left: 60px;">採用其他設計，討論各種設計的優缺點</p>
+<p>開啟 Webots 時出現以下錯誤:</p>
+<p><img alt="" height="112" src="./../images/Webots_openssl_error.png" width="300"/></p>
+<p>Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p>目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
+<p>因此在命令列執行: <span>conda install openssl=3.0.16 就可以避開上列錯誤。</span></p>
+<p><span>另外執行 <a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a> 中 Python 控制程式需要 numpy 套件，可以透過 conda install -c conda-forge numpy 安裝。</span></p>
 <p>w2:</p>
 <p style="padding-left: 30px;">登入 Onshape 後，連線至 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">OpenDuck mini v2 官方 Onshape</a> 後，以滑鼠左鍵點選畫面左上方的功能表，點選 Copy workspace 後，選擇 Document name，滑鼠點選 Copy document to 中的 Owned by me，再點選下方的 Open 後，就可以取得 OpenDuck workspace 的副本。</p>
 <p style="padding-left: 30px;">各組組員請分別練習在 Solvespace、NX2312 與 Openshape 上進行零件繪圖與組立，其中將牽涉使用各不同套件的繪圖與組立指令，並且必須了解如何透過不同零組件檔案格式(<a href="https://www.capvidia.com/blog/best-step-file-to-use-ap203-vs-ap214-vs-ap242">STEP424</a>、<a href="https://en.wikipedia.org/wiki/Parasolid">Parasolid</a>、<a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 等)進行轉檔。</p>

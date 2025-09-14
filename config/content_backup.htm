@@ -377,12 +377,21 @@ print(inverse(-12.77, -117.63, 67.27, 110, 110, 67.27))</pre>
 <p style="padding-left: 60px;">筆座採電磁鐵上升，以彈簧拉回下降</p>
 <p style="padding-left: 60px;">繪圖機構總成固定，繪圖區域升降</p>
 <p style="padding-left: 60px;">採用其他設計，討論各種設計的優缺點</p>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <p>w2:</p>
 <p style="padding-left: 30px;">登入 Onshape 後，連線至 <a href="https://cad.onshape.com/documents/64074dfcfa379b37d8a47762/w/3650ab4221e215a4f65eb7fe/e/0505c262d882183a25049d05">OpenDuck mini v2 官方 Onshape</a> 後，以滑鼠左鍵點選畫面左上方的功能表，點選 Copy workspace 後，選擇 Document name，滑鼠點選 Copy document to 中的 Owned by me，再點選下方的 Open 後，就可以取得 OpenDuck workspace 的副本。</p>
 <p style="padding-left: 30px;">各組組員請分別練習在 Solvespace、NX2312 與 Openshape 上進行零件繪圖與組立，其中將牽涉使用各不同套件的繪圖與組立指令，並且必須了解如何透過不同零組件檔案格式(<a href="https://www.capvidia.com/blog/best-step-file-to-use-ap203-vs-ap214-vs-ap242">STEP424</a>、<a href="https://en.wikipedia.org/wiki/Parasolid">Parasolid</a>、<a href="https://en.wikipedia.org/wiki/STL_(file_format)">STL</a> 等)進行轉檔。</p>
 <p><img caption="false" height="305" src="/images/cad2025_openduck_trunk.png" width="400"/></p>
-<p>Openduck mini v2 的 trunk_bottom (下軀幹) 組立，其中包括 roll_motor_bottom x 2 以及 STS3250 次組立 x 2。</p>
+<p>Openduck mini v2 的 trunk_bottom (下軀幹) 組立，其中包括 roll_motor_bottom x 2 以及 STS3250 次組立 x 2。<a href="/downloads/cad2025_openduck_Mechanical_Parts_2.7z">cad2025_openduck_Mechanical_Parts_2.7z</a></p>
 <p>接下來，請各組員設法將下軀幹兩側的 left_roll_to_pitch 以及 right_roll_to_pitch 零件組立後，分工進行 <a href="https://cyberbotics.com/doc/guide/tutorials">Webots Tutorial</a> 後，設法將組立件轉進 Webots，並利用 Python 控制程式讓兩側的 roll_to_pitch 可以由 STS3250 進行驅動。</p>
+=======
+<p>開啟 Webots 時出現以下錯誤:</p>
+<p><img alt="" height="112" src="/images/Webots_openssl_error.png" width="300"/></p>
+<p>Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
+<p>目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
+<p>因此在命令列執行: <span>conda install openssl=3.0.16 就可以避開上列錯誤。</span></p>
+<p><span>另外執行 <a href="https://mde.tw/cad2025/downloads/plotter_project.7z">plotter_project.7z</a> 中 Python 控制程式需要 numpy 套件，可以透過 conda install -c conda-forge numpy 安裝。</span></p>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 752e3495939d85f31ba68cd2d16157eeb636c364
 <hr/>
 <p>電腦輔助設計室電腦硬體與網路使用介紹</p>
 <p style="padding-left: 30px;">C 槽硬碟為 SSD，網路協定可以自行決定使用 IPv4 或 IPv6 (若使用純 IPv6 則必須設定 Proxy 才能連結到 github.com 以及僅支援 IPv4 協定的網站) </p>
