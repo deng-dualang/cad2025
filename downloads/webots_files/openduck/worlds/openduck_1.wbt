@@ -1,0 +1,36 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.19577481375110692 -0.00018320039844407361 0.9806488610804243 2.959779855957625
+  position 1.407221258379638 -0.28790720786880797 0.5987650394515645
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  children [
+    Pose {
+      translation 0 0 0.0368375
+      children [
+        CadShape {
+          url [
+            "../cad/split_parts/part_9.obj"
+          ]
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+          }
+        }
+      ]
+    }
+  ]
+}

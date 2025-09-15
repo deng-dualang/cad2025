@@ -5,5 +5,5 @@ sceneTreePerspectives: 000000ff00000001000000030000001d00000244000000fa010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/motor_controller2/motor_controller2.py" "controllers/max_profile/max_profile.py"
+textFiles: 0 "../plotter_project/fivebar/controllers/motor_controller2/motor_controller2.py" "../plotter_project/fivebar/controllers/max_profile/max_profile.py"
 consoles: Console:All:All
