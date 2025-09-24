@@ -1,0 +1,5 @@
+link1 tip center: -24.436, 158.123, 9
+pen center: 96.762, 262.578, -3
+link3 tip center: 218.635, 158.911, 15
+right motor center: 200, 0, 15
+left motor center: 0,0,0

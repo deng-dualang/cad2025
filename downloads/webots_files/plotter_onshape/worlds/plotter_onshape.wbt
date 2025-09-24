@@ -1,0 +1,49 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.48775317661643225 0.4395612572189745 0.7542431569809928 1.7847050354186915
+  position -0.22561667582785 -1.212506850388146 2.3447215932961227
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 1.5
+}
+Robot {
+  translation -0.2 -0.25 0.0686
+  children [
+    CadShape {
+      url [
+        "../cad/split_parts/part_3.obj"
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+      }
+      device [
+        RotationalMotor {
+          name "left_motor"
+        }
+      ]
+      endPoint Solid {
+        children [
+          CadShape {
+            url [
+              "../cad/split_parts/part_5.obj"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  controller "left_motor"
+}
