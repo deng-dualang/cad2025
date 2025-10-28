@@ -5,19 +5,20 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
 
 WorldInfo {
+  basicTimeStep 8
   contactProperties [
     ContactProperties {
       coulombFriction [
         0.8
       ]
       bounce 0.1
-      maxContactJoints 100
+      maxContactJoints 400
     }
   ]
 }
 Viewpoint {
-  orientation -0.19059620010547876 -0.026766798138636416 0.9813035346021931 3.688545314615114
-  position 0.30098426066055195 0.1353164419826722 0.3162451247996961
+  orientation -0.10302879694098728 -0.3170004009971241 0.9428127135166111 4.31289098620846
+  position 0.24884420924765827 0.29091253393433125 0.37354806432577614
 }
 TexturedBackground {
 }
@@ -37,7 +38,7 @@ Robot {
           }
           geometry Mesh {
             url [
-              "../openduck_in_solvespace/split_parts/part_1.obj"
+              "../openduck_in_solvespace/checked_repaired_simplified/part_1_repaired_simplified.obj"
             ]
           }
         }
@@ -48,7 +49,7 @@ Robot {
           }
           geometry Mesh {
             url [
-              "../openduck_in_solvespace/split_parts/part_5.obj"
+              "../openduck_in_solvespace/checked_repaired_simplified/part_5_repaired_simplified.obj"
             ]
           }
         }
@@ -84,14 +85,14 @@ Robot {
       ]
       endPoint DEF second_motor Solid {
         children [
-          DEF second_motor_shape Shape {
+          Shape {
             appearance Appearance {
               material Material {
               }
             }
             geometry Mesh {
               url [
-                "../openduck_in_solvespace/split_parts/part_2.obj"
+                "../openduck_in_solvespace/checked_repaired_simplified/part_2_repaired_simplified.obj"
               ]
             }
           }
@@ -118,75 +119,8 @@ Robot {
                   }
                   geometry Mesh {
                     url [
-                      "../openduck_in_solvespace/split_parts/part_6.obj"
+                      "../openduck_in_solvespace/checked_repaired_simplified/part_6_repaired_simplified.obj"
                     ]
-                  }
-                }
-                DEF third_motor_shape Shape {
-                  appearance Appearance {
-                    material Material {
-                    }
-                  }
-                  geometry Mesh {
-                    url [
-                      "../openduck_in_solvespace/split_parts/part_8.obj"
-                    ]
-                  }
-                }
-                HingeJoint {
-                  jointParameters HingeJointParameters {
-                    anchor 0.15313 0.01464 0.01652
-                  }
-                  device [
-                    RotationalMotor {
-                      name "t3"
-                    }
-                    PositionSensor {
-                      name "t3_sensor"
-                    }
-                  ]
-                  endPoint DEF third_motor Solid {
-                    rotation 1 0 0 0
-                    children [
-                      DEF left_leg_1_shape Shape {
-                        appearance Appearance {
-                          material Material {
-                          }
-                        }
-                        geometry Mesh {
-                          url [
-                            "../openduck_in_solvespace/split_parts/part_10.obj"
-                          ]
-                        }
-                      }
-                      DEF left_leg_2_shape Shape {
-                        appearance Appearance {
-                          material Material {
-                          }
-                        }
-                        geometry Mesh {
-                          url [
-                            "../openduck_in_solvespace/split_parts/part_11.obj"
-                          ]
-                        }
-                      }
-                    ]
-                    boundingObject Group {
-                      children [
-                        Mesh {
-                          url [
-                            "../openduck_in_solvespace/split_parts/part_10.obj"
-                          ]
-                        }
-                        Mesh {
-                          url [
-                            "../openduck_in_solvespace/split_parts/part_11.obj"
-                          ]
-                        }
-                      ]
-                    }
-                    physics Physics {
-                    }
                   }
                 }
               ]
@@ -226,6 +160,6 @@ Robot {
       }
     ]
   }
-  controller "t1_t2_t3_sync"
+  controller "openduck_controller"
   selfCollision TRUE
 }
