@@ -1,0 +1,686 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        0.8
+      ]
+      bounce 0.1
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.10934494175031 -0.17898478686853786 0.9777566823004817 4.926091215583071
+  position -0.2592304926932988 1.2888452934999057 0.5936673251640673
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  translation 0 0 0.17134
+  rotation 0 0 1 4.692820414042842e-06
+  children [
+    DEF central_body Solid {
+      children [
+        DEF central_body_shape Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../openduck_in_solvespace/split_parts/part_1.obj"
+            ]
+          }
+        }
+        DEF first_motor_shape Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../openduck_in_solvespace/split_parts/part_5.obj"
+            ]
+          }
+        }
+        DEF righ_first_motor_shape Shape {
+          appearance Appearance {
+            material Material {
+            }
+          }
+          geometry Mesh {
+            url [
+              "../openduck_in_solvespace/split_parts/part_4.obj"
+            ]
+          }
+        }
+      ]
+      name "central_body"
+      boundingObject Group {
+        children [
+          Mesh {
+            url [
+              "../openduck_in_solvespace/checked_repaired_simplified/part_1_repaired_simplified.obj"
+            ]
+          }
+          Mesh {
+            url [
+              "../openduck_in_solvespace/checked_repaired_simplified/part_5_repaired_simplified.obj"
+            ]
+          }
+          Mesh {
+            url [
+              "../openduck_in_solvespace/checked_repaired_simplified/part_4_repaired_simplified.obj"
+            ]
+          }
+        ]
+      }
+      physics Physics {
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0.07 0 0.05222
+      }
+      device [
+        RotationalMotor {
+          name "t1"
+          maxVelocity 100
+          maxTorque 100
+        }
+        PositionSensor {
+          name "t1_sensor"
+        }
+      ]
+      endPoint DEF second_motor Solid {
+        translation -4.163336342344337e-17 3.469446951953614e-18 0
+        children [
+          DEF second_motor_shape Shape {
+            appearance Appearance {
+              material Material {
+              }
+            }
+            geometry Mesh {
+              url [
+                "../openduck_in_solvespace/split_parts/part_2.obj"
+              ]
+            }
+          }
+          DEF left_shoulder HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+              anchor 0.07 -0.0145 0.0175
+            }
+            device [
+              RotationalMotor {
+                name "t2"
+                maxVelocity 100
+                maxTorque 100
+              }
+              PositionSensor {
+                name "t2_sensor"
+              }
+            ]
+            endPoint DEF left_shoulder Solid {
+              translation 5.551115123125783e-17 -2.0816681711721685e-17 6.938893903907228e-18
+              rotation 0 1 0 0
+              children [
+                DEF left_shoulder_shape Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../openduck_in_solvespace/split_parts/part_6.obj"
+                    ]
+                  }
+                }
+                DEF third_motor_shape Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../openduck_in_solvespace/split_parts/part_8.obj"
+                    ]
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    anchor 0.15313 0.01464 0.01652
+                  }
+                  device [
+                    RotationalMotor {
+                      name "t3"
+                      maxVelocity 100
+                      maxTorque 100
+                    }
+                    PositionSensor {
+                      name "t3_sensor"
+                    }
+                  ]
+                  endPoint DEF third_motor_leg Solid {
+                    translation 1.1102230246251565e-16 5.204170427930421e-18 3.469446951953614e-18
+                    rotation 1 0 0 0
+                    children [
+                      DEF left_leg_1_shape Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_10.obj"
+                          ]
+                        }
+                      }
+                      DEF left_leg_2_shape Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_11.obj"
+                          ]
+                        }
+                      }
+                      DEF fourth_motor Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_14.obj"
+                          ]
+                        }
+                      }
+                      DEF fourth_motor HingeJoint {
+                        jointParameters HingeJointParameters {
+                          anchor 0.15413 0.01628 -0.06175
+                        }
+                        device [
+                          RotationalMotor {
+                            name "t4"
+                            maxVelocity 100
+                            maxTorque 100
+                          }
+                          PositionSensor {
+                            name "t4_sensor"
+                          }
+                        ]
+                        endPoint DEF fourth_motor_leg Solid {
+                          rotation 1 0 0 0
+                          children [
+                            DEF left_leg_3_shape Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_16.obj"
+                                ]
+                              }
+                            }
+                            DEF left_leg_4_shape Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_17.obj"
+                                ]
+                              }
+                            }
+                            DEF fifth_motor_shape Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_20.obj"
+                                ]
+                              }
+                            }
+                            DEF fifth_motor HingeJoint {
+                              jointParameters HingeJointParameters {
+                                anchor 0.15503 0.01792 -0.14001
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "t5"
+                                  maxVelocity 100
+                                  maxTorque 100
+                                }
+                                PositionSensor {
+                                  name "t5_sensor"
+                                }
+                              ]
+                              endPoint DEF left_sole Solid {
+                                rotation 1 0 0 0
+                                children [
+                                  Shape {
+                                    appearance Appearance {
+                                      material Material {
+                                      }
+                                    }
+                                    geometry Mesh {
+                                      url [
+                                        "../openduck_in_solvespace/split_parts/part_22.obj"
+                                      ]
+                                    }
+                                  }
+                                ]
+                                boundingObject Mesh {
+                                  url [
+                                    "../openduck_in_solvespace/checked_repaired_simplified/part_22_repaired_simplified.obj"
+                                  ]
+                                }
+                                physics Physics {
+                                }
+                              }
+                            }
+                          ]
+                          boundingObject Group {
+                            children [
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_16_repaired_simplified.obj"
+                                ]
+                              }
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_17_repaired_simplified.obj"
+                                ]
+                              }
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_20_repaired_simplified.obj"
+                                ]
+                              }
+                            ]
+                          }
+                          physics Physics {
+                          }
+                        }
+                      }
+                    ]
+                    boundingObject Group {
+                      children [
+                        DEF left_leg_1 Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_10_repaired_simplified.obj"
+                          ]
+                        }
+                        DEF left_leg_2 Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_11_repaired_simplified.obj"
+                          ]
+                        }
+                        DEF fourth_motor Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_14_repaired_simplified.obj"
+                          ]
+                        }
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "left_shoulder"
+              boundingObject Group {
+                children [
+                  DEF left_shoulder Mesh {
+                    url [
+                      "../openduck_in_solvespace/checked_repaired_simplified/part_6_repaired_simplified.obj"
+                    ]
+                  }
+                  DEF third_motor Mesh {
+                    url [
+                      "../openduck_in_solvespace/checked_repaired_simplified/part_8_repaired_simplified.obj"
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "second_motor"
+        boundingObject Mesh {
+          url [
+            "../openduck_in_solvespace/checked_repaired_simplified/part_2_repaired_simplified.obj"
+          ]
+        }
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        axis 0 0 1
+        anchor 0 0 0.05422
+      }
+      device [
+        RotationalMotor {
+          name "rt1"
+          maxVelocity 100
+          maxTorque 100
+        }
+        PositionSensor {
+          name "rt1_sensor"
+        }
+      ]
+      endPoint DEF right_second_motor Solid {
+        children [
+          DEF right_second_motor_shape Shape {
+            appearance Appearance {
+              material Material {
+              }
+            }
+            geometry Mesh {
+              url [
+                "../openduck_in_solvespace/split_parts/part_3.obj"
+              ]
+            }
+          }
+          DEF right_shoulder HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+              anchor 0 0.01905 0.0175
+            }
+            device [
+              RotationalMotor {
+                name "rt2"
+                maxVelocity 100
+                maxTorque 100
+              }
+              PositionSensor {
+                name "rt2_sensor"
+              }
+            ]
+            endPoint Solid {
+              rotation 0 1 0 0
+              children [
+                DEF right_shoulder_shape Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../openduck_in_solvespace/split_parts/part_7.obj"
+                    ]
+                  }
+                }
+                DEF right_third_motor Shape {
+                  appearance Appearance {
+                    material Material {
+                    }
+                  }
+                  geometry Mesh {
+                    url [
+                      "../openduck_in_solvespace/split_parts/part_9.obj"
+                    ]
+                  }
+                }
+                HingeJoint {
+                  jointParameters HingeJointParameters {
+                    anchor -0.08314 0.01464 0.01652
+                  }
+                  device [
+                    RotationalMotor {
+                      name "rt3"
+                      maxVelocity 100
+                      maxTorque 100
+                    }
+                    PositionSensor {
+                      name "rt3_sensor"
+                    }
+                  ]
+                  endPoint DEF right_upper Solid {
+                    rotation 1 0 0 0
+                    children [
+                      DEF right_upper_1_shape Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_12.obj"
+                          ]
+                        }
+                      }
+                      DEF right_upper_2_shape Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_13.obj"
+                          ]
+                        }
+                      }
+                      DEF right_forth_motor_shape Shape {
+                        appearance Appearance {
+                          material Material {
+                          }
+                        }
+                        geometry Mesh {
+                          url [
+                            "../openduck_in_solvespace/split_parts/part_15.obj"
+                          ]
+                        }
+                      }
+                      HingeJoint {
+                        jointParameters HingeJointParameters {
+                          anchor -0.08414 0.01628 -0.06175
+                        }
+                        device [
+                          RotationalMotor {
+                            name "rt4"
+                            maxVelocity 100
+                            maxTorque 100
+                          }
+                          PositionSensor {
+                            name "rt4_sensor"
+                          }
+                        ]
+                        endPoint DEF right_lower Solid {
+                          rotation 1 0 0 0
+                          children [
+                            DEF right_lower_1 Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_18.obj"
+                                ]
+                              }
+                            }
+                            DEF right_lower_2 Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_19.obj"
+                                ]
+                              }
+                            }
+                            DEF right_fifth_motor Shape {
+                              appearance Appearance {
+                                material Material {
+                                }
+                              }
+                              geometry Mesh {
+                                url [
+                                  "../openduck_in_solvespace/split_parts/part_21.obj"
+                                ]
+                              }
+                            }
+                            HingeJoint {
+                              jointParameters HingeJointParameters {
+                                anchor -0.08504 0.01792 -0.14001
+                              }
+                              device [
+                                RotationalMotor {
+                                  name "rt5"
+                                  maxVelocity 100
+                                  maxTorque 100
+                                }
+                                PositionSensor {
+                                  name "rt5_sensor"
+                                }
+                              ]
+                              endPoint DEF right_sole Solid {
+                                rotation 1 0 0 0
+                                children [
+                                  DEF right_sole_shape Shape {
+                                    appearance Appearance {
+                                      material Material {
+                                      }
+                                    }
+                                    geometry Mesh {
+                                      url [
+                                        "../openduck_in_solvespace/split_parts/part_23.obj"
+                                      ]
+                                    }
+                                  }
+                                ]
+                                boundingObject Mesh {
+                                  url [
+                                    "../openduck_in_solvespace/checked_repaired_simplified/part_23_repaired_simplified.obj"
+                                  ]
+                                }
+                                physics Physics {
+                                }
+                              }
+                            }
+                          ]
+                          name "right_lower"
+                          boundingObject Group {
+                            children [
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_18_repaired_simplified.obj"
+                                ]
+                              }
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_19_repaired_simplified.obj"
+                                ]
+                              }
+                              Mesh {
+                                url [
+                                  "../openduck_in_solvespace/checked_repaired_simplified/part_21_repaired_simplified.obj"
+                                ]
+                              }
+                            ]
+                          }
+                          physics Physics {
+                          }
+                        }
+                      }
+                    ]
+                    name "right_upper"
+                    model "right_upper"
+                    boundingObject Group {
+                      children [
+                        Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_12_repaired_simplified.obj"
+                          ]
+                        }
+                        Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_13_repaired_simplified.obj"
+                          ]
+                        }
+                        Mesh {
+                          url [
+                            "../openduck_in_solvespace/checked_repaired_simplified/part_15_repaired_simplified.obj"
+                          ]
+                        }
+                      ]
+                    }
+                    physics Physics {
+                    }
+                  }
+                }
+              ]
+              name "right_shoulder"
+              boundingObject Group {
+                children [
+                  Mesh {
+                    url [
+                      "../openduck_in_solvespace/checked_repaired_simplified/part_7_repaired_simplified.obj"
+                    ]
+                  }
+                  Mesh {
+                    url [
+                      "../openduck_in_solvespace/checked_repaired_simplified/part_9_repaired_simplified.obj"
+                    ]
+                  }
+                ]
+              }
+              physics Physics {
+              }
+            }
+          }
+        ]
+        name "right_second_motor"
+        boundingObject Mesh {
+          url [
+            "../openduck_in_solvespace/checked_repaired_simplified/part_3_repaired_simplified.obj"
+          ]
+        }
+        physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject Group {
+    children [
+      DEF central_body Mesh {
+        url [
+          "../openduck_in_solvespace/split_parts/part_1.obj"
+        ]
+      }
+      DEF first_motor Mesh {
+        url [
+          "../openduck_in_solvespace/split_parts/part_5.obj"
+        ]
+      }
+    ]
+  }
+  physics Physics {
+  }
+  controller "all_ten_motor_control"
+  selfCollision TRUE
+}

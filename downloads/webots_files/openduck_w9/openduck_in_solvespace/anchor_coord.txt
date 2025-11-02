@@ -1,0 +1,6 @@
+right first anchor (70, 0, 93.97)
+
+right second anchor (70, -24.7, 17.5)
+
+left first anchor (0, 0, 93.97)
+left second anchor (0, -24.7, 17.5)
