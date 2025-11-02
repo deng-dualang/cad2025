@@ -681,6 +681,6 @@ Robot {
   }
   physics Physics {
   }
-  controller "all_ten_motor_control"
+  controller "knee_down_and_up"
   selfCollision TRUE
 }

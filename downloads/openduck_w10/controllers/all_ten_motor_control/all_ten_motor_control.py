@@ -66,16 +66,16 @@ rt5_sensor.enable(timestep)
 # 定義左邊五個馬達的目標角度（單位：度）
 t1_degree = 0
 t2_degree = 0
-t3_degree = -15
-t4_degree = -5
-t5_degree = 20
+t3_degree = 55
+t4_degree = -110
+t5_degree = 55
 
 # 定義右邊五個馬達的目標角度（單位：度）
 rt1_degree = 0
 rt2_degree = 0
-rt3_degree = 15
-rt4_degree = 5
-rt5_degree = -20
+rt3_degree = 55
+rt4_degree = -110
+rt5_degree = 55
 
 # 將「度」轉換為「弧度」（Webots 內部使用弧度）
 t1_target = math.radians(t1_degree)
