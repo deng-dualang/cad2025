@@ -1813,10 +1813,12 @@ Exit
 <p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：通過雙點擊 Webots 圖標（或在終端中從命令行調用）來啟動 Webots。如果您是第一次在此電腦上運行 Webots，可能會提示您選擇圖形主題。您也可能被邀請參加 Webots 指導遊覽，請關閉指導遊覽。</span></p>
 <p>2. 創建新世界：<br/>    - 先以 File -&gt; New Project Directory， 選擇專案存檔目錄後，轉到 File -&gt; New World。<br/>    - 使用適當的名稱保存新世界文件，例如 my_first_simulation.wbt。</p>
 <p>3. 添加競技場：<br/>    - 在場景樹中，右鍵點擊 root 並選擇 Add New -&gt; Solid。<br/>    - 將新固體重命名為 arena 並為其添加 Shape。<br/>    - 將其幾何形狀設置為 Box，並設置適當的尺寸（例如，1m x 1m x 0.01m）來表示地板。<br/>    - 為形狀添加 Material 並設置其顏色。</p>
+<hr/>
 <p>備註:</p>
 <p style="padding-left: 30px;">Solid -&gt; Shape -&gt; Box 或其他基本幾何物件</p>
 <p style="padding-left: 30px;">Solid -&gt; Shape -&gt; Mesh 則可以導入 STL 或 OBJ 檔案</p>
 <p style="padding-left: 30px;">CadShape 也可以導入 STL 或 OBJ 檔案</p>
+<hr/>
 <p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #2：通過點擊 3D 視圖的暫停按鈕來暫停當前模擬（請參閱用戶界面描述以找到按鈕）。如果主工具欄上的虛擬時間計數器停止，則模擬被暫停。從 File / New / New Project Directory... 菜單項創建一個新項目並按照說明進行：</span><br/><br/><span style="background-color: #ccffcc;">1. 將項目目錄命名為 my_first_simulation，而不是建議的 my_project。</span><br/><span style="background-color: #ccffcc;">2. 將世界文件命名為 my_first_simulation.wbt，而不是建議的 empty.wbt。</span><br/><span style="background-color: #ccffcc;">3. 點擊所有選框，包括默認未選中的 "Add a rectangle arena"。</span></p>
 <p>4. 添加牆壁：<br/>    - 重複該過程以在競技場周圍添加四面牆壁。<br/>    - 調整它們的位置和尺寸以適合地板周圍。</p>
 <p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #3：在場景樹中雙擊 RectangleArena 節點。這應該會打開該節點並顯示其字段。</span><br/><br/><span style="background-color: #ccffcc;">1. 選擇 floorTileSize 字段並將其值設置為 0.25 0.25 而不是 0.5 0.5。您應該立即在 3D 視圖中看到效果。</span><br/><span style="background-color: #ccffcc;">2. 選擇 wallHeight 字段並將其值更改為 0.05 而不是 0.1。競技場的牆壁現在應該變得更低。</span></p>
