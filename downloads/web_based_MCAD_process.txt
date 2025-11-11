@@ -1,0 +1,18 @@
+http://[2001:288:6004:17::4] 
+
+https://s5.eng.nfu.edu.tw:9500/
+
+網際電腦輔助機械設計服務設定流程:
+
+OS - Windows server, Linux server
+VM - PVE, Virtualbox, VMWare
+IPv6 - netplan
+dns server - bind9
+https proxy server - squid (for https)
+www server - nginx
+https certificate - letsencrypt
+flask + db (orm peewee) - wsgi - waitress + sqlite (MySQL, PostgreSQL)
+https proxy server - stunnel (for wsgi)
+create newusers - Python
+create stunnel.conf - Python port redirect
+Siemens NX NXOpen, Solidworks API, Inventor API
