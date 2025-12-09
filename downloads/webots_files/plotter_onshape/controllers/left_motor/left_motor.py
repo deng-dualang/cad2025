@@ -10,8 +10,11 @@ robot = Robot()
 # get the time step of the current world.
 timestep = int(robot.getBasicTimeStep())
 left_motor = robot.getDevice('left_motor')
+right_motor = robot.getDevice('right_motor')
 left_motor.setPosition(float('inf'))
 left_motor.setVelocity(1.0)
+right_motor.setPosition(float('inf'))
+right_motor.setVelocity(1.0)
 
 # You should insert a getDevice-like function in order to get the
 # instance of a device of the robot. Something like:
