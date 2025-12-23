@@ -2526,7 +2526,115 @@ if __name__ == "__main__":
 <p>Webots Cloud:</p>
 <p style="padding-left: 30px;"><a href="https://github.com/cyberbotics/webots-cloud">https://github.com/cyberbotics/webots-cloud</a></p>
 <p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/web-server">https://cyberbotics.com/doc/guide/web-server</a></p>
-<h1>Projects</h1>
+<h2>Nx2Webots</h2>
+<p><a href="https://wiki.ros.org/urdf/Tutorials">https://wiki.ros.org/urdf/Tutorials</a> </p>
+<p><a href="https://github.com/cyberbotics/urdf2webots">https://github.com/cyberbotics/urdf2webots</a> </p>
+<p>It's feasible to create a custom tool using <strong>NXOpen Python API</strong> to export a Siemens NX assembly into a Webots-compatible format, including joint information from assembly constraints (mates). However, there is <strong>no built-in or official exporter</strong> for this, so the tool would be fully custom-written. The most practical approach is to generate an intermediate <strong>URDF</strong> file (which includes meshes, hierarchy, and joints), then use Cyberbotics' open-source <strong>urdf2webots</strong> converter to produce a Webots <strong>PROTO</strong> file (recommended for reusable robot models) or directly a Robot node string for a .wbt world.</p>
+<h4 id="step-by-step-approach-to-build-the-tool">Step-by-Step Approach to Build the Tool</h4>
+<ol>
+<li>
+<p><strong>Set Up NXOpen Python Environment</strong>:</p>
+<ul>
+<li>Run scripts inside NX (via File &gt; Execute &gt; NX Open Python) or as journals.</li>
+<li>Import modules: <code>import NXOpen</code>, <code>import NXOpen.Assemblies</code>, <code>import NXOpen.Positioning</code>, <code>import NXOpen.UF</code>, etc.</li>
+<li>Access the displayed assembly: <code>theSession = NXOpen.Session.GetSession()</code>; <code>displayPart = theSession.Parts.Display</code>; <code>componentAssembly = displayPart.ComponentAssembly</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Traverse the Assembly Hierarchy</strong>:</p>
+<ul>
+<li>Use a recursive function to walk the component tree:
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> typing <span class="hljs-keyword">import</span> List
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_all_components</span><span class="hljs-params">(root: NXOpen.Assemblies.Component)</span> -&gt; List[NXOpen.Assemblies.Component]:</span>
+    components = [root]
+    <span class="hljs-keyword">for</span> child <span class="hljs-keyword">in</span> root.GetChildren():
+        components.extend(get_all_components(child))
+    <span class="hljs-keyword">return</span> components
+<span class="hljs-comment"># Start from root</span>
+root_comp = componentAssembly.RootComponent
+all_comps = get_all_components(root_comp)
+</code></pre>
+</li>
+<li>For each component: Get prototype part (<code>comp.Prototype</code>), position/orientation (<code>comp.Position</code> or matrix), name, etc.</li>
+<li>Identify the "base" link (usually the root or fixed part).</li>
+</ul>
+</li>
+<li>
+<p><strong>Export Meshes for Links</strong>:</p>
+<ul>
+<li>For each unique prototype part (link), export visual/collision meshes.</li>
+<li>Preferred formats: STL (simple, supported in URDF) or OBJ/DAE (better materials, via intermediate if needed).</li>
+<li>Use UF functions for STL export (common in journals):
+<pre><code class="lang-python">ufSession = NXOpen.UF.UFSession.GetUFSession()
+<span class="hljs-comment"># Collect solid bodies in the part</span>
+<span class="hljs-keyword">bodies </span>= part.<span class="hljs-keyword">Bodies.ToArray()
+</span>for <span class="hljs-keyword">body </span>in <span class="hljs-keyword">bodies:
+</span>    ufSession.Std.PutSolidInStlFile(file_handle, NXOpen.Tag.Null, <span class="hljs-keyword">body.Tag, </span>tolerance, <span class="hljs-number">0</span>.<span class="hljs-number">0</span>, <span class="hljs-number">0</span>.<span class="hljs-number">0</span>, num_errors, errors)
+</code></pre>
+</li>
+<li>Export each link as a separate mesh file (e.g., <code>link_name_visual.stl</code>) to a output folder.</li>
+<li>For collision, use simplified meshes or the same as visual.</li>
+<li>Compute inertia/mass if possible (NXOpen has mass properties APIs).</li>
+</ul>
+</li>
+<li>
+<p><strong>Extract Joint Information from Constraints</strong>:</p>
+<ul>
+<li>NX assembly constraints are accessible via <code>NXOpen.Positioning.Constraint</code> and <code>ComponentConstraint</code>.</li>
+<li>For each component: <code>constraints = comp.GetConstraints()</code> (or from Positioner).</li>
+<li>Analyze constraint type (<code>constraint.ConstraintType</code>): e.g., TouchAlign, Concentric, Distance, Angle → map to URDF joint types:
+<ul>
+<li>Concentric/Cylindrical → revolute or continuous.</li>
+<li>Slider/Linear → prismatic.</li>
+<li>Fixed → fixed.</li>
+<li>Ball/InPlane → ball or planar (limited in Webots).</li>
+</ul>
+</li>
+<li>Determine parent/child links, joint origin (from constraint geometry), axis (from alignment vectors).</li>
+<li>This is the most complex part: Constraints are between geometry (faces, edges, datums), not directly "joints" like in URDF. You'll need logic to infer DOF, axis, limits (from constraint expressions).</li>
+<li>If the assembly uses Motion joints (requires Mechanisms license), use <code>NXOpen.Motion</code> APIs for explicit joints/links.</li>
+</ul>
+</li>
+<li>
+<p><strong>Generate URDF XML</strong>:</p>
+<ul>
+<li>Write a .urdf file using Python string templates or xml library.</li>
+<li>Structure:
+<ul>
+<li><code>&lt;robot name="..."&gt;</code></li>
+<li><code>&lt;link name="base_link"&gt; &lt;visual&gt; &lt;mesh filename="base.stl"/&gt; &lt;/visual&gt; ... &lt;/link&gt;</code></li>
+<li><code>&lt;joint name="..." type="revolute"&gt; &lt;parent link="base"/&gt; &lt;child link="arm"/&gt; &lt;origin xyz="..." rpy="..."/&gt; &lt;axis xyz="..."/&gt; &lt;limit .../&gt; &lt;/joint&gt;</code></li>
+</ul>
+</li>
+<li>Convert NX positions/matrices to URDF origin (xyz + roll-pitch-yaw).</li>
+<li>Add inertial if computed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Convert to Webots</strong>:</p>
+<ul>
+<li>Run the external tool: <code>python urdf2webots.py --input=my_robot.urdf --output=my_robot.proto</code></li>
+<li>Options: Specify base translation/rotation, joint limits scaling, etc.</li>
+<li>The resulting .proto file can be inserted into a Webots world as a reusable robot model.</li>
+<li>For a one-off world, use <code>--output-inline</code> to get a Robot node string and paste into .wbt.</li>
+</ul>
+</li>
+</ol>
+<h4 id="challenges-and-tips">Challenges and Tips</h4>
+<ul>
+<li><strong>Joint Mapping Accuracy</strong>: NX constraints are positioning mates, not always kinematic joints. Complex/multi-DOF constraints may need manual rules or simplification. Test with simple assemblies first (e.g., revolute from concentric + align).</li>
+<li><strong>Coordinate Systems</strong>: NX uses absolute CSYS; URDF/Webots use chain from base. Ensure consistent units (meters in Webots/URDF).</li>
+<li><strong>Performance</strong>: In Webots, use simplified boundingObjects (primitives) instead of mesh collisions.</li>
+<li><strong>Alternatives if URDF is Too Hard</strong>:
+<ul>
+<li>Directly generate Webots PROTO text: Recreate hierarchy with Solid/Transform/CadShape nodes, HingeJoint/SliderJoint for inferred joints.</li>
+<li>But URDF route is cleaner and leverages existing converter.</li>
+</ul>
+</li>
+<li><strong>Testing</strong>: Start with a simple 2-link arm assembly in NX. Export manually first, then automate.</li>
+<li>Resources: NXOpen Python docs (Siemens site), example journals on GitHub (search "NXOpen assembly traverse"), urdf2webots repo.</li>
+</ul>
+<p>This would result in a powerful custom exporter script. If your assemblies use Motion Simulation joints explicitly, it's easier. For pure assembly constraints, expect some custom logic for joint inference. If you share a sample assembly structure, more specific code snippets could help!</p><h1>Projects</h1>
 <p>利用 Solvespae、NX、Onshape 或其他 CAD 套件建立下列的五軸機械臂零組件。</p>
 <p>驅動設計請採用 NEMA (National Electrical Manufacturers Association) 17 步進馬達:</p>
 <p style="padding-left: 30px;">法蘭 (Flange) 尺寸 1.7 英吋: 約 43.2 mm x 43.2 mm</p>
