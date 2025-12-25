@@ -142,61 +142,10 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Ardupilot << <a href='Ardupilot.html'>Previous</a> <a href='Stage1.html'>Next</a> >> Stage1<br /><h1>Tutorial</h1>
-<p>Webots 執行環境硬體需求:</p>
-<p style="padding-left: 30px;">2GHz 4 核心以上 CPU, NVIDIA 或 AMD 支援 OpenGL 3.3 版, 帶有 512 MB 記憶體以上獨立顯示卡</p>
-<p>操作系統:</p>
-<p style="padding-left: 30px;">Windows 10 或 11 64 位元操作系統</p>
-<p style="padding-left: 30px;">Ubuntu 24.04 以上版本</p>
-<p style="padding-left: 30px;">macOS 12 以上版本操作系統</p>
-<p>使用介面:</p>
-<p style="padding-left: 30px;">Webots 可以透過 Tools - Preferences - Language 中選擇使用 English 或簡體中文介面 (目前無繁體中文介面, 介面語系翻譯請參考 <a href="https://github.com/cyberbotics/webots/tree/released/resources/translations">translations 頁面</a>說明), 在此強烈建議使用 English 界面即可.</p>
-<hr/>
-<p>Webots 原始碼使用授權:<br/><br/>採 <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license agreement</a>. Apache 2.0 是一種開放且對企業友善的授權條款, 允許任何人免費使用、修改和分享軟體的原始程式碼, 包括商業用途使用.</p>
-<p>自行編譯 Webots 請參考 <a href="https://cyberbotics.com/doc/guide/building-webots">building Webots 頁面</a>說明.</p>
-<p>Webots 套件中的大部分範例模擬檔案都使用 Apache 2.0 許可釋出, 但有部分機器人和物件模型（proto 檔案）則是根據 <a href="https://cyberbotics.com/webots_assets_license">Webots 資產的開放原始碼許可協議</a>發佈, 另外有些範例則是由用戶根據不同的開源許可證所提供, 這些檔案都會明確標示其許可證內容.</p>
-<hr/>
-<p>Webots 介紹: (查英英字典: <a href="https://www.merriam-webster.com/dictionary/">https://www.merriam-webster.com/dictionary/</a>)</p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-webots">What is Webots?</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-can-i-do-with-webots">What can I do with Webots?</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#webots-simulation">Webots simulation</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-world">What is a world?</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-controller">What is a controller?</a></p>
-<p style="padding-left: 30px;"><a href="https://cyberbotics.com/doc/guide/introduction-to-webots#what-is-a-supervisor-controller">What is a supervisor controller?</a></p>
-<p><a href="https://www.youtube.com/playlist?list=PLt69C9MnPchkLuNNc4q9SeMFA96_v4THJ">Webots Crash Course</a> (速成班教學影片)</p>
-<p><a href="https://github.com/felipenmartins/Robotics-Simulation-Labs">https://github.com/felipenmartins/Robotics-Simulation-Labs</a> </p>
-<hr/>
-<p>第一個 Webots 導引: <a href="https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots">https://cyberbotics.com/doc/guide/tutorial-1-your-first-simulation-in-webots</a></p>
-<p>登入 Github, 在 <a href="https://github.com/copilot">https://github.com/copilot</a> 的協助下執行此一教學練習.</p>
-<p>導引目的: You will create your first simulation containing a simple environment: an arena with floor and walls, a few boxes, an e-puck robot and a controller program that will make the robot move.</p>
-<p>建立一個簡單的模擬環境, 意即一個競技場中, 包括一個帶有地板、圍牆、幾個盒子、一個 e-puck 機器人, 以及能讓機器人移動的控制程式.</p>
-<p><img alt="" height="310" src="./../images/tutorial_e-puck.thumbnail.jpg" width="400"/></p>
-<p>開啟 Webots 前, 請下載 <a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB).</p>
-<p>有關 Webots 在 Windows 操作系統啟動, 請參考<a href="https://cyberbotics.com/doc/guide/starting-webots#windows">說明</a>. 有關 Web streaming 也請參考<a href="https://cyberbotics.com/doc/guide/web-streaming">說明</a>.</p>
-<p>Webots 的可執行檔案位於 Y:\Webots_2023b\msys64\mingw64\bin\Webotsw.exe, 配置時, 若希望在不上網的情況下執行官方範例, 則必須再預先下載 <a href="https://github.com/cyberbotics/webots/releases/tag/R2023b">https://github.com/cyberbotics/webots/releases/tag/R2023b</a> 中的 <a href="https://github.com/cyberbotics/webots/releases/download/R2023b/assets-R2023b.zip">assets-R2023b.zip</a>, 存入 Y:\home_ipv6\AppData\Local\Cyberbotics\Webots\cache\assets 目錄, 否則啟動官方範例時, 必須從官方網站下載各範例中所導入的原型節點資料.</p>
-<p>若 Webotsw.exe 並非是在可攜程式的環境中啟動, 則 Webots 啟動後所下載的原型節點資料, 將會存入操作系統中的 C:\Users\%USERNAME%\AppData\Local\Cyberbotics\Webots\cache\assets 目錄中.</p>
-<p>在可攜程式環境中啟動 Webots 的設定:</p>
-<p style="padding-left: 30px;">start_ipv6.bat 中納入:</p>
-<p style="padding-left: 30px;">REM for webots<br/>set  path_webots=%Disk%:\Webots_2023b\msys64\mingw64\bin;%Disk%:\Webots_2023b\msys64\usr\bin</p>
-<p style="padding-left: 30px;">並將 %path_webots% 放入 PATH 環境變數設定中.</p>
-<p style="padding-left: 30px;">若希望在執行 start_ipv6.bat 時開啟 Webots, 可以在啟動可攜程式的批次檔案中加入 start webotsw.exe</p>
-<p>在可攜程式環境中 (USB 固態硬碟、一般隨身碟、筆電或個人電腦) 啟動 Webots 後, 開始建立模擬世界(即場景), 而在 Webots 中所謂場景:</p>
-<p>A <strong>World</strong> is a file containing information like where the objects are, what they look like, how they interact with each other, what is the color of the sky, and the definitions of gravity, friction, masses of the objects, etc. It defines the initial state of a simulation. The different objects are called <strong>Nodes</strong> and are organized hierarchically in a <strong>Scene Tree</strong>. Therefore, a node may contain sub-nodes. A world is stored in a file having the <code>.wbt</code> extension. The file format is derived from the <a href="./../downloads/vrml97specification.pdf">VRML97</a> language, and is human readable. The world files must be stored directly in a directory called <code>worlds</code>.</p>
-<p>Webots 場景中包含以下定義:</p>
-<ol>
-<li>物件所在位置</li>
-<li>物件的外形</li>
-<li>物件如何互動</li>
-<li>天空的顏色</li>
-<li>地心引力的定義</li>
-<li>摩擦力</li>
-<li>物件的質量</li>
-<li>模擬的起始條件</li>
-<li>其他有關模擬的設定等</li>
-</ol>
-<p>場景中的物件稱為節點, 各節點配置於場景樹中, 各節點可以再包含子節點, 場景的檔案格式源自 VRML97 程式語法 (<a href="./../downloads/vrmlman.pdf">VRML Primer and Tutorial</a>), 場景的檔案副檔名為 .wbt, 且一定要存入名稱為 worlds 的目錄中.</p>
-<p>Webots 模擬選單功能說明: <a href="https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu">https://cyberbotics.com/doc/guide/the-user-interface#simulation-menu</a> 其中著色選單可以關閉場景中的畫面, 主要配合基因演算、視覺辨識或機器學習流程中的快速模擬流程.</p>
-<br />Ardupilot << <a href='Ardupilot.html'>Previous</a> <a href='Stage1.html'>Next</a> >> Stage1</div>
+    <div id="tipue_search_content">w7 << <a href='w7.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref<br /><h1>w10</h1>
+<p><span>w10: </span><a href="https://cyberbotics.com/">Webots</a><span><span> </span>是什麼？有什麼特點？ 如何進行場景模擬？ 如何用 Python 進行控制系統設計？<span> </span></span></p>
+<p><span>41023235所作:</span></p>
+<p><img alt="" height="4500" src="./../images/w10 cad2025.jpg" width="800"/></p><br />w7 << <a href='w7.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref</div>
         
     <!-- footer -->
       <div class="container">
