@@ -2,7 +2,7 @@
         <head>
         <title>cad2025</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,133 +142,10 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Distancesensor << <a href='Distancesensor.html'>Previous</a> <a href='Tutorial5.html'>Next</a> >> Tutorial5<br /><h1>Tutorial4</h1>
-<p>導引課程 4：更多關於控制器的內容<br/><br/>現在我們開始討論與編程機器人控制器相關的主題。我們將設計一個簡單的控制器來避開在前面的教程中創建的障礙物。<br/><br/>本教程將介紹 Webots 中機器人編程的基礎。在本章結束時，您應該了解場景樹節點與控制器 API 之間的關聯，如何初始化和清理機器人控制器，如何初始化機器人設備，如何獲取傳感器值，如何指令執行器，以及如何編程一個簡單的反饋迴路。<br/><br/>本教程僅涉及 Webots 功能的正確使用。機器人算法的研究超出了本教程的目標，因此不會在此處討論。掌握一些基本的編程知識是解決本章問題的必要條件（任何 C 教程應該都是足夠的入門介紹）。在本章的末尾，提供了進一步的機器人算法的鏈接。</p>
-<p>新的模擬場景與控制器</p>
-<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">實作 #1：將之前的世界保存為 collision_avoidance.wbt。從文件/新建/新建機器人控制器菜單項中創建一個新的 C（或任何其他語言）控制器，命名為 epuck_avoid_collision（對於 C++ 和 Java，命名為 EPuckAvoidCollision）。修改 E-puck 節點的控制器欄位以將其與新控制器關聯。</span></p>
-<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">Hands on #1: Save the previous world as collision_avoidance.wbt. Create a new C (or any other language) controller called epuck_avoid_collision (for C++ and Java call it EPuckAvoidCollision instead) from the File / New / New Robot Controller... menu item. Modify the controller field of the E-puck node in order to associate it to the new controller.</span></p>
-<p>Reminder: How to create a new controller?<br/>Select the File / New / New Robot Controller... menu item and choose your programming language and the file name.</p>
-<p>了解 e-puck 模型<br/><br/>控制器編程需要一些與 e-puck 模型相關的信息。為了創建碰撞檢測算法，我們需要讀取其炮塔周圍的 8 個紅外距離傳感器的值，並且我們需要驅動其兩個輪子。下圖展示了距離傳感器在炮塔周圍的分佈情況以及 e-puck 的方向。<br/><br/>距離傳感器在機器人層次結構中由 8 個 <a href="https://cyberbotics.com/doc/reference/distancesensor">DistanceSensor</a> 節點建模。這些節點通過它們的名稱欄位進行引用（從 ps0 到 ps7）。我們將在稍後解釋這些節點是如何定義的。目前，只需注意可以通過 Webots API 的相關模塊訪問 DistanceSensor 節點（通過 webots/distance_sensor.h 標頭文件）。距離傳感器返回的值在 0 到 4096 之間縮放（線性分段到距離）。4096 表示測量到大量光（障礙物很近），而 0 表示沒有測量到光（沒有障礙物）。<br/><br/>控制器 API 是一個編程接口，它使您能夠訪問機器人的模擬傳感器和執行器。例如，包含 webots/distance_sensor.h 文件允許使用 wb_distance_sensor_* 函數，通過這些函數可以查詢 DistanceSensor 節點的值。API 函數的文檔可以在<a href="https://cyberbotics.com/doc/reference/nodes-and-api-functions">參考手冊</a>中找到，並附有每個節點的描述。</p>
-<p><img alt="" height="281" src="./../images/tutorial_e-puck_top_view.thumbnail.jpg" width="300"/></p>
-<p>e-puck 模型的上視圖。綠色箭頭表示機器人的前方。紅色線條代表紅外距離傳感器的方向。字符串標籤對應於距離傳感器的名稱。</p>
-<p><img alt="" height="181" src="./../images/UML state machine of a simple feedback loop.png" width="600"/></p>
-<p>簡單回饋迴路的 UML 狀態機</p>
-<p>編寫控制器程序<br/><br/>我們想要編程一個非常簡單的碰撞避免行為。您將編程使機器人向前行駛，直到前方距離傳感器檢測到障礙物，然後轉向無障礙物的方向。為了做到這一點，我們將使用在圖中的 UML 狀態機中所示的簡單反饋迴路。<br/><br/>此控制器的完整代碼在下一小節中給出。</p>
-<p style="padding-left: 30px;"><span style="background-color: #ccffcc;">動手操作 #2：在控制器文件的開頭，添加對應於 Robot、DistanceSensor 和 Motor 節點的導入指令，以便能夠使用相應的 API：</span><br/><br/><span style="background-color: #ccffcc;">from controller import Robot, DistanceSensor, Motor</span><br/><br/><span style="background-color: #ccffcc;">在導入語句之後，定義一個變量，用於定義每個物理步長的持續時間。這個宏將用作 Robot::step 函數的參數，它也將用於啟用設備。這個持續時間以毫秒為單位，必須是 WorldInfo 節點的 basicTimeStep 欄位值的倍數。</span><br/><br/><span style="background-color: #ccffcc;">TIME_STEP = 64</span></p>
-<p>主函數是控制器程序開始執行的地方。傳遞給主函數的參數由 Robot 節點的 controllerArgs 欄位給出。必須使用 wb_robot_init 函數初始化 Webots API，並使用 wb_robot_cleanup 函數清理它。</p>
-<p>動手操作 #3：在 Python 中沒有主函數，程序從文件的開始處開始執行：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># create the Robot instance.
-robot = Robot()
-# initialize devices
-# feedback loop: step simulation until receiving an exit event
-while robot.step(TIME_STEP) != -1:
-    # read sensors outputs
-    # process behavior
-    # write actuators inputs</pre>
-<p>機器人設備由 WbDeviceTag 引用。WbDeviceTag 由 wb_robot_get_device 函數檢索。然後，它在每個涉及此設備的函數調用中用作第一個參數。像 DistanceSensor 這樣的傳感器在使用前必須啟用。enable 函數的第二個參數定義了傳感器的刷新率。</p>
-<p>動手操作 #4：在註釋 // initialize devices 之後，獲取並啟用距離傳感器，如下所示：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># initialize devices
-ps = []
-psNames = [
-    'ps0', 'ps1', 'ps2', 'ps3',
-    'ps4', 'ps5', 'ps6', 'ps7'
-]
-
-for i in range(8):
-    ps.append(robot.getDevice(psNames[i]))
-    ps[i].enable(TIME_STEP)</pre>
-<p>初始化設備後，初始化馬達：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">leftMotor = robot.getDevice('left wheel motor')
-rightMotor = robot.getDevice('right wheel motor')
-leftMotor.setPosition(float('inf'))
-rightMotor.setPosition(float('inf'))
-leftMotor.setVelocity(0.0)
-rightMotor.setVelocity(0.0)</pre>
-<p>在主循環中，在註釋 # read sensors outputs 之後，按如下方式讀取距離傳感器的值：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># read sensors outputs
-psValues = []
-for i in range(8):
-    psValues.append(ps[i].getValue())</pre>
-<p>在主循環中，在註釋 # process behavior 之後，檢測是否發生碰撞（即距離傳感器返回的值大於閾值），如下所示：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># detect obstacles
-right_obstacle = psValues[0] &gt; 80.0 or psValues[1] &gt; 80.0 or psValues[2] &gt; 80.0
-left_obstacle = psValues[5] &gt; 80.0 or psValues[6] &gt; 80.0 or psValues[7] &gt; 80.0</pre>
-<p>最後，使用有關障礙物的信息來驅動車輪，如下所示：</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">MAX_SPEED = 6.28
-...
-# initialize motor speeds at 50% of MAX_SPEED.
-leftSpeed  = 0.5 * MAX_SPEED
-rightSpeed = 0.5 * MAX_SPEED
-# modify speeds according to obstacles
-if left_obstacle:
-    # turn right
-    leftSpeed  = 0.5 * MAX_SPEED
-    rightSpeed = -0.5 * MAX_SPEED
-elif right_obstacle:
-    # turn left
-    leftSpeed  = -0.5 * MAX_SPEED
-    rightSpeed = 0.5 * MAX_SPEED
-# write actuators inputs
-leftMotor.setVelocity(leftSpeed)
-rightMotor.setVelocity(rightSpeed)</pre>
-<p>Save your code by selecting the File / Save Text File menu item. Reload the world.</p>
-<p>控制器代碼<br/><br/>以下是前一小節中詳細介紹的控制器完整代碼。</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from controller import Robot, DistanceSensor, Motor
-
-# time in [ms] of a simulation step
-TIME_STEP = 64
-
-MAX_SPEED = 6.28
-
-# create the Robot instance.
-robot = Robot()
-
-# initialize devices
-ps = []
-psNames = [
-    'ps0', 'ps1', 'ps2', 'ps3',
-    'ps4', 'ps5', 'ps6', 'ps7'
-]
-
-for i in range(8):
-    ps.append(robot.getDevice(psNames[i]))
-    ps[i].enable(TIME_STEP)
-
-leftMotor = robot.getDevice('left wheel motor')
-rightMotor = robot.getDevice('right wheel motor')
-leftMotor.setPosition(float('inf'))
-rightMotor.setPosition(float('inf'))
-leftMotor.setVelocity(0.0)
-rightMotor.setVelocity(0.0)
-
-# feedback loop: step simulation until receiving an exit event
-while robot.step(TIME_STEP) != -1:
-    # read sensors outputs
-    psValues = []
-    for i in range(8):
-        psValues.append(ps[i].getValue())
-
-    # detect obstacles
-    right_obstacle = psValues[0] &gt; 80.0 or psValues[1] &gt; 80.0 or psValues[2] &gt; 80.0
-    left_obstacle = psValues[5] &gt; 80.0 or psValues[6] &gt; 80.0 or psValues[7] &gt; 80.0
-
-    # initialize motor speeds at 50% of MAX_SPEED.
-    leftSpeed  = 0.5 * MAX_SPEED
-    rightSpeed = 0.5 * MAX_SPEED
-    # modify speeds according to obstacles
-    if left_obstacle:
-        # turn right
-        leftSpeed  = 0.5 * MAX_SPEED
-        rightSpeed = -0.5 * MAX_SPEED
-    elif right_obstacle:
-        # turn left
-        leftSpeed  = -0.5 * MAX_SPEED
-        rightSpeed = 0.5 * MAX_SPEED
-    # write actuators inputs
-    leftMotor.setVelocity(leftSpeed)
-    rightMotor.setVelocity(rightSpeed)</pre>
-<p>解決方案：世界文件<br/><br/>要將您的世界與解決方案進行比較，請轉到您的文件並找到在 <a href="https://mde.tw/cd2025/content/Tutorial1.html">Tutorial1</a> 中創建的名為 my_first_simulation 的文件夾，然後轉到 worlds 文件夾並使用文本編輯器打開正確的世界。此解決方案與其他解決方案位於解決方案目錄中。<br/><br/>結論<br/><br/>以下是您剛剛學到的關鍵點的快速摘要：<br/><br/>- 控制器入口點是主函數，就像任何標準的 C 程序一樣。<br/>- 在調用 wb_robot_init 函數之前，不應調用任何 Webots API 函數。<br/>- 離開主函數之前要調用的最後一個函數是 wb_robot_cleanup 函數。<br/>- 設備由其設備節點的名稱欄位引用。可以通過 wb_robot_get_device 函數檢索節點的引用。<br/>- 每個控制器程序都作為 Webots 進程的子進程執行。控制器進程不與 Webots 共享任何內存（除了相機的圖像），並且它可以在與 Webots 不同的 CPU（或 CPU 核心）上運行。<br/>- 控制器代碼鏈接到 libController 動態庫。該庫處理控制器與 Webots 之間的通信。<br/><br/>本節更詳細地解釋了控制器編程。您應該仔細閱讀以進一步了解在 Webots 中的機器人編程。</p>
-<br />Distancesensor << <a href='Distancesensor.html'>Previous</a> <a href='Tutorial5.html'>Next</a> >> Tutorial5</div>
+    <div id="tipue_search_content">w10 << <a href='w10.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref<br /><h1>w17</h1>
+<p><span>w17: 如何實作一套 </span><a href="https://youtu.be/iOLFP90DneY">5-bar Linkage Plotter</a><span><span> </span>與<span> </span></span><a href="https://mde.tw/cad2025/content/OpenDuck.html">Openduck mini</a><span>？</span></p>
+<p><span>41023235所作:</span></p>
+<p><span><img alt="" height="5850" src="./../images/w17 cad2025.jpg" width="800"/></span></p><br />w10 << <a href='w10.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref</div>
         
     <!-- footer -->
       <div class="container">
