@@ -2,7 +2,7 @@
         <head>
         <title>cad2025</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -142,43 +142,23 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">NX << <a href='NX.html'>Previous</a> <a href='License.html'>Next</a> >> License<br /><h1>NX2312</h1>
-<p>這裡將使用電腦輔助設計室所安裝的 NX2312 套件.</p>
-<p>Siemens NX: <a href="https://plm.sw.siemens.com/en-US/nx/">https://plm.sw.siemens.com/en-US/nx/</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/documents/209349590/PL20230425446868577">NX2312 Documentation</a></p>
-<p>NXOpen: <a href="https://github.com/mdecycu/nxopen">https://github.com/mdecycu/nxopen</a></p>
-<p style="padding-left: 30px;"><a href="https://docs.sw.siemens.com/en-US/doc/209349590/PL20230425446868577.nxopen_prog_guide/xid2250951">Setup NXOpen Python Intellisense</a></p>
-<p>在自己的電腦上，以可攜方式執行 NX2312:</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/portable_2026.7z">portable_2026.7z</a> (387MB)</p>
-<p style="padding-left: 60px;">解開壓縮後，雙點擊 start_miniconda3.bat 啟動可攜系統，雙點擊 stop.bat 關閉可攜系統。</p>
-<p style="padding-left: 60px;">可攜系統啟動後，在命令列執行 conda activate y:\envs\cmsimde 可進入能執行 CMSiMDE 的環境。</p>
-<p style="padding-left: 60px;">若希望可攜系統啟動直接進入 cmsimde 環境，可將 start_miniconda3.bat 檔案中第 98 行: call "%CONDA_ROOT%\Scripts\activate.bat" %ENV_NAME% 更換為 call "%CONDA_ROOT%\Scripts\activate.bat" %Disk%:\envs\cmsimde。</p>
-<p style="padding-left: 30px;"><a href="http://229.cycu.org/cad_data.7z">cad_data.7z</a> (包括 NX2312、Blender4.2 與 Webots2023b，4.2GB)</p>
-<p style="padding-left: 60px;">解開壓縮檔，將 nx、Webots_2023b 與 Blender 4.2 等目錄放入可攜系統的 data 目錄中。</p>
-<p style="padding-left: 60px;">在命令列執行 webotsw 可啟動 Webots，設定 NX 使用授權後，執行 ugraf -nx 可啟動 NX2312。</p>
-<p style="padding-left: 60px;">Webots2023b 啟動時需要 openssl_lh_set_thunks 函式，因為這是特別的 OpenSSL 介接，其目的可能是透過此函式與 OpenSSL 整合記憶體分配、除錯、或 OpenSSL 引擎擴充。</p>
-<p style="padding-left: 60px;">目前已知 miniconda 中必須透過 conda install openssl=3.0.16 安裝舊版後的 openssl-3-x64.dll 中才會包含openssl_lh_set_thunks 函式。</p>
-<p style="padding-left: 30px;"><a href="https://learn.microsoft.com/zh-tw/cpp/windows/latest-supported-vc-redist?view=msvc-170">Microsoft Visual C++ 可轉散發套件</a> (<a href="https://drive.google.com/file/d/10dzQbk_OT1Cm354rnk-2_sXwRRUmDrjK/view?usp=drive_link">VC_redist.x64.exe</a>)</p>
-<p>在電腦輔助設計室中，利用可攜套件設定，執行安裝於 C: 中的 NX2312:</p>
-<p style="padding-left: 30px;">修改 start_miniconda3.bat，將可攜套件 NX 路徑換成 C: 中安裝 NX2312 所在路徑後，將批次檔案存為 start_cadlab_nx.bat</p>
-<p>NX2312 NXOpen Python 動態連結程式庫版本: Python 3.10.9</p>
-<p style="padding-left: 30px;">在可攜程式環境中利用 miniconda3 建立 nxopen 虛擬環境 (注意: 必須使用反斜線分隔目錄名稱):</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda create -p y:\envs\nxopen python=3.10</span> 指定建立 nxopen Python 環境，並使用 3.10 版。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda activate y:\envs\nxopen</span> 將 Python 環境切換到 nxopen env。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">where python</span> 查詢目前 env 所使用的 Python 所在目錄位置。</p>
-<p style="padding-left: 60px;"><span style="background-color: #ccffcc;">conda clean --all</span> 刪除安裝 env 時所下載的安裝套件以及暫存檔案。</p>
-<p style="padding-left: 60px;">進入 nxopen 虛擬環境後，在命令列執行下列 PYTHONPATH 設定，可以使用 Python </p>
-<p style="padding-left: 60px;"><a href="./../downloads/add_nx_webots_pythonpath_bat.txt">add_nx_webots_pythonpath_bat.txt</a></p>
-<p style="padding-left: 60px;">若要在 SciTE 編輯器中指令使用 nxopen env 中的 Python，可以先在命令列中以 conda activate nxopen 後，接著以 where python 查詢所使用 python.exe 所在目錄後，利用處於同樣目錄的 pythonw.exe 設定 python.properties:</p>
-<p style="padding-left: 90px;">if PLAT_WIN<br/>    python.command=y:\envs\nxopen\python.exe</p>
-<p style="padding-left: 60px;">完成 python.properties 設定修改後，在命令列中利用 start /MIN y:\wscite\SciTE.exe  開啟編輯器後，以下列程式查詢所使用的 conda env，以及所使用的 Python 版本:</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import sys
-import os
-
-conda_env = os.environ.get("CONDA_DEFAULT_ENV")
-print(f"Conda env：{conda_env}")
-print(f"Python version: {sys.version}")</pre>
-<p style="padding-left: 60px;"></p><br />NX << <a href='NX.html'>Previous</a> <a href='License.html'>Next</a> >> License</div>
+    <div id="tipue_search_content">w17 << <a href='w17.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref<br /><h1>w18</h1>
+<p><span>w18: 課程總結</span></p>
+<p>《電腦輔助設計與實習》課程心得</p>
+<p><span> </span></p>
+<p>黃俊錡（<span>41023235</span>）</p>
+<p><span> </span></p>
+<p>在修習《電腦輔助設計與實習》課程的過程中，我首次系統性地接觸到以雲端與版本控制為核心的工程設計學習方式，包含<span> GitHub</span>、<span>Codespaces</span>、<span>Onshape </span>與<span> Webots </span>等工具，讓我對現代工程設計的實際流程有了全新的認識。</p>
+<p><span> </span></p>
+<p>在程式與專題管理方面，透過<span> Git </span>與<span> GitHub </span>的使用，我學會如何進行版本控制、提交修改、處理衝突，以及透過<span> fork </span>與<span> repository </span>進行課程作業的管理。搭配<span> GitHub Codespaces</span>，不需要額外安裝環境即可直接在瀏覽器中撰寫與執行程式，讓我體會到雲端開發在學習與協作上的便利性，也大幅降低了環境設定所帶來的困擾。</p>
+<p><span> </span></p>
+<p>在電腦輔助設計部分，課程中使用<span> Onshape </span>進行零組件建模與組合件設計。透過實際操作，我學會如何建立零件、組合零件之間的約束關係，以及將組合件中的零件拆分、另存為獨立檔案，進一步理解設計流程中「零件—組合—再利用」的概念。這些經驗讓我對雲端<span> CAD </span>在多人協作與版本管理上的優勢有更深刻的體會。</p>
+<p><span> </span></p>
+<p>此外，透過<span> Webots </span>的模擬練習，我開始將設計好的機構結合控制程式進行動態模擬。從機器人模型的建立、控制器程式的撰寫，到實際在模擬環境中觀察運動結果，讓我理解到機械設計、程式控制與系統整合之間的關聯性，也體會到僅有外型設計是不足以完成一個可運作系統的。</p>
+<p><span> </span></p>
+<p>在學習過程中，我經常遇到操作不熟、錯誤訊息看不懂，或流程觀念混淆的情況，但透過反覆嘗試、查資料與請教問題，我逐漸建立起解決問題的能力，也對工程學習需要耐心與邏輯思考有更深的認知。</p>
+<p><span> </span></p>
+<p>總結來說，《電腦輔助設計與實習》是一門結合程式設計、機構建模與模擬驗證的實務導向課程。透過<span> GitHub</span>、<span>Codespaces</span>、<span>Onshape </span>與<span> Webots </span>的整合使用，我不僅提升了實際操作能力，也更清楚了解現代工程設計從程式、建模到模擬的完整流程。感謝老師的指導，讓我在實作中累積經驗，並為未來進一步學習相關工程技術打下基礎。</p><br />w17 << <a href='w17.html'>Previous</a> <a href='Ref.html'>Next</a> >> Ref</div>
         
     <!-- footer -->
       <div class="container">
